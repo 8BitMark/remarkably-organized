@@ -25,7 +25,7 @@
 		display.endsWith('large') ? 'large' : display.endsWith('small') ? 'small' : 'medium',
 	);
 	const cols = $derived(
-		type === 'lined' ? columns ?? 1 : size === 'small' ? 30 : size === 'medium' ? 25 : 20,
+		type === 'lined' ? columns ?? 1 : size === 'small' ? 20 : size === 'medium' ? 15 : 10,
 	);
 	const numLines = $derived(
 		lines ?? (size === 'small' ? 30 : size === 'medium' ? 25 : 20),
