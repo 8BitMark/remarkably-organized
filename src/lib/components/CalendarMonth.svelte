@@ -77,7 +77,7 @@
 	</div>
 	{#if showNotes}
 		<div class="notes">
-			<h3>Notes</h3>
+			<h3>Marks Notes</h3>
 			<Grid display="solid" />
 		</div>
 	{/if}
