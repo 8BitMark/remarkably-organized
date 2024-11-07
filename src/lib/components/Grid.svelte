@@ -28,7 +28,7 @@
 		type === 'lined' ? columns ?? 1 : size === 'small' ? 20 : size === 'medium' ? 15 : 10,
 	);
 	const numLines = $derived(
-		lines ?? (size === 'small' ? 30 : size === 'medium' ? 25 : 20),
+		lines ?? (size === 'small' ? 20 : size === 'medium' ? 15 : 10),
 	);
 </script>
 
@@ -131,7 +131,7 @@
 				transparent var(--dot-large-size)
 			);
 			background-position: var(--dot-position) 0px;
-			background-size: calc(var(--dot-distance) * 10) calc(var(--dot-distance) * 10);
+			background-size: calc(var(--dot-distance) * 15) calc(var(--dot-distance) * 15);
 			height: 100%;
 			width: 100%;
 		}
