@@ -39,7 +39,7 @@
 			? '20px'
 			: size === 'medium'
 				? '24px'
-				: '30px'}>
+				: '60px'}>
 		<div class="dots-small"></div>
 		<div class="dots-medium"></div>
 		<div class="dots-large"></div>
