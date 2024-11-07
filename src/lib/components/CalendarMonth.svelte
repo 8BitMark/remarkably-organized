@@ -78,7 +78,7 @@
 	{#if showNotes}
 		<div class="notes">
 			<h3>Notes</h3>
-			<Grid display="dotted" />
+			<Grid display="solid" />
 		</div>
 	{/if}
 {/if}
@@ -172,7 +172,7 @@
 		height: 50%;
 		padding: 0;
 		h3 {
-			font-size: 0.9em;
+			font-size: 1.8em;
 			font-weight: var(--font-weight-light);
 			margin: 0.55rem 0 0.55rem;
 		}
