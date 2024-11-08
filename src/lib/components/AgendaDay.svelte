@@ -5,7 +5,7 @@
 				{i === 12 ? 12 : i % 12}
 				<small>{i < 12 ? 'AM' : 'PM'}</small>
 			{:else}
-				22
+				6
 				<small>AM</small>
 			{/if}
 		</div>
@@ -20,7 +20,7 @@
 		display: grid;
 		grid-template-columns: 2.5rem 1fr;
 		grid-template-rows: repeat(24, 1fr);
-		width: 100%;
+		width: 48%;
 		height: 100%;
 		justify-items: stretch;
 		align-items: stretch;
