@@ -2,8 +2,8 @@
 	{#each new Array(18) as _, i (i)}
 		<div class="hour-label">
 			{#if i > 0}
-				{i === 12 ? 12 : i % 12}
-				<small>{i < 12 ? 'AM' : 'PM'}</small>
+				{(i+6) === 12 ? 12 : (i+6) % 12}
+				<small>{(i+6) < 12 ? 'AM' : 'PM'}</small>
 			{:else}
 				6
 				<small>AM</small>
