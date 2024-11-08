@@ -1,4 +1,4 @@
-<div class="priorities">
+<div class="tasks">
        <medium>Priorities</medium>
 </div>
 
