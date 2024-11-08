@@ -19,11 +19,11 @@
 	.day {
 		display: grid;
 		grid-template-columns: 2.5rem 1fr;
-		grid-template-rows: repeat(24, 1fr);
+		grid-template-rows: repeat(18, 1fr);
 		width: 48%;
 		height: 100%;
 		justify-items: stretch;
-		align-items: stretch;
+		align-items: left;
 		grid-auto-flow: column;
 		padding: 1rem 1rem 0 0;
 	}
