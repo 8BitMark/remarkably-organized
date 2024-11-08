@@ -16,6 +16,7 @@
 					{/if}
 		</div>
 </div>
+</div>
 
 	{/each}
 	{#each new Array(17) as _, i (i)}
@@ -24,7 +25,7 @@
 </div>
 
 <style lang="scss">
- .container {
+   .container {
     margin: 1em;
 	}
 
