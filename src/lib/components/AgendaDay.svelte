@@ -15,13 +15,12 @@
 						<small>AM</small>
 					{/if}
 		</div>
-</div>
-</div>
 
 	{/each}
 	{#each new Array(17) as _, i (i)}
 		<div class="hour"></div>
 	{/each}
+</div>
 </div>
 
 <style lang="scss">
