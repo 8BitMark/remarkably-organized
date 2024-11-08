@@ -1,5 +1,10 @@
-<div class="day">
-	{#each new Array(18) as _, i (i)}
+<div class="priorities">
+       <medium>Priorities</medium>
+</div>
+
+
+<div class="schedule">
+	{#each new Array(17) as _, i (i)}
 		<div class="hour-label">
 			{#if i > 0}
 				{(i+6) === 12 ? 12 : (i+6) % 12}
@@ -10,20 +15,32 @@
 			{/if}
 		</div>
 	{/each}
-	{#each new Array(18) as _, i (i)}
+	{#each new Array(17) as _, i (i)}
 		<div class="hour"></div>
 	{/each}
 </div>
 
 <style lang="scss">
-	.day {
+	.tasks {
+		display: grid;
+		grid-template-columns: 2.5rem 1fr;
+		grid-template-rows: repeat(5, 1fr);
+		width: 48%;
+		height: 100%;
+		justify-items: stretch;
+		align-items: left;
+		grid-auto-flow: column;
+		padding: 1rem 1rem 0 0;
+	}
+
+	.schedule {
 		display: grid;
 		grid-template-columns: 2.5rem 1fr;
 		grid-template-rows: repeat(18, 1fr);
 		width: 48%;
 		height: 100%;
 		justify-items: stretch;
-		align-items: left;
+		align-items: right;
 		grid-auto-flow: column;
 		padding: 1rem 1rem 0 0;
 	}
