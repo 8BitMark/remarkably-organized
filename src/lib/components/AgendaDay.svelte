@@ -5,7 +5,7 @@
 				{i === 12 ? 12 : i % 12}
 				<small>{i < 12 ? 'AM' : 'PM'}</small>
 			{:else}
-				6
+				22
 				<small>AM</small>
 			{/if}
 		</div>
