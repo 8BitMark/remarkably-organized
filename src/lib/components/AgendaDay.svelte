@@ -1,7 +1,9 @@
 
 
 		<div class="schedule">
-			{#each new Array(17) as _, i (i)}
+
+
+			{#each new Array(36) as _, i (i+2)}
 				<div class="hour-label">
 					{#if i > 0}
 						{(i+6) === 12 ? 12 : (i+6) % 12}
@@ -13,7 +15,7 @@
 		</div>
 
 	{/each}
-	{#each new Array(17) as _, i (i)}
+	{#each new Array(36) as _, i (i)}
 		<div class="hour"></div>
 	{/each}
 </div>
@@ -46,7 +48,7 @@
 	}
 	.hour-label {
 		text-align: left;
-		grid-column: 1;
+		grid-column: 2;
 		font-weight: var(--font-weight-light);
 		font-size: 0.7em;
 		color: var(--text-low);
