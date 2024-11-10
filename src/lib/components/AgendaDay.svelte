@@ -1,9 +1,12 @@
 
 
 		<div class="schedule">
+   {#each new Array(18) as _, i (i)}
+				<div class="task">
+      <small>note<\small>
+    </div>
 
-
-			{#each new Array(36) as _, i (i+2)}
+			{#each new Array(18) as _, i (i)}
 				<div class="hour-label">
 					{#if i > 0}
 						{(i+6) === 12 ? 12 : (i+6) % 12}
@@ -15,7 +18,7 @@
 		</div>
 
 	{/each}
-	{#each new Array(36) as _, i (i)}
+	{#each new Array(18) as _, i (i)}
 		<div class="hour"></div>
 	{/each}
 </div>
@@ -23,12 +26,17 @@
 <style lang="scss">
 
 		.tasks {
-		height: 100%;
-		width: 100%;
-		justify-items: stretch;
-		align-items: left;
-		grid-auto-flow: column;
-		padding: 1rem 1rem 0 0;
+		border-top: solid 1px var(--outline);
+		text-align: left;
+		grid-column: 1;
+		font-weight: var(--font-weight-light);
+		font-size: 0.7em;
+		color: var(--text-low);
+		margin-top: -0.5rem;
+		small {
+			color: currentColor;
+			font-size: 0.6em;
+		}
 	}
 
 	.schedule {
