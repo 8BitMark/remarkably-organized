@@ -1,10 +1,6 @@
 
-		<div class="schedule">
-     <div class="tasks">
-		       <medium>Priorities</medium>
-   		</div>
 
-		<div class="hours">
+		<div class="schedule">
 			{#each new Array(17) as _, i (i)}
 				<div class="hour-label">
 					{#if i > 0}
@@ -24,11 +20,7 @@
 </div>
 
 <style lang="scss">
-	.schedule {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		
-		
+
 		.tasks {
 		height: 100%;
 		width: 100%;
@@ -38,8 +30,9 @@
 		padding: 1rem 1rem 0 0;
 	}
 
-	.hours {
-		grid-column:2;
+	.schedule {
+		display: grid; 
+		grid-template-columns: 60% 40%; 
 		grid-template-rows: repeat(18, 1fr);
 		height: 100%;
 		width: 100%;
@@ -48,12 +41,12 @@
 		grid-auto-flow: column;
 		padding: 1rem 1rem 0 0;
 	}
-}
+
 	.hour {
 		border-top: solid 1px var(--outline);
 	}
 	.hour-label {
-		text-align: center;
+		text-align: left;
 		grid-column: 1;
 		font-weight: var(--font-weight-light);
 		font-size: 0.7em;
