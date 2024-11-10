@@ -3,7 +3,6 @@
 		       <medium>Priorities</medium>
 		</div>
 
-
 		<div class="schedule">
 			{#each new Array(17) as _, i (i)}
 				<div class="hour-label">
@@ -27,7 +26,8 @@
 		display: grid;
 		grid-template-columns: 1.5rem 1fr;
 		grid-template-rows: repeat(18, 1fr);
-		height: 100%;
+		height: 50%;
+		width: 60%;
 		justify-items: stretch;
 		align-items: left;
 		grid-auto-flow: column;
@@ -38,12 +38,14 @@
 		display: grid;
 		grid-template-columns: 1rem 1fr;
 		grid-template-rows: repeat(18, 1fr);
-		height: 100%;
+		height: 50%;
+		width: 40%;
 		justify-items: stretch;
 		align-items: right;
 		grid-auto-flow: column;
 		padding: 1rem 1rem 0 0;
 	}
+
 	.hour {
 		border-top: solid 1px var(--outline);
 	}
