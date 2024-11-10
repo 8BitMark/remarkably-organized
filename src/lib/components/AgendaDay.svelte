@@ -5,6 +5,7 @@
 				<div class="task">
       <small>note<\small>
     </div>
+				{/each}
 
 			{#each new Array(18) as _, i (i)}
 				<div class="hour-label">
