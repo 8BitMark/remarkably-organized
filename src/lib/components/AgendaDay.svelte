@@ -1,5 +1,5 @@
 
-		<div class="shedule">
+		<div class="schedule">
      <div class="tasks">
 		       <medium>Priorities</medium>
    		</div>
