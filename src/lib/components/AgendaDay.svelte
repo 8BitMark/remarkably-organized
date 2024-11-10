@@ -1,4 +1,4 @@
-<div class="container">
+
 		<div class="tasks">
 		       <medium>Priorities</medium>
 		</div>
@@ -21,17 +21,12 @@
 		<div class="hour"></div>
 	{/each}
 </div>
-</div>
 
 <style lang="scss">
-   .container {
-    margin: 1em;
-	}
-
 	.tasks {
 		display: grid;
-		grid-template-columns: 2.5rem 1fr;
-		grid-template-rows: repeat(5, 1fr);
+		grid-template-columns: 1.5rem 1fr;
+		grid-template-rows: repeat(18, 1fr);
 		height: 100%;
 		justify-items: stretch;
 		align-items: left;
@@ -41,7 +36,7 @@
 
 	.schedule {
 		display: grid;
-		grid-template-columns: 2.5rem 1fr;
+		grid-template-columns: 1rem 1fr;
 		grid-template-rows: repeat(18, 1fr);
 		height: 100%;
 		justify-items: stretch;
