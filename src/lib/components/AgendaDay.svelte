@@ -3,7 +3,7 @@
 		<div class="schedule">
    {#each new Array(18) as _, i (i)}
 				<div class="task">
-      <small>note<\small>
+      <small>note</small>
     </div>
 				{/each}
 
