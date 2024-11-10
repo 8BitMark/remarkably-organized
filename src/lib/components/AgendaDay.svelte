@@ -17,7 +17,6 @@
 		<div class="hour"></div>
 	{/each}
 </div>
-</div>
 
 <style lang="scss">
 
