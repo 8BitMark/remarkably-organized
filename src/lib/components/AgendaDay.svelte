@@ -2,7 +2,7 @@
 
 		<div class="schedule">
    {#each new Array(18) as _, i (i)}
-				<div class="task">
+				<div class="tasks">
       <small>note</small>
     </div>
 				{/each}
