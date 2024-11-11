@@ -1,11 +1,13 @@
 
 
 <div class="schedule">
-   {#each new Array(18) as _, i (i)}
-		<div class="tasks">
-			<medium>Priorities</medium>
-		</div>
-	{/each}
+	<div class="tasks">
+		<small>PRIORITIES</small>
+		{#each new Array(18) as _, i (i)}
+			<div class="hour">
+			</div>
+		{/each}
+	</div>
 
 	{#each new Array(18) as _, i (i)}
 		<div class="hour-label">
