@@ -1,9 +1,9 @@
 
 
 <div class="schedule">
+  <medium>PRIORITIES</medium>
    {#each new Array(18) as _, i (i)}
 		<div class="tasks">
-			<medium>Priorities</medium>
 		</div>
 	{/each}
 
