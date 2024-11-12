@@ -31,7 +31,7 @@
 	.planner {
 		display: grid; 
 		grid-template-columns: 60% 40%; 
-		grid-template-rows: repeat(18, 1fr);
+		grid-template-rows: repeat(36, 1fr);
 		height: 100%;
 		width: 100%;
 		justify-items: stretch;
