@@ -3,7 +3,12 @@
 	{#each new Array(36) as _, i (i)}
 		{#if (((i-1)/2)) % 1 === 0}
 			<div class="tasks"> 
+
 			</div>
+		{:else}
+			<div class="tasks"> 
+				blank
+			</div>	
 		{/if}
 	{/each}
 
@@ -66,16 +71,17 @@
 		margin-top: -0.5rem;
 		margin-left: 10px;
 		margin-right: 10px;
-		width:100%;
 		hour {
-			border-top: solid 2px var(--outline);
+			border-top: solid 2px;
 			color: darkgrey;
+			width:100%;
 			small {
 				font-size: 1em;
 			}
 		}
 		halfhour {
-			border-top: solid 1px var(--outline);
+			border-top: solid 1px;
+			width:100%;
 			color: lightgray;
 		}
 	 }
