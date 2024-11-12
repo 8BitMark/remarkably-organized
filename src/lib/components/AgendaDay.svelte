@@ -1,23 +1,30 @@
 
 <div class="planner">
 	<small>PRIORITIES</small>
-	{#each new Array(18) as _, i (i)}
+	{#each new Array(36) as _, i (i)}
 		<div class="tasks">
 		</div>
 	{/each}
 
 
-	{#each new Array(18) as _, i (i)}
-		<div class="schedule">
-			{#if i > 0}
-				{(i+6) === 12 ? 12 : (i+6) % 12}
-				<small>{(i+6) < 12 ? 'AM' : 'PM'}</small>
-			{:else}
+
+
+	{#each new Array(36) as _, i (i)}
+        <div class="schedule">
+            {#if ((i/2) + 6) % 1 === 0}
+                {((i/2) + 6) === 12 ? 12 : (i + 6) % 12}
+                <small>{((i/2) + 6) < 12 ? 'AM' : 'PM'}</small>
+			{:else if i=6}
 				6
 				<small>AM</small>
 			{/if}
-		</div>
+            
+            {#if ((i/2) + 6.5) % 1 === 0.5}
+                <div class="dots">...</div>
+            {/if}
+        </div>
 	{/each}
+
 </div>
 
 <style lang="scss">
