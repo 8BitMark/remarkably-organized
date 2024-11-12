@@ -20,7 +20,7 @@
 			{/if}
             
             {#if ((i/2) + 6.5) % 1 === 0.5}
-                <div class="dots">...</div>
+                <small>...</small>
             {/if}
         </div>
 	{/each}
