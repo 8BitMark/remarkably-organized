@@ -1,8 +1,7 @@
-
 <div class="planner">
 	<small>PRIORITIES</small>
 	{#each new Array(36) as _, i (i)}
-		<div class="tasks">
+		<div class="tasks"> 
 		</div>
 	{/each}
 
@@ -14,9 +13,6 @@
             {#if ((i/2) + 6) % 1 === 0}
                 {((i/2) + 6) === 12 ? 12 : (i + 6) % 12}
                 <small>{((i/2) + 6) < 12 ? 'AM' : 'PM'}</small>
-			{:else if i=6}
-				6
-				<small>AM</small>
 			{/if}
             
             {#if ((i/2) + 6.5) % 1 === 0.5}
@@ -38,7 +34,7 @@
 		align-items: right;
 		grid-auto-flow: column;
 		padding: 1rem 1rem 0 0;
-	}
+	
 
 	.tasks {
 		border-top: solid 2px var(--outline);
@@ -48,7 +44,6 @@
 		font-size: 0.7em;
 		color: var(--text-low);
 		margin-top: -0.5rem;
-		padding: 1rem 1rem 0 1rem;
 		padding: 1rem 1rem 0 1rem;
 	}
 
@@ -64,5 +59,6 @@
 			color: currentColor;
 			font-size: 1em;
 		}
+	}
 	}
 </style>
