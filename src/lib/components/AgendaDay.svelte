@@ -13,12 +13,16 @@
 	{#each new Array(36) as _, i (i)}
         <div class="schedule">
             {#if (((i-1)/2) + 6) % 1 === 0}
-                {(((i-1)/2) + 6) === 12 ? 12 : (((i-1)/2) + 6) % 12}
-                <hour>{(((i-1)/2) + 6) < 12 ? 'AM' : 'PM'}</hour>
+                <hour>
+					{(((i-1)/2) + 6) === 12 ? 12 : (((i-1)/2) + 6) % 12}
+					<small>{(((i-1)/2) + 6) < 12 ? 'AM' : 'PM'}</small>
+				</hour>
 			{/if}
             
             {#if (((i-1)/2) + 6) % 1 === 0.5}
-                <halfhour>...</halfhour>
+                <halfhour>
+
+				</halfhour>
             {/if}
         </div>
 	{/each}
@@ -62,15 +66,17 @@
 		margin-top: -0.5rem;
 		margin-left: 10px;
 		margin-right: 10px;
+		width:100%;
 		hour {
 			border-top: solid 2px var(--outline);
 			color: darkgrey;
-			font-size: 1em;
+			small {
+				font-size: 1em;
+			}
 		}
 		halfhour {
 			border-top: solid 1px var(--outline);
 			color: lightgray;
-			font-size: 1em;
 		}
 	 }
 	}
