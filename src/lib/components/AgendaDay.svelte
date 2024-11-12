@@ -1,24 +1,12 @@
-
-
-<div class="schedule">
-	<div class="tasks">
-		<small>PRIORITIES</small>
-		{#each new Array(18) as _, i (i)}
-			<div class="hour">
-			</div>
-		{/each}
-	</div>
-
+<div class="tasks">
+	<small>PRIORITIES</small>
 	{#each new Array(18) as _, i (i)}
-		<div class="hour-label">
-			{#if i > 0}
-				{(i+6) === 12 ? 12 : (i+6) % 12}
-				<small>{(i+6) < 12 ? 'AM' : 'PM'}</small>
-			{:else}
-				6
-				<small>AM</small>
-			{/if}
-			<div class="hour"></div>
+		<div class="hour">
+		</div>
+	{/each}
+</div>
+	
+<div class="schedule">
 	{#each new Array(18) as _, i (i)}
 		<div class="hour-label">
 			{#if i > 0}
@@ -35,7 +23,7 @@
 
 <style lang="scss">
 
-		.tasks {
+	.tasks {
 		border-top: solid 2px var(--outline);
 		border-bottom: solid 1px var(--outline);
 		border-top: solid 2px var(--outline);
