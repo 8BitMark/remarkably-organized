@@ -46,7 +46,6 @@
           {#each Array(6) as _, i}
           <li>
             <input type="checkbox" id={`priority-${i}`} />
-            <label for={`priority-${i}`}>Priority {i + 1}</label>
           </li>
           {/each}
         </ul>
@@ -78,14 +77,15 @@
 <style lang="scss">
     .container {
       display: grid;
-      grid-template-columns: 1fr 2fr;
+      grid-template-columns: 60% 4%;
       gap: 20px;
       height: 100%;
     }
     .left-side, .right-side {
       display: flex;
       flex-direction: column;
-    }
+	  padding-left: 10px; 
+	}
     .date {
       margin-bottom: 20px;
       font-size: 1.5em;
@@ -97,37 +97,35 @@
     .priorities h2, .notes h2, .schedule h2 {
       margin-top: 0;
       font-size: 1.2em;
-      background-color: #555;
-      color: #fff;
-      padding: 5px;
+      color: #555;
+      padding: 2px;
     }
     .priorities ul, .notes ul {
       list-style-type: none;
       padding: 0;
     }
     .priorities li, .notes li {
-      margin-bottom: 10px;
-      padding-bottom: 10px;
       border-bottom: 1px solid #ccc;
     }
     .notes ul {
       height: calc(100% - 70px); /* Adjust for the header height */
     }
     .notes li::after {
-      content: "";
       display: block;
       border-bottom: 1px solid #ccc;
-      margin-top: 10px;
     }
     .schedule {
       display: grid;
       grid-template-rows: repeat(34, 1fr);
       gap: 5px;
     }
-    .hour, .half-hour {
-      border-bottom: 1px solid #ccc;
+    .hour{
+      border-bottom: 1px solid darkgrey;
       padding: 2px;
     }
+	.half-hour {
+	  border-bottom: 1px dashed lightgrey;
+	}
 
 
 
