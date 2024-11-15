@@ -1,4 +1,5 @@
-<div class="planner">
+
+<!-- <div class="planner">
 	<small>PRIORITIES</small>
 	{#each new Array(36) as _, i (i)}
 		{#if (((i-1)/2)) % 1 === 0}
@@ -33,8 +34,103 @@
 	{/each}
 
 </div>
+-->
+
+
+<div class="date">Date: __________</div>
+  <div class="container">
+    <div class="left-side">
+      <div class="priorities">
+        <h2>Priorities</h2>
+        <ul>
+          {#each Array(6) as _, i}
+          <li>
+            <input type="checkbox" id={`priority-${i}`} />
+            <label for={`priority-${i}`}>Priority {i + 1}</label>
+          </li>
+          {/each}
+        </ul>
+      </div>
+      <div class="notes">
+        <h2>Notes</h2>
+        <ul>
+          {#each Array(20) as _, i}
+          <li>&nbsp;</li>
+          {/each}
+        </ul>
+      </div>
+    </div>
+    <div class="right-side">
+      <div class="schedule">
+        <h2>Schedule</h2>
+        {#each Array(17) as _, i (i)}
+        <div class="hour">
+          {(i + 6) % 12 === 0 ? 12 : (i + 6) % 12} {i < 6 ? 'AM' : 'PM'}
+        </div>
+        <div class="half-hour"></div>
+        {/each}
+      </div>
+    </div>
+  </div>
+
+
 
 <style lang="scss">
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 20px;
+      height: 100%;
+    }
+    .left-side, .right-side {
+      display: flex;
+      flex-direction: column;
+    }
+    .date {
+      margin-bottom: 20px;
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+    .priorities, .notes, .schedule {
+      flex: 1;
+    }
+    .priorities h2, .notes h2, .schedule h2 {
+      margin-top: 0;
+      font-size: 1.2em;
+      background-color: #555;
+      color: #fff;
+      padding: 5px;
+    }
+    .priorities ul, .notes ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    .priorities li, .notes li {
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #ccc;
+    }
+    .notes ul {
+      height: calc(100% - 70px); /* Adjust for the header height */
+    }
+    .notes li::after {
+      content: "";
+      display: block;
+      border-bottom: 1px solid #ccc;
+      margin-top: 10px;
+    }
+    .schedule {
+      display: grid;
+      grid-template-rows: repeat(34, 1fr);
+      gap: 5px;
+    }
+    .hour, .half-hour {
+      border-bottom: 1px solid #ccc;
+      padding: 2px;
+    }
+
+
+
 	.planner {
 		display: grid; 
 		grid-template-columns: 60% 40%; 
