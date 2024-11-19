@@ -77,7 +77,8 @@
 <style lang="scss">
     .container {
       display: grid;
-      grid-template-columns: 60% 4%;
+      grid-template-columns: 60% 40%;
+      grid-template-rows: repeat(36, 1fr);
       gap: 20px;
       height: 100%;
     }
