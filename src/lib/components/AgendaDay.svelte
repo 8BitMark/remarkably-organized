@@ -36,8 +36,6 @@
 </div>
 -->
 
-
-<div class="date">Date: __________</div>
   <div class="container">
     <div class="left-side">
       <div class="priorities">
@@ -62,7 +60,7 @@
     <div class="right-side">
       <div class="schedule">
         <h2>Schedule</h2>
-        {#each Array(17) as _, i (i)}
+        {#each Array(18) as _, i (i)}
         <div class="hour">
           {(i + 6) % 12 === 0 ? 12 : (i + 6) % 12} {i < 6 ? 'AM' : 'PM'}
         </div>
@@ -70,7 +68,6 @@
         {/each}
       </div>
     </div>
-  </div>
 
 
 
