@@ -53,6 +53,8 @@
     
     .priorities, .notes, .schedule {
       flex: 1;
+      display: grid;
+      gap: 2px;
     }
     .priorities h2, .notes h2, .schedule h2 {
       margin-top: 0;
@@ -62,8 +64,8 @@
     }
     .priorities ul, .notes ul {
       list-style-type: none;
+      border-top: 1px solid darkgrey;
       padding: 0;
-      gap: 2px;
     }
     .priorities li, .notes li {
       border-bottom: 1px solid darkgrey;
