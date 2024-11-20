@@ -116,7 +116,6 @@
     }
     .schedule {
       display: grid;
-      grid-template-rows: repeat(36, 1fr);
       gap: 2px;
     }
     .hour{
