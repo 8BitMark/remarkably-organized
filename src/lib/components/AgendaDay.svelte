@@ -83,11 +83,11 @@
     }
     .hour{
       border-top: 1px solid darkgrey;
-      height: 15px;
+      height: 20px;
       padding: 0px;
     }
     .half-hour {
-      height: 15px;
+      height: 20px;
       border-top: 1px dashed lightgrey;
     }
 </style>
