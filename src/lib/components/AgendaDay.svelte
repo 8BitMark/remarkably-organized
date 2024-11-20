@@ -22,12 +22,13 @@
     <div class="right-side">
       <div class="schedule">
         <h2>Schedule</h2>
-        {#each Array(18) as _, i (i)}
+        {#each Array(17) as _, i (i)}
         <div class="hour">
           {(i + 6) % 12 === 0 ? 12 : (i + 6) % 12} {i < 6 ? 'AM' : 'PM'}
         </div>
         <div class="half-hour"></div>
         {/each}
+	<div class="hour"></div>
       </div>
     </div>
 </div>
@@ -38,8 +39,8 @@
     .container {
       display: grid;
       grid-template-columns: 60% 40%;
-      grid-template-rows: repeat(18, 1fr);
-      gap: 20px;
+      grid-template-rows: repeat(17, 1fr);
+      gap: 5px;
       height: 100%;
     }
     .left-side, .right-side {
@@ -82,9 +83,11 @@
     }
     .hour{
       border-top: 1px solid darkgrey;
+      height: 15px;
       padding: 0px;
     }
     .half-hour {
+      height: 15px
       border-top: 1px dashed lightgrey;
     }
 </style>
