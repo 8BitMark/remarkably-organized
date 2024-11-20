@@ -87,7 +87,7 @@
       padding: 0px;
     }
     .half-hour {
-      height: 15px
+      height: 15px;
       border-top: 1px dashed lightgrey;
     }
 </style>
