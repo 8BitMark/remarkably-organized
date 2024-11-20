@@ -2,21 +2,17 @@
     <div class="left-side">
       <div class="priorities">
         <h2>Priorities</h2>
-        <ul>
-          {#each Array(8) as _, i}
-          <li>
+        {#each Array(8) as _, i}
+          <div class="lines">
             <input type="checkbox" id={`priority-${i}`} />
-          </li>
-          {/each}
-        </ul>
+          </div>
+        {/each}
       </div>
       <div class="notes">
         <h2>Notes</h2>
-        <ul>
-          {#each Array(26) as _, i}
-          <li>&nbsp;</li>
-          {/each}
-        </ul>
+        {#each Array(26) as _, i}
+          <div class="lines"></div>
+        {/each}
       </div>
     </div>
     <div class="right-side">
@@ -62,21 +58,12 @@
       color: #555;
       padding-top: 5px;
     }
-    .priorities ul, .notes ul {
-      list-style-type: none;
-      border-top: 1px solid darkgrey;
-      padding: 0;
-    }
-    .priorities li, .notes li {
-      border-bottom: 1px solid darkgrey;
-      height: 22px;
-    }
     
     .schedule {
       display: grid;
       gap: 2px;
     }
-    .hour{
+    .hour, .lines{
       border-top: 1px solid darkgrey;
       height: 22px;
       padding: 0px;
