@@ -1,41 +1,3 @@
-
-<!-- <div class="planner">
-	<small>PRIORITIES</small>
-	{#each new Array(36) as _, i (i)}
-		{#if (((i-1)/2)) % 1 === 0}
-			<div class="tasks"> 
-
-			</div>
-		{:else}
-			<div class="tasks"> 
-				blank
-			</div>	
-		{/if}
-	{/each}
-
-
-
-
-	{#each new Array(36) as _, i (i)}
-        <div class="schedule">
-            {#if (((i-1)/2) + 6) % 1 === 0}
-                <hour>
-					{(((i-1)/2) + 6) === 12 ? 12 : (((i-1)/2) + 6) % 12}
-					<small>{(((i-1)/2) + 6) < 12 ? 'AM' : 'PM'}</small>
-				</hour>
-			{/if}
-            
-            {#if (((i-1)/2) + 6) % 1 === 0.5}
-                <halfhour>
-
-				</halfhour>
-            {/if}
-        </div>
-	{/each}
-
-</div>
--->
-
   <div class="container">
     <div class="left-side">
       <div class="priorities">
@@ -60,7 +22,7 @@
     <div class="right-side">
       <div class="schedule">
         <h2>Schedule</h2>
-        {#each Array(36) as _, i (i)}
+        {#each Array(18) as _, i (i)}
         <div class="hour">
           {(i + 6) % 12 === 0 ? 12 : (i + 6) % 12} {i < 6 ? 'AM' : 'PM'}
         </div>
@@ -76,7 +38,7 @@
     .container {
       display: grid;
       grid-template-columns: 60% 40%;
-      grid-template-rows: repeat(36, 1fr);
+      grid-template-rows: repeat(18, 1fr);
       gap: 20px;
       height: 100%;
     }
