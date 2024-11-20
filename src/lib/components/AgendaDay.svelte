@@ -34,11 +34,11 @@
 <style lang="scss">
     .container {
       display: grid;
-      grid-template-columns: 60% 40%;
+      grid-template-columns: 55% 45%;
       grid-template-rows: repeat(17, 1fr);
       gap: 5px;
       height: 100%;
-      widgth: 100%;
+      widgth: 95%;
     }
     .left-side, .right-side {
       display: flex;

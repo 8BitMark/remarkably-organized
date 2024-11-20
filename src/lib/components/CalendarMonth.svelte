@@ -77,7 +77,6 @@
 	</div>
 	{#if showNotes}
 		<div class="notes">
-			<h3>Marks Notes</h3>
 			<Grid display="lined" />
 		</div>
 	{/if}
@@ -99,7 +98,7 @@
 		grid-gap: 0px;
 		padding: 0 1rem 1rem;
 		&.with-notes {
-			height: 50%;
+			height: 65%;
 			padding: 0 1rem 0;
 		}
 		.week {
@@ -169,7 +168,7 @@
 		text-align: center;
 		border-top: solid 1px var(--outline);
 		width: 100%;
-		height: 50%;
+		height: 35%;
 		padding: 0 1rem 1rem;
 		h3 {
 			font-size: 1.8em;

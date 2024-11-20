@@ -91,6 +91,11 @@
 	}
 	.notes {
 		flex: 1;
+		text-align: right;
+		border-top: solid 1px var(--outline);
+	/*	width: 100%;
+		height: 35%;
+		padding: 0 1rem 1rem;*/
 	}
 	.days {
 		display: grid;
