@@ -83,7 +83,8 @@
     .left-side, .right-side {
       display: flex;
       flex-direction: column;
-	  padding-left: 10px; 
+	  padding-left: 5px; 
+	  padding-right: 5px; 
      }
     .date {
       margin-bottom: 20px;
@@ -97,7 +98,7 @@
       margin-top: 0;
       font-size: 1.2em;
       color: #555;
-      padding: 2px;
+      padding: 20px;
     }
     .priorities ul, .notes ul {
       list-style-type: none;
@@ -115,12 +116,12 @@
     }
     .schedule {
       display: grid;
-      grid-template-rows: repeat(34, 1fr);
-      gap: 5px;
+      grid-template-rows: repeat(36, 1fr);
+      gap: 2px;
     }
     .hour{
       border-top: 1px solid darkgrey;
-      padding: 2px;
+      padding: 0px;
     }
     .half-hour {
       border-top: 1px dashed lightgrey;
