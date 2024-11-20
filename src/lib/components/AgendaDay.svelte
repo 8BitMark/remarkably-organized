@@ -79,7 +79,7 @@
     }
     .schedule {
       display: grid;
-      gap: 22px;
+      gap: 2px;
     }
     .hour{
       border-top: 1px solid darkgrey;
@@ -87,7 +87,7 @@
       padding: 0px;
     }
     .half-hour {
-      height: 20px;
+      height: 22px;
       border-top: 1px dashed lightgrey;
     }
 </style>
