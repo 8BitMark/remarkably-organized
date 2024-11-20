@@ -42,18 +42,15 @@
       grid-template-rows: repeat(17, 1fr);
       gap: 5px;
       height: 100%;
+      widgth: 100%;
     }
     .left-side, .right-side {
       display: flex;
       flex-direction: column;
-	  padding-left: 5px; 
-	  padding-right: 5px; 
+	    padding-left: 5px; 
+	    padding-right: 5px; 
      }
-    .date {
-      margin-bottom: 20px;
-      font-size: 1.5em;
-      font-weight: bold;
-    }
+    
     .priorities, .notes, .schedule {
       flex: 1;
     }
@@ -66,18 +63,13 @@
     .priorities ul, .notes ul {
       list-style-type: none;
       padding: 0;
+      gap: 2px;
     }
     .priorities li, .notes li {
       border-bottom: 1px solid darkgrey;
       height: 22px;
     }
-    .notes ul {
-      /* height: calc(100% - 70px); /* Adjust for the header height */
-    }
-    .notes li::after {
-      display: block;
-      border-bottom: 1px solid darkgrey;
-    }
+    
     .schedule {
       display: grid;
       gap: 2px;
