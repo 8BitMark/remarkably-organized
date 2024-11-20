@@ -77,7 +77,9 @@
 	</div>
 	{#if showNotes}
 		<div class="notes">
-			<Grid display="lined" />
+			{#each Array(6) as _, i (i)}
+				<div class="lines"></div>
+			{/each}
 		</div>
 	{/if}
 {/if}
@@ -176,4 +178,9 @@
 			margin: 0.55rem 0 0.55rem;
 		}
 	}
+	.lines{
+      border-top: 1px solid var(--outline);
+      height: 22px;
+      padding: 0px;
+    }
 </style>

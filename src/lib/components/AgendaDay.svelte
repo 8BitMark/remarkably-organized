@@ -64,12 +64,12 @@
       gap: 2px;
     }
     .hour, .lines{
-      border-top: 1px solid darkgrey;
+      border-top: 1px solid var(--outline);
       height: 22px;
       padding: 0px;
     }
     .half-hour {
       height: 22px;
-      border-top: 1px dashed lightgrey;
+      border-top: 1px dashed var(--outline);
     }
 </style>
