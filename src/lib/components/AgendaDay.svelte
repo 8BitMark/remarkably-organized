@@ -79,11 +79,11 @@
     }
     .schedule {
       display: grid;
-      gap: 2px;
+      gap: 22px;
     }
     .hour{
       border-top: 1px solid darkgrey;
-      height: 20px;
+      height: 22px;
       padding: 0px;
     }
     .half-hour {
