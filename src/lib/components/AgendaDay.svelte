@@ -3,7 +3,7 @@
       <div class="priorities">
         <h2>Priorities</h2>
         <ul>
-          {#each Array(6) as _, i}
+          {#each Array(8) as _, i}
           <li>
             <input type="checkbox" id={`priority-${i}`} />
           </li>
@@ -13,7 +13,7 @@
       <div class="notes">
         <h2>Notes</h2>
         <ul>
-          {#each Array(20) as _, i}
+          {#each Array(26) as _, i}
           <li>&nbsp;</li>
           {/each}
         </ul>
@@ -61,7 +61,7 @@
       margin-top: 0;
       font-size: 1.2em;
       color: #555;
-      padding: 20px;
+      padding-top: 5px;
     }
     .priorities ul, .notes ul {
       list-style-type: none;
@@ -69,9 +69,10 @@
     }
     .priorities li, .notes li {
       border-bottom: 1px solid #ccc;
+      height: 22px;
     }
     .notes ul {
-      height: calc(100% - 70px); /* Adjust for the header height */
+      /* height: calc(100% - 70px); /* Adjust for the header height */
     }
     .notes li::after {
       display: block;
