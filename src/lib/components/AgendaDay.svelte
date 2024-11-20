@@ -60,7 +60,7 @@
     <div class="right-side">
       <div class="schedule">
         <h2>Schedule</h2>
-        {#each Array(18) as _, i (i)}
+        {#each Array(34) as _, i (i)}
         <div class="hour">
           {(i + 6) % 12 === 0 ? 12 : (i + 6) % 12} {i < 6 ? 'AM' : 'PM'}
         </div>
@@ -118,11 +118,11 @@
       gap: 5px;
     }
     .hour{
-      border-bottom: 1px solid darkgrey;
+      border-top: 1px solid darkgrey;
       padding: 2px;
     }
 	.half-hour {
-	  border-bottom: 1px dashed lightgrey;
+	  border-top: 1px dashed lightgrey;
 	}
 
 
