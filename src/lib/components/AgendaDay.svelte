@@ -60,7 +60,7 @@
     <div class="right-side">
       <div class="schedule">
         <h2>Schedule</h2>
-        {#each Array(34) as _, i (i)}
+        {#each Array(36) as _, i (i)}
         <div class="hour">
           {(i + 6) % 12 === 0 ? 12 : (i + 6) % 12} {i < 6 ? 'AM' : 'PM'}
         </div>
@@ -68,6 +68,7 @@
         {/each}
       </div>
     </div>
+</div>
 
 
 
@@ -83,7 +84,7 @@
       display: flex;
       flex-direction: column;
 	  padding-left: 10px; 
-	}
+     }
     .date {
       margin-bottom: 20px;
       font-size: 1.5em;
@@ -121,61 +122,7 @@
       border-top: 1px solid darkgrey;
       padding: 2px;
     }
-	.half-hour {
-	  border-top: 1px dashed lightgrey;
-	}
-
-
-
-	.planner {
-		display: grid; 
-		grid-template-columns: 60% 40%; 
-		grid-template-rows: repeat(36, 1fr);
-		height: 100%;
-		width: 100%;
-		justify-items: stretch;
-		align-items: right;
-		grid-auto-flow: column;
-		padding: 1rem 1rem 0 0;
-	
-
-	.tasks {
-		text-align: left;
-		grid-column: 1;
-		font-weight: var(--font-weight-light);
-		font-size: 0.7em;
-		color: var(--text-low);
-		margin-top: -0.5rem;
-		margin-left: 10px;
-		margin-right: 10px;
-		padding: 1rem 1rem 0 1rem;
-		border-top: solid 2px var(--outline);
-		color: darkgrey;
-		font-size: 1em;
-	}
-
-	.schedule {
-		text-align: left;
-		grid-column: 2;
-		font-weight: var(--font-weight-light);
-		font-size: 0.7em;
-		color: var(--text-low);
-		margin-top: -0.5rem;
-		margin-left: 10px;
-		margin-right: 10px;
-		hour {
-			border-top: solid 2px;
-			color: darkgrey;
-			width:100%;
-			small {
-				font-size: 1em;
-			}
-		}
-		halfhour {
-			border-top: solid 1px;
-			width:100%;
-			color: lightgray;
-		}
-	 }
-	}
+    .half-hour {
+      border-top: 1px dashed lightgrey;
+    }
 </style>
