@@ -68,7 +68,7 @@
       padding: 0;
     }
     .priorities li, .notes li {
-      border-bottom: 1px solid #ccc;
+      border-bottom: 1px solid darkgrey;
       height: 22px;
     }
     .notes ul {
@@ -76,7 +76,7 @@
     }
     .notes li::after {
       display: block;
-      border-bottom: 1px solid #ccc;
+      border-bottom: 1px solid darkgrey;
     }
     .schedule {
       display: grid;
