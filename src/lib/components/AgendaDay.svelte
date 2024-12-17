@@ -6,7 +6,6 @@
 	    <div class="icon"></div>
 	    <div class="content"></div>
         {/each}
-	<div class="lines"></div>
 	</div>
       <div class="notes">
         <h2>Notes</h2>
