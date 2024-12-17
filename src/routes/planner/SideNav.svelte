@@ -235,7 +235,7 @@
 		bottom: 0;
 		right: 0;
 		width: var(--sidenav-width);
-		padding: var(--sidenav-width) 0 0;
+		padding: var(--sidenav-width)+30px 0 0;
 		background-color: var(--nav-bg);
 		&.right {
 			left: auto;
