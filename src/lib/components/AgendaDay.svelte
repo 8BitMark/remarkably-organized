@@ -2,12 +2,12 @@
     <div class="left-side">
       <div class="priorities">
         <h2>Priorities</h2>
+	<div class="lines"></div>
         {#each Array(8) as _, i}
 	    <div class="icon"></div>
 	    <div class="content"></div>
         {/each}
-	<div class="lines"></div>
-      </div>
+	</div>
       <div class="notes">
         <h2>Notes</h2>
         {#each Array(26) as _, i}
@@ -49,20 +49,21 @@
     
    .priorities {
     display: grid;
-    grid-template-columns: 20px auto;
+    grid-template-columns: 22px auto;
     gap: 2px;
   }
   .priorities .icon {
     width: 22px;
     height: 22px;
-    border-right: 1px solid #000;
+    border-right: 1px solid var(--outline);
     border-top: 1px solid var(--outline);
   }
   .priorities .content {
-    padding-left: 5px;
+     padding: 0px;
      border-top: 1px solid var(--outline);
      font-size: 0.9em;
-      height: 22px;
+     height: 22px;
+     width: 100%;
   }
   
   .notes, .schedule {
@@ -76,11 +77,14 @@
     color: #555;
     padding-top: 5px;
   }
-    
+
+.schedule {
+	padding-right: 10px;
+}
   
     .hour, .lines{
       border-top: 1px solid var(--outline);
-      font-size: 0.9em;
+      font-size: 0.5em;
       height: 22px;
       padding: 0px;
     }
