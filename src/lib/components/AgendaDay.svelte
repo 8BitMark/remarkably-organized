@@ -49,18 +49,18 @@
     
    .priorities {
     display: grid;
-    grid-template-columns: 22px auto;
-    gap: 2px;
+    grid-template-columns: 25px auto;
+    gap: 0px;
   }
   .priorities .icon {
-    width: 22px;
+    width: 25px;
     height: 22px;
     border-right: 1px solid var(--outline);
-    border-top: 1px solid var(--outline);
+    border-bottom: 1px solid var(--outline);
   }
   .priorities .content {
      padding: 0px;
-     border-top: 1px solid var(--outline);
+     border-botom: 1px solid var(--outline);
      font-size: 0.9em;
      height: 22px;
      width: 100%;
@@ -84,9 +84,9 @@
   
     .hour, .lines{
       border-top: 1px solid var(--outline);
-      font-size: 0.5em;
+      font-size: 0.7em;
       height: 22px;
-      padding: 0px;
+      padding-top: 3px;
     }
     .half-hour {
       height: 22px;
