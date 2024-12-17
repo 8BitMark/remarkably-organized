@@ -56,12 +56,14 @@
      border-bottom: 1px solid var(--outline);
    }
   .priorities .icon {
+    grid-column:1;
     width: 25px;
     height: 24px;
     border-right: 1px solid var(--outline);
     border-bottom: 1px solid var(--outline);
   }
   .priorities .content {
+     grid-column:2;
      padding: 0px;
      border-bottom: 1px solid var(--outline);
      font-size: 0.9em;
