@@ -42,8 +42,7 @@
     .left-side, .right-side {
       display: flex;
       flex-direction: column;
-	    padding-left: 5px; 
-	    padding-right: 5px; 
+	    padding-left: 10px;  
      }
     
    .priorities {
@@ -51,7 +50,7 @@
     grid-template-columns: 25px auto;
     gap: 0px;
   }
-  .priorities .h2 {
+  .priorities h2 {
      border-bottom: 1px solid var(--outline);
    }
   .priorities .icon {
@@ -76,7 +75,7 @@
     gap: 2px;
   }
   .priorities h2, .notes h2, .schedule h2 {
-    margin-top: 0;
+    margin-top: 5px;
     font-size: 1.2em;
     color: #555;
     padding-top: 5px;
