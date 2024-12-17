@@ -52,18 +52,21 @@
     grid-template-columns: 25px auto;
     gap: 0px;
   }
+  .priorities .h2 {
+     border-bottom: 1px solid var(--outline);
+   }
   .priorities .icon {
     width: 25px;
     height: 24px;
     border-right: 1px solid var(--outline);
-    border-top: 1px solid var(--outline);
+    border-bottom: 1px solid var(--outline);
   }
   .priorities .content {
      padding: 0px;
-     border-top: 1px solid var(--outline);
+     border-bottom: 1px solid var(--outline);
      font-size: 0.9em;
      height: 24px;
-     width: 100%;
+     width: auto;
   }
   
   .notes, .schedule {
