@@ -51,6 +51,7 @@
     gap: 0px;
   }
   .priorities h2 {
+     grid-column:1 / span 2;
      border-bottom: 1px solid var(--outline);
    }
   .priorities .icon {
