@@ -2,11 +2,11 @@
     <div class="left-side">
       <div class="priorities">
         <h2>Priorities</h2>
-	<div class="lines"></div>
         {#each Array(8) as _, i}
 	    <div class="icon"></div>
 	    <div class="content"></div>
         {/each}
+	<div class="lines"></div>
 	</div>
       <div class="notes">
         <h2>Notes</h2>
@@ -54,15 +54,15 @@
   }
   .priorities .icon {
     width: 25px;
-    height: 22px;
+    height: 24px;
     border-right: 1px solid var(--outline);
-    border-bottom: 1px solid var(--outline);
+    border-top: 1px solid var(--outline);
   }
   .priorities .content {
      padding: 0px;
-     border-botom: 1px solid var(--outline);
+     border-top: 1px solid var(--outline);
      font-size: 0.9em;
-     height: 22px;
+     height: 24px;
      width: 100%;
   }
   
