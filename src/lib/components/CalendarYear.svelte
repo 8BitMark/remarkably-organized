@@ -70,7 +70,9 @@
 					{/if}
 					{#each new Array(month.end.getUTCDate()) as _, day}
 						{#if day % 7 === 0}
-    							<div class="week-number">{Math.floor(day / 7) + 1}</div>
+    							<div class="week-number">Math.floor((timeframe.end.getTime() - timeframe.weekStart.getTime()) / 604800000,
+		) + 1}
+							</div>
   						{/if}
 						
 						<div
