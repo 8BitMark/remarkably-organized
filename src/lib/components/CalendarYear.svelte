@@ -70,7 +70,7 @@
 					{/if}
 					{#each new Array(month.end.getUTCDate()) as _, day}
 						{#if day % 7 === 0}
-    							<div class="week-number">Math.floor((timeframe.end.getTime() - timeframe.weekStart.getTime()) / 604800000,
+    							<div class="week-number">{Math.floor((timeframe.end.getTime() - timeframe.weekStart.getTime()) / 604800000,
 		) + 1}
 							</div>
   						{/if}
@@ -110,7 +110,7 @@
 	}
 	.days {
 		display: grid;
-		grid-template-columns: repeat(6, 1fr);
+		grid-template-columns: repeat(8, 1fr);
 		grid-template-rows: repeat(6, 1fr);
 		justify-items: center;
 		align-items: center;
