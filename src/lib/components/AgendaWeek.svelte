@@ -61,7 +61,7 @@
 <style lang="scss">
     .container {
       display: grid;
-      grid-template-columns: 55% 45%;
+      grid-template-columns: 45% 55%;
       grid-template-rows: repeat(17, 1fr);
       gap: 5px;
       height: 98%;
@@ -89,6 +89,7 @@
     border-right: 1px solid var(--outline);
     border-bottom: 1px solid var(--outline);
   }
+
   .priorities .content {
      grid-column:2;
      padding: 0px;
@@ -102,6 +103,8 @@
    display: grid;
     grid-template-columns: 25px auto;
     gap: 0px;
+    height: 100%;
+    min-height: 100%;
    }
 
   .weekly-plan h2 {
@@ -129,7 +132,7 @@
     display: grid;
     gap: 2px;
   }
-  .priorities h2, .notes h2, .schedule h2 {
+  .priorities h2, .notes h2, .schedule h2, .weekly-plan h2 {
     margin-top: 5px;
     font-size: 1.2em;
     color: #555;
