@@ -108,7 +108,7 @@
 	}
 	.days {
 		display: grid;
-		grid-template-columns: repeat(7, 1fr);
+		grid-template-columns: repeat(6, 1fr);
 		grid-template-rows: repeat(6, 1fr);
 		justify-items: center;
 		align-items: center;
