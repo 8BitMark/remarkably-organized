@@ -119,6 +119,10 @@
     border-right: 1px solid var(--outline);
     border-bottom: 1px solid var(--outline);
     background-color: var(--outline);
+  writing-mode: vertical-rl; /* Vertical text from bottom to top */
+  transform: rotate(180deg); /* Rotate text to start from bottom */
+  align-items: center; /* Align text to the bottom of the cell */
+  justify-content: center; /* Center text horizontally */
   }
   .weekly-plan .content {
      grid-column:2;
