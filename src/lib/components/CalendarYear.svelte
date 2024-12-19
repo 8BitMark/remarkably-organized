@@ -55,6 +55,7 @@
 			<a href="#{getMonthLink(month)}" class="month">
 				<h2>{month.nameLong}</h2>
 				<div class="days">
+					<div class="week-label">W</div>
 					{#if startWeekOnSunday}
 						<div class="label">{getDayShortName(0)}</div>
 					{/if}
@@ -68,6 +69,10 @@
 						<div class="label">{getDayShortName(0)}</div>
 					{/if}
 					{#each new Array(month.end.getUTCDate()) as _, day}
+						{#if day % 7 === 0}
+    							<div class="week-number">{Math.floor(day / 7) + 1}</div>
+  						{/if}
+						
 						<div
 							class="day"
 							style:grid-column={day > 0
@@ -120,6 +125,22 @@
 			font-size: 1.1em;
 			font-weight: var(--font-weight-light);
 			line-height: 1.3rem;
+		}
+		.week-number {
+			font-size: 1.1em;
+			font-weight: var(--font-weight-bold);
+			line-height: 1.3rem;
+			color: var(--outline);
+		}
+		.week-label {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 0.65em;
+			font-weight: var(--font-weight-bold);
+			color: var(--text-low);
+			background-color: var(--outline);
+			border: 1px solid white;
 		}
 	}
 </style>
