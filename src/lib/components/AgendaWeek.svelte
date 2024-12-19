@@ -43,7 +43,7 @@
 
       <div class="priorities">
         <h2>Tasks</h2>
-        {#each Array(10) as _, i}
+        {#each Array(8) as _, i}
 	    <div class="icon"></div>
 	    <div class="content"></div>
         {/each}
@@ -102,21 +102,23 @@
   .weekly-plan {
    display: grid;
     grid-template-columns: 25px auto;
+    grid-template-rows: repeat(7, 1fr);
     gap: 0px;
     height: 100%;
-    min-height: 100%;
    }
 
   .weekly-plan h2 {
      grid-column:1 / span 2;
      border-bottom: 1px solid var(--outline);
    }
+
   .weekly-plan .day {
     grid-column:1;
     width: 25px;
     height: auto;
     border-right: 1px solid var(--outline);
     border-bottom: 1px solid var(--outline);
+    background-color: var(--outline);
   }
   .weekly-plan .content {
      grid-column:2;
@@ -132,6 +134,7 @@
     display: grid;
     gap: 2px;
   }
+
   .priorities h2, .notes h2, .schedule h2, .weekly-plan h2 {
     margin-top: 5px;
     font-size: 1.2em;
