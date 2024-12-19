@@ -102,7 +102,7 @@
   .weekly-plan {
    display: grid;
     grid-template-columns: 25px auto;
-    grid-template-rows: repeat(7, 1fr);
+    grid-template-rows: 22px repeat(7, 1fr);
     gap: 0px;
     height: 100%;
    }
@@ -119,11 +119,12 @@
     border-right: 1px solid var(--outline);
     border-bottom: 1px solid var(--outline);
     background-color: var(--outline);
-  writing-mode: vertical-rl; /* Vertical text from bottom to top */
-  transform: rotate(180deg); /* Rotate text to start from bottom */
-  align-items: center; /* Align text to the bottom of the cell */
-  justify-content: center; /* Center text horizontally */
+    writing-mode: vertical-rl; /* Vertical text from bottom to top */
+    transform: rotate(180deg); /* Rotate text to start from bottom */
+    align-items: center; /* Align text to the bottom of the cell */
+    justify-content: center; /* Center text horizontally */
   }
+
   .weekly-plan .content {
      grid-column:2;
      padding: 0px;
