@@ -69,7 +69,7 @@
 						<div class="label">{getDayShortName(0)}</div>
 					{/if}
 					{#each new Array(month.end.getUTCDate()) as _, day}
-						{#if day % 7 === 0}
+						{#if ((month.start.getUTCDay() - (startWeekOnSunday ? 0 : 1) + 7) % 7) === 0}
     							<div class="week-number">x
 							</div>
   						{/if}
