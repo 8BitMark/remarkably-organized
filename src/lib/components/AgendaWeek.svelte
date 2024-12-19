@@ -51,7 +51,7 @@
 
       <div class="notes">
         <h2>Notes</h2>
-        {#each Array(16) as _, i}
+        {#each Array(17) as _, i}
           <div class="lines"></div>
         {/each}
       </div>
@@ -61,7 +61,7 @@
 <style lang="scss">
     .container {
       display: grid;
-      grid-template-columns: 45% 55%;
+      grid-template-columns: 40% 60%;
       grid-template-rows: repeat(17, 1fr);
       gap: 5px;
       height: 98%;
@@ -75,7 +75,7 @@
     
    .priorities {
     display: grid;
-    grid-template-columns: 25px auto;
+    grid-template-columns: 24px auto;
     gap: 0px;
   }
   .priorities h2 {
@@ -101,7 +101,7 @@
 
   .weekly-plan {
    display: grid;
-    grid-template-columns: 25px auto;
+    grid-template-columns: 24px auto;
     grid-template-rows: 22px repeat(7, 1fr);
     gap: 0px;
     height: 100%;
@@ -130,7 +130,7 @@
      padding: 0px;
      border-bottom: 1px solid var(--outline);
      font-size: 0.9em;
-     height: autopx;
+     height: auto;
      width: auto;
   }
 
