@@ -22,13 +22,12 @@
 				{date.toLocaleString('default', { weekday: 'short', timeZone: 'UTC' })} {date.getUTCDate()}
 				<!-- {@html formatToString(date.getUTCDate(), { type: 'ordinal', html: true })} -->
 			</a>
-			<div class="content"></div>
 		{:else}
 			<div class="day">
 				{date.toLocaleString('default', { weekday: 'short', timeZone: 'UTC' })}
 			</div>
-			<div class="content"></div>
 		{/if}
+  <div class="content"></div>
 	    	{/each}
 	</div>
     </div>
@@ -122,7 +121,7 @@
 				border-left: 1px solid var(--outline-high);
     border-bottom: 1px solid var(--outline-high);
     background-color: var(--outline);
-    color: var(--text-high);
+    color: var(--text-low);
     writing-mode: vertical-lr;
     text-orientation: mixed;
 				margin: 0px;
@@ -161,7 +160,7 @@
   }
 
   .weekly-plan h2 {
-		   grid-column:1 / span 2;
+		   /*grid-column:1 / span 2;*/
      border-bottom: 2px solid var(--outline-high);
 					height: 25px;
      margin-top: 5px;
