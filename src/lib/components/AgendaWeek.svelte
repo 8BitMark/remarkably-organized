@@ -16,11 +16,9 @@
 		{#each new Array(7) as _, i (i)}
 		{@const date = new Date(weekStart.getTime() + i * 86400000)}
 		{#if timeframe.weekStart}
-			<a
-				class="day"
+			<a class="day"
 				href="#{date.getUTCFullYear()}-{date.getUTCMonth() + 1}-{date.getUTCDate()}">
 				{date.toLocaleString('default', { weekday: 'short', timeZone: 'UTC' })} {date.getUTCDate()}
-				<!-- {@html formatToString(date.getUTCDate(), { type: 'ordinal', html: true })} -->
 			</a>
 		{:else}
 			<div class="day">
@@ -116,9 +114,8 @@
   .weekly-plan .day {
     grid-column:1;
     width: 25px;
-				height:100%;
+				height: auto;
 				display: flex;
-    border-right: 1px solid var(--outline-high);
 				border-left: 1px solid var(--outline-high);
     border-bottom: 1px solid var(--outline-high);
     background-color: var(--outline);
@@ -138,9 +135,11 @@
      grid-column:2;
      padding: 0px;
 					margin: 0px;
+					border-left: 1px solid var(--outline-high);
      border-bottom: 1px solid var(--outline-high);
      font-size: 0.9em;
      width: auto;
+					height:auto;
   }
 
   .notes, .schedule {
