@@ -118,9 +118,9 @@
     height: auto;
 display: flex;
     border-right: 1px solid var(--outline-high);
-    border-bottom: 1px solid var(--outline-high);
+    border-bottom: 1.5px solid var(--outline-high);
     background-color: var(--outline);
-    color: var(--text-low);
+    color: var(--text-high);
     writing-mode: vertical-lr;
     text-orientation: mixed;
     transform: rotate(180deg); /* Rotate text to start from bottom */
@@ -133,7 +133,7 @@ display: flex;
   .weekly-plan .content {
      grid-column:2;
      padding: 0px;
-     border-bottom: 1px solid var(--outline-high);
+     border-bottom: 1.5px solid var(--outline-high);
      font-size: 0.9em;
      height: auto;
      width: auto;
