@@ -80,7 +80,7 @@
   }
   .priorities h2 {
      grid-column:1 / span 2;
-     border-bottom: 1.5px solid var(--outline-high);
+     border-bottom: 1.5px solid var(--text-high);
    }
   .priorities .icon {
     grid-column:1;
@@ -143,7 +143,7 @@
   .priorities h2, .notes h2, .schedule h2 {
     margin-top: 5px;
     font-size: 1.2em;
-    color: #555;
+    color: var(--text-high);
     padding-top: 5px;
   }
 
@@ -152,7 +152,7 @@
      border-bottom: 1px solid var(--outline-high);
      margin-top: 5px;
       font-size: 1.2em;
-      color: #555;
+      color: var(--text-high);
      padding-top: 5px;
    }
 
