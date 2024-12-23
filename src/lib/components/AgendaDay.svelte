@@ -100,7 +100,7 @@
     }
 
     .lines {
-      border-bottom: 1px solid var(--outline);
+      border-bottom: 1px solid var(--outline-high);
       color: var(---text-low);
       font-size: 0.7em;
       height: 24px;
