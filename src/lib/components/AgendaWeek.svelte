@@ -115,11 +115,16 @@
     grid-column:1;
     width: 25px;
 				height: auto;
-				display: flex;
 				border-left: 1px solid var(--outline-high);
     border-bottom: 1px solid var(--outline-high);
     background-color: var(--outline);
-    color: var(--text-low);
+    
+				padding:0px;
+  }
+
+.weekly-plan .date {
+	display:flex;
+	color: var(--text-low);
     writing-mode: vertical-lr;
     text-orientation: mixed;
 		  margin: 0px;
@@ -128,8 +133,7 @@
     justify-content: center; /* Center text horizontally */
     letter-spacing: 1.5px;
     text-transform: uppercase;
-				padding:0px;
-  }
+	}
 
   .weekly-plan .content {
      grid-column:2;
