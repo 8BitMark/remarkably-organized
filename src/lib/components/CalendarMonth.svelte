@@ -77,7 +77,7 @@
 	</div>
 	{#if showNotes}
 		<div class="notes">
-			{#each Array(6) as _, i (i)}
+			{#each Array(10) as _, i (i)}
 				<div class="lines"></div>
 			{/each}
 		</div>
@@ -100,9 +100,12 @@
 		grid-gap: 0px;
 		padding: 0 1rem 1rem;
 		&.with-notes {
-			height: 65%;
+			height: 70%;
 			padding: 0 1rem 0;
 		}
+		border-top: solid 1px var(--outline);
+		border-right: solid 1px var(--outline);
+		border-left: solid 1px var(--outline);
 		.week {
 			grid-column: 1;
 			writing-mode: vertical-lr;
@@ -170,7 +173,7 @@
 		text-align: center;
 		border-top: solid 1px var(--outline);
 		width: 100%;
-		height: 35%;
+		height: 30%;
 		padding: 0 1rem 1rem;
 		h3 {
 			font-size: 1.8em;
@@ -178,9 +181,9 @@
 			margin: 0.55rem 0 0.55rem;
 		}
 	}
-	.lines{
+  .lines{
       border-top: 1px solid var(--outline);
-      height: 22px;
+      height: 25px;
       padding: 0px;
     }
 </style>
