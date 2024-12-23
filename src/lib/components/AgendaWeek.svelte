@@ -105,7 +105,7 @@
   .weekly-plan {
     display: grid;
     grid-template-columns: 24px auto;
-    grid-template-rows: 25px repeat(7, 1fr);
+    grid-template-rows: 30px repeat(7, 1fr);
     gap: 0px;
     height: 98%;
 				margin: 0px;
@@ -118,6 +118,7 @@
 				border-left: 1px solid var(--outline-high);
     border-bottom: 1px solid var(--outline-high);
     background-color: var(--outline);
+
     padding-top: 3px;
   }
 
