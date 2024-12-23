@@ -80,20 +80,20 @@
   }
   .priorities h2 {
      grid-column:1 / span 2;
-     border-bottom: 1px solid var(--outline);
+     border-bottom: 1.5px solid var(--outline-high);
    }
   .priorities .icon {
     grid-column:1;
     width: 25px;
     height: 24px;
-    border-right: 1px solid var(--outline);
-    border-bottom: 1px solid var(--outline);
+    border-right: 1px solid var(--outline-high);
+    border-bottom: 1px solid var(--outline-high);
   }
 
   .priorities .content {
      grid-column:2;
      padding: 0px;
-     border-bottom: 1px solid var(--outline);
+     border-bottom: 1px solid var(--outline-high);
      font-size: 0.9em;
      height: 24px;
      width: auto;
@@ -107,14 +107,12 @@
     height: 98%;
    }
 
-
-
   .weekly-plan .day {
     grid-column:1;
     width: 25px;
     height: auto;
-    border-right: 1px solid var(--outline);
-    border-bottom: 1px solid var(--outline);
+    border-right: 1px solid var(--outline-high);
+    border-bottom: 1px solid var(--outline-high);
     background-color: var(--outline);
 
     writing-mode: vertical-lr;
@@ -123,6 +121,8 @@
     transform: rotate(180deg); /* Rotate text to start from bottom */
     align-items: center; /* Align text to the bottom of the cell */
     justify-content: center; /* Center text horizontally */
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
   }
 
   .weekly-plan .content {
