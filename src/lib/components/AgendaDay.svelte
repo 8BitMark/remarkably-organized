@@ -92,13 +92,13 @@
 }
   
     .hour, .lines{
-      border-top: 1px solid var(--outline-high);
+      border-bottom: 1px solid var(--outline-high);
       font-size: 0.7em;
       height: 22px;
       padding-top: 3px;
     }
     .half-hour {
       height: 22px;
-      border-top: 1px dashed var(--outline);
+      border-bottom: 1px dashed var(--outline);
     }
 </style>
