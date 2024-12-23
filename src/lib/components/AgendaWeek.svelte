@@ -108,7 +108,7 @@
   .weekly-plan {
     display: grid;
     grid-template-columns: 24px auto;
-    grid-template-rows: repeat(7, 1fr);
+    grid-template-rows: 25px repeat(7, 1fr);
     gap: 0px;
     height: 95%;
 				margin: 0px;
@@ -165,6 +165,7 @@
   .weekly-plan h2 {
 		   grid-column:1 / span 2;
      border-bottom: 2px solid var(--outline-high);
+					height: 25px;
      margin-top: 5px;
      font-size: 1.2em;
      color: var(--text-low);
