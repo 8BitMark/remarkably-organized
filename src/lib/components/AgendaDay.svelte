@@ -17,7 +17,7 @@
     <div class="right-side">
       <div class="schedule">
         <h2>Schedule</h2>
-        {#each Array(16) as _, i (i)}
+        {#each Array(17) as _, i (i)}
         <div class="hour">
           {(i + 6)}
 <!--% 12 === 0 ? 12 : (i + 6) % 12} {i < 6 ? 'AM' : 'PM'}-->
@@ -35,7 +35,7 @@
     .container {
       display: grid;
       grid-template-columns: 55% 45%;
-      grid-template-rows: repeat(16, 1fr);
+      grid-template-rows: repeat(17, 1fr);
       gap: 5px;
       height: 98%;
       widgth: 95%;
