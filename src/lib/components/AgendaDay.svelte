@@ -19,7 +19,8 @@
         <h2>Schedule</h2>
         {#each Array(17) as _, i (i)}
         <div class="hour">
-          {(i + 6) % 12 === 0 ? 12 : (i + 6) % 12} {i < 6 ? 'AM' : 'PM'}
+          {(i + 6) % 12 === 0 ? 12 : (i + 6) % 12} 
+	  <!--{i < 6 ? 'AM' : 'PM'}-->
         </div>
         <div class="half-hour"></div>
         {/each}
@@ -52,19 +53,20 @@
   }
   .priorities h2 {
      grid-column:1 / span 2;
-     border-bottom: 1px solid var(--outline);
+     border-bottom: 1px solid var(--outline-high);
+     text-transform: uppercase;
    }
   .priorities .icon {
     grid-column:1;
     width: 25px;
     height: 24px;
-    border-right: 1px solid var(--outline);
-    border-bottom: 1px solid var(--outline);
+    border-right: 1px solid var(--outline-high);
+    border-bottom: 1px solid var(--outline-high);
   }
   .priorities .content {
      grid-column:2;
      padding: 0px;
-     border-bottom: 1px solid var(--outline);
+     border-bottom: 1px solid var(--outline-high);
      font-size: 0.9em;
      height: 24px;
      width: auto;
@@ -78,8 +80,10 @@
   .priorities h2, .notes h2, .schedule h2 {
     margin-top: 5px;
     font-size: 1.2em;
-    color: #555;
+    color: var(--outline-high);
+    text-transform: uppercase;
     padding-top: 5px;
+    letter-spacing: 1.5px;
   }
 
 .schedule {
@@ -87,7 +91,7 @@
 }
   
     .hour, .lines{
-      border-top: 1px solid var(--outline);
+      border-top: 1px solid var(--outline-high);
       font-size: 0.7em;
       height: 22px;
       padding-top: 3px;
