@@ -92,8 +92,8 @@
 }
   
     .hour {
-      border-bottom: 1px solid var(--outline);
-      color: var(---text-low);
+      border-bottom: 1px dashed var(--outline-high);
+      color: var(---text-high);
       font-size: 0.7em;
       height: 22px;
       padding-top: 3px;
@@ -111,6 +111,7 @@
       font-size: 0.7em;
       height: 22px;
       padding-top: 3px;
-      border-bottom: 1px dashed var(--outline-high);
+      color: var(---text-high);
+      border-bottom: 1px solid var(--outline-high);
     }
 </style>
