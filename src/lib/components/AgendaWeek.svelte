@@ -104,7 +104,7 @@
     grid-template-columns: 24px auto;
     grid-template-rows: 24px repeat(7, 1fr);
     gap: 0px;
-    height: 95%;
+    height: auto;
    }
 
   .weekly-plan .day {
