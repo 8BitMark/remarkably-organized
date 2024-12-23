@@ -114,7 +114,7 @@
     border-right: 1px solid var(--outline-high);
     border-bottom: 1px solid var(--outline-high);
     background-color: var(--outline);
-    color: var(--outline-low);
+    color: var(--text-low);
 
     writing-mode: vertical-lr;
     text-orientation: mixed;
@@ -142,20 +142,24 @@
   }
 
   .priorities h2, .notes h2, .schedule h2 {
-    border-bottom: 1px solid var(--outline-high);
+    border-bottom: 1.5px solid var(--outline-high);
     margin-top: 5px;
     font-size: 1.2em;
     color: var(--text-low);
     padding-top: 5px;
+letter-spacing: 1.5px;
+    text-transform: uppercase;
   }
 
   .weekly-plan h2 {
      grid-column:1 / span 2;
-     border-bottom: 1px solid var(--outline-high);
+     border-bottom: 1.5px solid var(--outline-high);
      margin-top: 5px;
       font-size: 1.2em;
      color: var(--text-low);
      padding-top: 5px;
+letter-spacing: 1.5px;
+    text-transform: uppercase;
    }
 
 .schedule {
