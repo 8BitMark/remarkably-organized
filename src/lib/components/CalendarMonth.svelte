@@ -77,7 +77,7 @@
 	</div>
 	{#if showNotes}
 		<div class="notes">
-			{#each Array(10) as _, i (i)}
+			{#each Array(9) as _, i (i)}
 				<div class="lines"></div>
 			{/each}
 		</div>
@@ -119,6 +119,7 @@
 			margin-bottom: -1px;
 			&.last-week {
 				border-top: none;
+border-bottom: solid 1px var(--outline);
 				margin-bottom: 0px;
 			}
 		}
