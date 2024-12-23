@@ -118,8 +118,7 @@
 				border-left: 1px solid var(--outline-high);
     border-bottom: 1px solid var(--outline-high);
     background-color: var(--outline);
-    
-				padding:0px;
+    padding-top: 3px;
   }
 
 .weekly-plan .date {
