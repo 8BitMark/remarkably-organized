@@ -116,7 +116,6 @@
   .weekly-plan .day {
     grid-column:1;
     width: 25px;
-    display:flex;
     border-right: 1px solid var(--outline-high);
 				border-left: 1px solid var(--outline-high);
     border-bottom: 1px solid var(--outline-high);
@@ -160,7 +159,7 @@
   }
 
   .weekly-plan h2 {
-		   /*grid-column:1 / span 2;*/
+		   grid-column:1 / span 2;
      border-bottom: 2px solid var(--outline-high);
 					height: 25px;
      margin-top: 5px;
