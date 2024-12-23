@@ -107,9 +107,9 @@
   .weekly-plan {
    display: grid;
     grid-template-columns: 24px auto;
-    grid-template-rows: repeat(7, 1fr);
+    grid-template-rows: 25px repeat(7, 1fr);
     gap: 0px;
-    height: auto;
+    height: 95%;
    }
 
   .weekly-plan .day {
@@ -146,6 +146,7 @@
 
   .priorities h2, .notes h2, .schedule h2 {
     border-bottom: 1.5px solid var(--outline-high);
+    height: 25px;
     margin-top: 5px;
     font-size: 1.2em;
     color: var(--text-low);
