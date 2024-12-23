@@ -53,7 +53,7 @@
   }
   .priorities h2 {
      grid-column:1 / span 2;
-     border-bottom: 1px solid var(--outline-high);
+     border-bottom: 1.5px solid var(--outline-high);
      text-transform: uppercase;
    }
   .priorities .icon {
@@ -84,6 +84,7 @@
     text-transform: uppercase;
     padding-top: 5px;
     letter-spacing: 1.5px;
+    border-bottom: 1.5px solid var(--outline-high);
   }
 
 .schedule {
