@@ -110,15 +110,14 @@
     grid-template-columns: 24px auto;
     grid-template-rows: 25px repeat(7, 1fr);
     gap: 0px;
-    height: 95%;
+    height: 98%;
 				margin: 0px;
   }
 
   .weekly-plan .day {
     grid-column:1;
     width: 25px;
-    height: auto;
-    display: flex;
+    display:flex;
     border-right: 1px solid var(--outline-high);
 				border-left: 1px solid var(--outline-high);
     border-bottom: 1px solid var(--outline-high);
@@ -141,7 +140,6 @@
 					margin: 0px;
      border-bottom: 1px solid var(--outline-high);
      font-size: 0.9em;
-     height: auto;
      width: auto;
   }
 
