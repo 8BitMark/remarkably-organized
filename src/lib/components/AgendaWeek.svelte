@@ -168,6 +168,7 @@
      border-bottom: 2px solid var(--outline-high);
 					height: 25px;
      margin-top: 5px;
+					margin-bottom: 5px;
      font-size: 1.2em;
      color: var(--text-low);
      padding-top: 5px;
