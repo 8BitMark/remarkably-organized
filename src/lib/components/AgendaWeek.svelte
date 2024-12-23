@@ -115,12 +115,11 @@
   .weekly-plan .day {
     grid-column:1;
     width: 25px;
-    height: 24px;
+    height: auto;
     border-right: 1px solid var(--outline-high);
     border-bottom: 1px solid var(--outline-high);
     background-color: var(--outline);
     color: var(--text-low);
-    display: flex;
     writing-mode: vertical-lr;
     text-orientation: mixed;
     transform: rotate(180deg); /* Rotate text to start from bottom */
