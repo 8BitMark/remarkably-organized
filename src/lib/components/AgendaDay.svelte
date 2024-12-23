@@ -19,8 +19,8 @@
         <h2>Schedule</h2>
         {#each Array(17) as _, i (i)}
         <div class="hour">
-          {(i + 6) % 12 === 0 ? 12 : (i + 6) % 12} 
-	  <!--{i < 6 ? 'AM' : 'PM'}-->
+          {(i + 6)}
+<!--% 12 === 0 ? 12 : (i + 6) % 12} {i < 6 ? 'AM' : 'PM'}-->
         </div>
         <div class="half-hour"></div>
         {/each}
