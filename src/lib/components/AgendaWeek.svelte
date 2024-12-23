@@ -116,6 +116,8 @@
   .weekly-plan .day {
     grid-column:1;
     width: 25px;
+				height:100%;
+				display: flex;
     border-right: 1px solid var(--outline-high);
 				border-left: 1px solid var(--outline-high);
     border-bottom: 1px solid var(--outline-high);
@@ -123,7 +125,7 @@
     color: var(--text-low);
     writing-mode: vertical-lr;
     text-orientation: mixed;
-				margin: 0px;
+		  margin: 0px;
     transform: rotate(180deg); /* Rotate text to start from bottom */
     align-items: center; /* Align text to the bottom of the cell */
     justify-content: center; /* Center text horizontally */
