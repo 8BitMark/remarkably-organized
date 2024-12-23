@@ -72,7 +72,10 @@
       flex-direction: column;
 	    padding-left: 10px;  
      }
-    
+
+    .right-side {
+	 padding-right: 10px;  
+     }
    .priorities {
     display: grid;
     grid-template-columns: 24px auto;
@@ -147,7 +150,7 @@
     font-size: 1.2em;
     color: var(--text-low);
     padding-top: 5px;
-letter-spacing: 1.5px;
+    letter-spacing: 1.5px;
     text-transform: uppercase;
   }
 
@@ -158,8 +161,8 @@ letter-spacing: 1.5px;
       font-size: 1.2em;
      color: var(--text-low);
      padding-top: 5px;
-letter-spacing: 1.5px;
-    text-transform: uppercase;
+     letter-spacing: 1.5px;
+     text-transform: uppercase;
    }
 
 .schedule {
@@ -167,13 +170,13 @@ letter-spacing: 1.5px;
 }
   
     .hour, .lines{
-      border-top: 1px solid var(--outline-high);
+      border-bottom: 1px solid var(--outline-high);
       font-size: 0.7em;
       height: 22px;
       padding-top: 3px;
     }
     .half-hour {
       height: 22px;
-      border-top: 1px dashed var(--outline);
+      border-bottom: 1px dashed var(--outline);
     }
 </style>
