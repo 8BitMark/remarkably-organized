@@ -102,7 +102,7 @@
   .weekly-plan {
    display: grid;
     grid-template-columns: 24px auto;
-    grid-template-rows: 22px repeat(7, 1fr);
+    grid-template-rows: 24px repeat(7, 1fr);
     gap: 0px;
     height: 98%;
    }
@@ -128,7 +128,7 @@
   .weekly-plan .content {
      grid-column:2;
      padding: 0px;
-     border-bottom: 1px solid var(--outline);
+     border-bottom: 1px solid var(--outline-high);
      font-size: 0.9em;
      height: auto;
      width: auto;
@@ -149,7 +149,7 @@
 
   .weekly-plan h2 {
      grid-column:1 / span 2;
-     border-bottom: 1px solid var(--outline);
+     border-bottom: 1px solid var(--outline-high);
      margin-top: 5px;
       font-size: 1.2em;
       color: #555;
@@ -161,7 +161,7 @@
 }
   
     .hour, .lines{
-      border-top: 1px solid var(--outline);
+      border-top: 1px solid var(--outline-high);
       font-size: 0.7em;
       height: 22px;
       padding-top: 3px;
