@@ -103,9 +103,7 @@
 			height: 70%;
 			padding: 0 1rem 0;
 		}
-		border-top: solid 1px var(--outline);
-		border-right: solid 1px var(--outline);
-		border-left: solid 1px var(--outline);
+	
 		.week {
 			grid-column: 1;
 			writing-mode: vertical-lr;
@@ -117,7 +115,7 @@
 			font-size: 0.8em;
 			color: rgba(0, 0, 0, 0.75);
 			border-top: solid 1px var(--outline);
-			border-left: solid 1px var(--outline-high);
+			border-left: solid 1px var(--outline);
 			margin-bottom: -1px;
 			&.last-week {
 				border-top: none;
@@ -131,6 +129,9 @@
 			font-size: 1.05em;
 			font-weight: var(--font-weight-light);
 			border-left: solid 1px var(--outline);
+	                border-top: solid 1px var(--outline);
+	 	        border-right: solid 1px var(--outline);
+	
 			line-height: 1;
 			&.border-top {
 				border-top: solid 1px var(--outline);
