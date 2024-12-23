@@ -107,7 +107,7 @@
   .weekly-plan {
    display: grid;
     grid-template-columns: 24px auto;
-    grid-template-rows: 60px repeat(7, 1fr);
+    grid-template-rows: repeat(7, 1fr);
     gap: 0px;
     height: auto;
    }
