@@ -107,7 +107,7 @@
   .weekly-plan {
    display: grid;
     grid-template-columns: 24px auto;
-    grid-template-rows: 24px repeat(7, 1fr);
+    grid-template-rows: 60px repeat(7, 1fr);
     gap: 0px;
     height: auto;
    }
@@ -120,10 +120,8 @@
     border-bottom: 1px solid var(--outline-high);
     background-color: var(--outline);
     color: var(--text-low);
-
     writing-mode: vertical-lr;
     text-orientation: mixed;
-    display: flex;
     transform: rotate(180deg); /* Rotate text to start from bottom */
     align-items: center; /* Align text to the bottom of the cell */
     justify-content: center; /* Center text horizontally */
