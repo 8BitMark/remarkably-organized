@@ -80,7 +80,7 @@
   .priorities h2, .notes h2, .schedule h2 {
     margin-top: 5px;
     font-size: 1.2em;
-    color: var(--outline-high);
+    color: var(---text-low);
     text-transform: uppercase;
     padding-top: 5px;
     letter-spacing: 1.5px;
@@ -93,7 +93,7 @@
   
     .hour {
       border-bottom: 1px solid var(--outline);
-      color: var(--outline-high);
+      color: var(---text-low);
       font-size: 0.7em;
       height: 22px;
       padding-top: 3px;
