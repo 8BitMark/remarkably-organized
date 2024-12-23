@@ -110,6 +110,7 @@
     grid-template-rows: repeat(7, 1fr);
     gap: 0px;
     height: 95%;
+				margin: 0px;
    }
 
   .weekly-plan .day {
@@ -125,6 +126,7 @@
     color: var(--text-high);
     writing-mode: vertical-lr;
     text-orientation: mixed;
+				margin: 0px;
     transform: rotate(180deg); /* Rotate text to start from bottom */
     align-items: center; /* Align text to the bottom of the cell */
     justify-content: center; /* Center text horizontally */
@@ -136,6 +138,7 @@
   .weekly-plan .content {
      grid-column:2;
      padding: 0px;
+					margin: 0px;
      border-bottom: 1px solid var(--outline-high);
      font-size: 0.9em;
      height: auto;
@@ -162,7 +165,7 @@
   .left-side h2 {
      border-bottom: 2px solid var(--outline-high);
      margin-top: 5px;
-      font-size: 1.2em;
+     font-size: 1.2em;
      color: var(--text-low);
      padding-top: 5px;
      letter-spacing: 1.5px;
