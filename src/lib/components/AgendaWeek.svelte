@@ -80,7 +80,7 @@
   }
   .priorities h2 {
      grid-column:1 / span 2;
-     border-bottom: 1.5px solid var(--text-high);
+     border-bottom: 1.5px solid var(--outline-high);
    }
   .priorities .icon {
     grid-column:1;
@@ -104,7 +104,7 @@
     grid-template-columns: 24px auto;
     grid-template-rows: 24px repeat(7, 1fr);
     gap: 0px;
-    height: 98%;
+    height: 95%;
    }
 
   .weekly-plan .day {
@@ -114,6 +114,7 @@
     border-right: 1px solid var(--outline-high);
     border-bottom: 1px solid var(--outline-high);
     background-color: var(--outline);
+    color: var(--outline-low);
 
     writing-mode: vertical-lr;
     text-orientation: mixed;
@@ -141,9 +142,10 @@
   }
 
   .priorities h2, .notes h2, .schedule h2 {
+    border-bottom: 1px solid var(--outline-high);
     margin-top: 5px;
     font-size: 1.2em;
-    color: var(--text-high);
+    color: var(--text-low);
     padding-top: 5px;
   }
 
@@ -152,7 +154,7 @@
      border-bottom: 1px solid var(--outline-high);
      margin-top: 5px;
       font-size: 1.2em;
-      color: var(--text-high);
+     color: var(--text-low);
      padding-top: 5px;
    }
 
