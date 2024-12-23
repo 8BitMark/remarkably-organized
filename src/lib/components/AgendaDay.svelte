@@ -95,7 +95,7 @@
       border-bottom: 1px solid var(--outline);
       color: var(---text-low);
       font-size: 0.7em;
-      height: 23px;
+      height: 22px;
       padding-top: 3px;
     }
 
@@ -109,7 +109,7 @@
 
     .half-hour {
       font-size: 0.7em;
-      height: 23px;
+      height: 22px;
       padding-top: 3px;
       border-bottom: 1px dashed var(--outline-high);
     }
