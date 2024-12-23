@@ -118,7 +118,7 @@
     width: 25px;
     height: auto;
     display: flex;
-    border-right: 1px solid var(--outline-high);
+    /*border-right: 1px solid var(--outline-high);*/
 				border-left: 1px solid var(--outline-high);
 				/*border-top: 1px solid var(--outline-high);*/
     border-bottom: 1px solid var(--outline-high);
