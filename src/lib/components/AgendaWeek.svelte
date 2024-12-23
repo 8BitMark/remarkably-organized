@@ -118,7 +118,8 @@
     height: auto;
 display: flex;
     border-right: 1px solid var(--outline-high);
-    border-bottom: 3px solid var(--outline-high);
+				border-top: 1px solid var(--outline-high);
+    border-bottom: 10px solid var(--outline-high);
     background-color: var(--outline);
     color: var(--text-high);
     writing-mode: vertical-lr;
@@ -128,12 +129,13 @@ display: flex;
     justify-content: center; /* Center text horizontally */
     letter-spacing: 1.5px;
     text-transform: uppercase;
+				padding:0px;
   }
 
   .weekly-plan .content {
      grid-column:2;
      padding: 0px;
-     border-bottom: 1.5px solid var(--outline-high);
+     border-bottom: 1px solid var(--outline-high);
      font-size: 0.9em;
      height: auto;
      width: auto;
@@ -146,7 +148,7 @@ display: flex;
   }
 
   .priorities h2, .notes h2, .schedule h2 {
-    border-bottom: 1.5px solid var(--outline-high);
+    border-bottom: 2px solid var(--outline-high);
     height: 25px;
     margin-top: 5px;
     font-size: 1.2em;
@@ -157,7 +159,7 @@ display: flex;
   }
 
   .left-side h2 {
-     border-bottom: 1.5px solid var(--outline-high);
+     border-bottom: 2px solid var(--outline-high);
      margin-top: 5px;
       font-size: 1.2em;
      color: var(--text-low);
