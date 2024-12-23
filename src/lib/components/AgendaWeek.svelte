@@ -51,7 +51,7 @@
 
       <div class="notes">
         <h2>Notes</h2>
-        {#each Array(17) as _, i}
+        {#each Array(16) as _, i}
           <div class="lines"></div>
         {/each}
       </div>
@@ -116,10 +116,11 @@
     grid-column:1;
     width: 25px;
     height: auto;
-display: flex;
+    display: flex;
     border-right: 1px solid var(--outline-high);
-				 border-top: 1px solid var(--outline-high);
-    /*border-bottom: 1px solid var(--outline-high);*/
+				border-left: 1px solid var(--outline-high);
+				/*border-top: 1px solid var(--outline-high);*/
+    border-bottom: 1px solid var(--outline-high);
     background-color: var(--outline);
     color: var(--text-high);
     writing-mode: vertical-lr;
