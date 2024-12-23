@@ -221,9 +221,9 @@ export class PlannerSettings {
 	/** Settings for changing how the daily pages should work */
 	readonly dayPage = new (class DayPageSettings {
 		disable = $state(false);
-		template = $state('notes-day' as PageTemplate);
-		notePagesTemplate = $state('dotted' as PageTemplate);
-		notePagesAmount = $state(0);
+		template = $state('agenda-day' as PageTemplate);
+		notePagesTemplate = $state('lined' as PageTemplate);
+		notePagesAmount = $state(1);
 		sideNavDisplay = $state(
 			'days-this-week' as
 				| 'days-this-week'
