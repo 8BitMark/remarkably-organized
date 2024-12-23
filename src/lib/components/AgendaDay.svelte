@@ -18,13 +18,13 @@
       <div class="schedule">
         <h2>Schedule</h2>
         {#each Array(17) as _, i (i)}
-        <div class="half-hour">
+        <div class="hour">
           {(i + 6)}
 <!--% 12 === 0 ? 12 : (i + 6) % 12} {i < 6 ? 'AM' : 'PM'}-->
         </div>
-        <div class="hour"></div>
+        <div class="half-hour"></div>
         {/each}
-	<div class="half-hour"></div>
+	<div class="hour"></div>
       </div>
     </div>
 </div>
@@ -91,14 +91,18 @@
 	padding-right: 10px;
 }
   
-    .hour, .lines{
-      border-bottom: 1px solid var(--outline-high);
+    .hour {
+      border-bottom: 1px solid var(--outline);
+      color: var(--outline-high);
       font-size: 0.7em;
       height: 22px;
       padding-top: 3px;
     }
-    .half-hour {
+
+    .half-hour, .lines {
+      font-size: 0.7em;
       height: 22px;
-      border-bottom: 1px dashed var(--outline);
+      padding-top: 3px;
+      border-bottom: 1px dashed var(--outline-high);
     }
 </style>
