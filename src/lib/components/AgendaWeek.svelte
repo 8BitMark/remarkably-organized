@@ -104,13 +104,10 @@
     grid-template-columns: 24px auto;
     grid-template-rows: 22px repeat(7, 1fr);
     gap: 0px;
-    height: 100%;
+    height: 98%;
    }
 
-  .weekly-plan h2 {
-     grid-column:1 / span 2;
-     border-bottom: 1px solid var(--outline);
-   }
+
 
   .weekly-plan .day {
     grid-column:1;
