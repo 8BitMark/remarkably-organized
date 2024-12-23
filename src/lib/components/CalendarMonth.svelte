@@ -114,16 +114,12 @@
 			justify-content: center;
 			font-size: 0.8em;
 			color: var(--text-low);
-			border-top: solid 1.5px var(--outline-high);
-			border-left: solid 1.5px var(--outline-high);
-                        border-right: solid 1.5px var(--outline-high);
+			border-top: solid 1px var(--outline-high);
+			border-left: solid 1px var(--outline-high);
+                        border-right: solid 1x var(--outline-high);
 			background-color: var(--outline);
 			margin-bottom: -1px;
-			&.last-week {
-				border-top: none;
-                                border-bottom: solid 1.5px var(--outline-high);
-				margin-bottom: 0px;
-			}
+			border-bottom: solid 1px var(--outline-high);
 		}
 		.day {
 			display: flex;
@@ -131,13 +127,13 @@
 			justify-content: start;
 			font-size: 1.05em;
 			font-weight: var(--font-weight-light);
-			border-left: solid 1.5px var(--outline-high);
-	                border-top: solid 1.5px var(--outline-high);
-	 	        border-right: solid 1.5px var(--outline-high);
+			border-left: solid 1px var(--outline-high);
+	                border-top: solid 1px var(--outline-high);
+	 	        border-right: solid 1px var(--outline-high);
 	
 			line-height: 1;
 			&.border-top {
-				border-top: solid 1.5px var(--outline-high);
+				border-top: solid 1px var(--outline-high);
 			}
 			small {
 				font-size: 0.65em;
