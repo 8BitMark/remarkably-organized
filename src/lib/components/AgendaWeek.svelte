@@ -10,8 +10,8 @@
 
 <div class="container">
     <div class="left-side">
+	<h2>Weekly Plan</h2>
     	<div class="weekly-plan">
-	        <h2>Weekly Plan</h2>
 		{#each new Array(7) as _, i (i)}
 		{@const date = new Date(weekStart.getTime() + i * 86400000)}
 		{#if timeframe.weekStart}
@@ -155,7 +155,7 @@
     text-transform: uppercase;
   }
 
-  .weekly-plan h2 {
+  .left-side h2 {
      grid-column:1 / span 2;
      border-bottom: 1.5px solid var(--outline-high);
      margin-top: 5px;
