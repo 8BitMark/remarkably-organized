@@ -118,7 +118,7 @@
     height: auto;
 display: flex;
     border-right: 1px solid var(--outline-high);
-    border-bottom: 1.5px solid var(--outline-high);
+    border-bottom: 3px solid var(--outline-high);
     background-color: var(--outline);
     color: var(--text-high);
     writing-mode: vertical-lr;
