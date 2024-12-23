@@ -140,12 +140,21 @@
     gap: 2px;
   }
 
-  .priorities h2, .notes h2, .schedule h2, .weekly-plan h2 {
+  .priorities h2, .notes h2, .schedule h2 {
     margin-top: 5px;
     font-size: 1.2em;
     color: #555;
     padding-top: 5px;
   }
+
+  .weekly-plan h2 {
+     grid-column:1 / span 2;
+     border-bottom: 1px solid var(--outline);
+     margin-top: 5px;
+      font-size: 1.2em;
+      color: #555;
+     padding-top: 5px;
+   }
 
 .schedule {
 	padding-right: 10px;
