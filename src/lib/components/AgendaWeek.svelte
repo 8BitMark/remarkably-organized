@@ -18,7 +18,7 @@
 			<a
 				class="day"
 				href="#{date.getUTCFullYear()}-{date.getUTCMonth() + 1}-{date.getUTCDate()}">
-				{date.toLocaleString('default', { weekday: 'short', timeZone: 'UTC' })} &nbsp; {date.getUTCDate()}
+				{date.toLocaleString('default', { weekday: 'short', timeZone: 'UTC' })} {date.getUTCDate()}
 				<!-- {@html formatToString(date.getUTCDate(), { type: 'ordinal', html: true })} -->
 			</a>
 			<div class="content"></div>
@@ -116,6 +116,7 @@
     grid-column:1;
     width: 25px;
     height: auto;
+display: flex;
     border-right: 1px solid var(--outline-high);
     border-bottom: 1px solid var(--outline-high);
     background-color: var(--outline);
