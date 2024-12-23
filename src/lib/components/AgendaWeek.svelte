@@ -10,8 +10,9 @@
 
 <div class="container">
     <div class="left-side">
-	<h2>Weekly Plan</h2>
+
     	<div class="weekly-plan">
+    	<h2>Weekly Plan</h2>
 		{#each new Array(7) as _, i (i)}
 		{@const date = new Date(weekStart.getTime() + i * 86400000)}
 		{#if timeframe.weekStart}
@@ -72,10 +73,10 @@
       display: flex;
       flex-direction: column;
       padding-left: 10px;  
-     }
+    }
 
-    .right-side {
-	 padding-right: 10px;  
+   .right-side {
+	   padding-right: 10px;  
    }
 
    .priorities {
@@ -105,22 +106,21 @@
   }
 
   .weekly-plan {
-   display: grid;
+    display: grid;
     grid-template-columns: 24px auto;
     grid-template-rows: repeat(7, 1fr);
     gap: 0px;
     height: 95%;
 				margin: 0px;
-   }
+  }
 
   .weekly-plan .day {
     grid-column:1;
     width: 25px;
     height: auto;
     display: flex;
-    /*border-right: 1px solid var(--outline-high);*/
+    border-right: 1px solid var(--outline-high);
 				border-left: 1px solid var(--outline-high);
-				/*border-top: 1px solid var(--outline-high);*/
     border-bottom: 1px solid var(--outline-high);
     background-color: var(--outline);
     color: var(--text-high);
@@ -162,7 +162,8 @@
     text-transform: uppercase;
   }
 
-  .left-side h2 {
+  .weekly-plan h2 {
+		   grid-column:1 / span 2;
      border-bottom: 2px solid var(--outline-high);
      margin-top: 5px;
      font-size: 1.2em;
