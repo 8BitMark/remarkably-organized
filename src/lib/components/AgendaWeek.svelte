@@ -64,7 +64,7 @@
       grid-template-columns: 40% 60%;
       grid-template-rows: repeat(17, 1fr);
       gap: 5px;
-      height: 98%;
+      height: 95%;
       widgth: 95%;
     }
     .left-side, .right-side {
