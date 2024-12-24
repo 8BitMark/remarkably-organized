@@ -25,6 +25,7 @@
         <div class="half-hour"></div>
         {/each}
 	<div class="hour"></div>
+        <div class="half-hour"></div>
       </div>
     </div>
 </div>
@@ -80,7 +81,7 @@
   .priorities h2, .notes h2, .schedule h2 {
     margin-top: 5px;
     font-size: 1.2em;
-    color: var(---text-low);
+    color: var(--text-low);
     text-transform: uppercase;
     padding-top: 5px;
     letter-spacing: 1.5px;
@@ -93,7 +94,7 @@
   
     .hour {
       border-bottom: 1px dashed var(--outline-high);
-      color: var(--text-high);
+      color: var(--text-low);
       font-size: 0.7em;
       height: 22px;
       padding-top: 2px;
@@ -111,7 +112,7 @@
       font-size: 0.7em;
       height: 22px;
       padding-top: 2px;
-      color: var(--text-high);
+      color: var(--text-low);
       border-bottom: 1px solid var(--outline-high);
     }
 </style>
