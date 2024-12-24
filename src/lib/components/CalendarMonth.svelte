@@ -120,7 +120,7 @@
 			border-left: solid 1px var(--outline-high);
                         border-right: solid 1px var(--outline-high);
 			background-color: var(--outline);
-			margin-bottom: -1px;
+			margin-bottom: 0px;
 			border-bottom: solid 1px var(--outline-high);
 		}
 		.day {
@@ -129,14 +129,8 @@
 			justify-content: start;
 			font-size: 1.05em;
 			font-weight: var(--font-weight-light);
-			border-left: solid 1px var(--outline-high);
-	                border-top: solid 1px var(--outline-high);
-	 	        border-right: solid 1px var(--outline-high);
-	
+			border: solid 1px var(--outline-high);	
 			line-height: 1;
-			&.border-top {
-				border-top: solid 1px var(--outline-high);
-			}
 			small {
 				font-size: 0.65em;
 				opacity: 1;
