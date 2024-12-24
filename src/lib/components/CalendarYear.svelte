@@ -47,6 +47,15 @@
 		if (day === 'Sun') return 'Su';
 		return day;
 	}
+
+
+	function getWeekNumber(date) {
+   		const targetDate = new Date(date);
+    		const startOfYear = new Date(targetDate.getFullYear(), 0, 1);
+    		const pastDaysOfYear = (targetDate - startOfYear) / 86400000;
+
+    		return Math.ceil((pastDaysOfYear + startOfYear.getDay() + 1) / 7);
+  	}
 </script>
 
 {#if months.length}
@@ -55,7 +64,7 @@
 			<a href="#{getMonthLink(month)}" class="month">
 				<h2>{month.nameLong}</h2>
 				<div class="days">
-					<div class="week-label">W</div>
+					<div class="week-label">Wk</div>
 					{#if startWeekOnSunday}
 						<div class="label">{getDayShortName(0)}</div>
 					{/if}
@@ -69,10 +78,14 @@
 						<div class="label">{getDayShortName(0)}</div>
 					{/if}
 					{#each new Array(month.end.getUTCDate()) as _, day}
+
+						<!-- <a href="#{week.id}" class="week" class:last-week={i === numWeeks - 1}> -->
+						
 						{#if day === 0}
-							<div class="day" style:grid-column=1>X</div>			
+							<div class="day" style:grid-column=1> X 
+							</div>			
 						{:else if startWeekOnSunday ? (month.start.getUTCDay() + day) % 7 === 0 : (month.start.getUTCDay() + day) % 7 === 1}
-							<div class="day" style:grid-column=1>X</div>
+							<div class="day" style:grid-column=1>{getWeekNumber(month.start + 1 + day)}</div>
 						{/if}
 						<a class="day"
 							style:grid-column={day > 0
