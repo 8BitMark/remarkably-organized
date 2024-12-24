@@ -62,7 +62,7 @@
       grid-template-columns: 40% 60%;
       grid-template-rows: repeat(17, 1fr);
       gap: 5px;
-      height: 95%;
+      height: 98%;
       widgth: 95%;
     }
 
@@ -107,7 +107,7 @@
     grid-template-columns: 24px auto;
     grid-template-rows: 30px repeat(7, 1fr);
     gap: 0px;
-    height: 98%;
+    height: 100%;
     margin: 0px;
   }
 
@@ -119,13 +119,13 @@
     border-bottom: 1px solid var(--outline-high);
     background-color: var(--outline);
     font-size: 0.8em;
+    margin: 0px;    
     padding: 0px;
     display:flex;
-	color: var(--text-low);
-    	writing-mode: vertical-lr;
+    color: var(--text-low);
+    writing-mode: vertical-lr;
     	text-orientation: mixed;
-	margin: 0px;
-    	transform: rotate(180deg); /* Rotate text to start from bottom */
+	/* transform: rotate(180deg); /* Rotate text to start from bottom */
     	align-items: center; /* Align text to the bottom of the cell */
     	justify-content: center; /* Center text horizontally */
     	letter-spacing: 1.5px;
@@ -138,7 +138,7 @@
  	margin: 0px;
 	border-left: 1px solid var(--outline-high);
      	border-bottom: 1px solid var(--outline-high);
-     	font-size: 0.9em;
+     	font-size: 0.8em;
      	width: auto;
 	height:auto;
   }
