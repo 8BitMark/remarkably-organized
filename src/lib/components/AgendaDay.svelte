@@ -25,6 +25,7 @@
         <div class="half-hour"></div>
         {/each}
 	<div class="hour"></div>
+	<div class="half-hour"></div>
       </div>
     </div>
 </div>
