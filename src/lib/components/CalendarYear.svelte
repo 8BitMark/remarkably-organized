@@ -69,7 +69,7 @@
 						<div class="label">{getDayShortName(0)}</div>
 					{/if}
 					{#each new Array(month.end.getUTCDate()) as _, day}
-						{#if (new Date(month.start.getFullYear(), month.start.getMonth(), day + 1).getUTCDay() === 1)}
+						{#if (month.start.getUTCDay() === 1)}
  						   <div class="day">X</div>
 						{/if}
 						<div
