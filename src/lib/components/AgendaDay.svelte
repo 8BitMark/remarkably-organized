@@ -96,7 +96,7 @@
       color: var(--text-high);
       font-size: 0.7em;
       height: 22px;
-      padding-top: 3px;
+      padding-top: 2px;
     }
 
     .lines {
@@ -104,13 +104,13 @@
       color: var(--text-low);
       font-size: 0.7em;
       height: 24px;
-      padding-top: 3px;
+      padding-top: 2px;
     }
 
     .half-hour {
       font-size: 0.7em;
       height: 22px;
-      padding-top: 3px;
+      padding-top: 2px;
       color: var(--text-high);
       border-bottom: 1px solid var(--outline-high);
     }
