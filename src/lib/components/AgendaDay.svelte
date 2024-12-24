@@ -93,7 +93,7 @@
   
     .hour {
       border-bottom: 1px dashed var(--outline-high);
-      color: var(---text-high);
+      color: var(--text-high);
       font-size: 0.7em;
       height: 22px;
       padding-top: 3px;
@@ -101,7 +101,7 @@
 
     .lines {
       border-bottom: 1px solid var(--outline-high);
-      color: var(---text-low);
+      color: var(--text-low);
       font-size: 0.7em;
       height: 24px;
       padding-top: 3px;
@@ -111,7 +111,7 @@
       font-size: 0.7em;
       height: 22px;
       padding-top: 3px;
-      color: var(---text-high);
+      color: var(--text-high);
       border-bottom: 1px solid var(--outline-high);
     }
 </style>
