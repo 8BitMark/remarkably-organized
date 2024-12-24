@@ -129,7 +129,9 @@
 			justify-content: start;
 			font-size: 1.05em;
 			font-weight: var(--font-weight-light);
-			border: solid 1px var(--outline-high);	
+			border-top: solid 1px var(--outline-high);
+			border-right: solid 1px var(--outline-high);
+			border-bottom: solid 1px var(--outline-high);
 			line-height: 1;
 			small {
 				font-size: 0.65em;
