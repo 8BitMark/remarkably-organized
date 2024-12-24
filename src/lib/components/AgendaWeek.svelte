@@ -118,7 +118,7 @@
 	border-left: 1px solid var(--outline-high);
     border-bottom: 1px solid var(--outline-high);
     background-color: var(--outline);
-
+font-size: 0.8em;
     padding-top: 3px;
    display:flex;
 	color: var(--text-low);
