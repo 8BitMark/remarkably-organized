@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { Month, PlannerSettings } from '$lib';
+	import type { Month, PlannerSettings, getWeek} from '$lib';
 	import { formatToString } from '$lib';
 
 	let {
