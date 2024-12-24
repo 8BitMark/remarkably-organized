@@ -85,7 +85,7 @@
 							<div class="day" style:grid-column=1> X 
 							</div>			
 						{:else if startWeekOnSunday ? (month.start.getUTCDay() + day) % 7 === 0 : (month.start.getUTCDay() + day) % 7 === 1}
-							<div class="day" style:grid-column=1>{getWeekNumber(month.start + 1 + day)}</div>
+							<div class="day" style:grid-column=1>{getWeek(month.start + 1 + day, startWeekOnSunday)}</div>
 						{/if}
 						<a class="day"
 							style:grid-column={day > 0
