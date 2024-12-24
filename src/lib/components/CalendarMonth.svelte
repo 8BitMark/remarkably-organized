@@ -113,6 +113,8 @@
 			align-items: center;
 			justify-content: center;
 			font-size: 0.8em;
+    			letter-spacing: 1.5px;
+    			text-transform: uppercase;
 			color: var(--text-low);
 			border-top: solid 1px var(--outline-high);
 			border-left: solid 1px var(--outline-high);
