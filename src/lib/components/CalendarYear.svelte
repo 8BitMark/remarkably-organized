@@ -69,9 +69,8 @@
 						<div class="label">{getDayShortName(0)}</div>
 					{/if}
 					{#each new Array(month.end.getUTCDate()) as _, day}
-						{#if ((month.start.getUTCDay()+day) %7 === 1)}
- 						   <div class="day">X</div>
-						{/if}
+					
+ 						<div class="day">{(month.start.getUTCDay()+day) %7}</div>
 						<div
 							class="day"
 							style:grid-column={day > 0
