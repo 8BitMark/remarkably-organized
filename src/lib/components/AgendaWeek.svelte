@@ -108,22 +108,19 @@
     grid-template-rows: 30px repeat(7, 1fr);
     gap: 0px;
     height: 98%;
-				margin: 0px;
+    margin: 0px;
   }
 
   .weekly-plan .day {
     grid-column:1;
     width: 25px;
-				height: auto;
-				border-left: 1px solid var(--outline-high);
+	height: auto;
+	border-left: 1px solid var(--outline-high);
     border-bottom: 1px solid var(--outline-high);
     background-color: var(--outline);
 
     padding-top: 3px;
-  }
-
-.weekly-plan .date {
-	display:flex;
+   display:flex;
 	color: var(--text-low);
     	writing-mode: vertical-lr;
     	text-orientation: mixed;
@@ -133,7 +130,7 @@
     	justify-content: center; /* Center text horizontally */
     	letter-spacing: 1.5px;
     	text-transform: uppercase;
-	}
+}
 
   .weekly-plan .content {
      	grid-column:2;
