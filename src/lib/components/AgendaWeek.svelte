@@ -119,7 +119,7 @@
     border-bottom: 1px solid var(--outline-high);
     background-color: var(--outline);
     font-size: 0.8em;
-    padding 0px;
+    padding: 0px;
     display:flex;
 	color: var(--text-low);
     	writing-mode: vertical-lr;
