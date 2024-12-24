@@ -125,25 +125,25 @@
 .weekly-plan .date {
 	display:flex;
 	color: var(--text-low);
-    writing-mode: vertical-lr;
-    text-orientation: mixed;
-		  margin: 0px;
-    /* transform: rotate(180deg); /* Rotate text to start from bottom */
-    align-items: center; /* Align text to the bottom of the cell */
-    justify-content: center; /* Center text horizontally */
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
+    	writing-mode: vertical-lr;
+    	text-orientation: mixed;
+	margin: 0px;
+    	transform: rotate(180deg); /* Rotate text to start from bottom */
+    	align-items: center; /* Align text to the bottom of the cell */
+    	justify-content: center; /* Center text horizontally */
+    	letter-spacing: 1.5px;
+    	text-transform: uppercase;
 	}
 
   .weekly-plan .content {
-     grid-column:2;
-     padding: 0px;
-					margin: 0px;
-					border-left: 1px solid var(--outline-high);
-     border-bottom: 1px solid var(--outline-high);
-     font-size: 0.9em;
-     width: auto;
-					height:auto;
+     	grid-column:2;
+     	padding: 0px;
+ 	margin: 0px;
+	border-left: 1px solid var(--outline-high);
+     	border-bottom: 1px solid var(--outline-high);
+     	font-size: 0.9em;
+     	width: auto;
+	height:auto;
   }
 
   .notes, .schedule {
