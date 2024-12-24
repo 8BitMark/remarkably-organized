@@ -108,7 +108,7 @@
 							</div>			
 						{:else if startWeekOnSunday ? (month.start.getUTCDay() + day) % 7 === 0 : (month.start.getUTCDay() + day) % 7 === 1}
 
-							<div class="day" style:grid-column=1>{month.start.getUTCFullYear()}-{month.start.getUTCMonth()+1}-{day+1)}:{getISOWeekNumber(Date(month.start.getUTCFullYear(),month.start.getUTCMonth()+1,day+1), startWeekOnSunday)}</div>
+							<div class="day" style:grid-column=1>{month.start.getUTCFullYear()}-{month.start.getUTCMonth()+1}-{day+1}:{getISOWeekNumber(Date(month.start.getUTCFullYear(),month.start.getUTCMonth()+1,day+1), startWeekOnSunday)}</div>
 						
 						{/if}
 						<a class="day"
