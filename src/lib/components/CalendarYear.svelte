@@ -70,7 +70,7 @@
 					{/if}
 					{#each new Array(month.end.getUTCDate()) as _, day}
 					
- 						<div class="day">{(month.start.getUTCDay()+day) %7}</div>
+ 						<div class="day">{(month.start.getUTCDay()+day)}</div>
 						<div
 							class="day"
 							style:grid-column={day > 0
