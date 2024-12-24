@@ -99,7 +99,7 @@
 					{#if !startWeekOnSunday}
 						<div class="label">{getDayShortName(0)}</div>
 					{/if}
-					{#each new Array(month.end.getUTCDate()) as _, day}
+					{#each new Array(month.end.getUTCDate()) as caldate, day}
 
 						<!-- <a href="#{week.id}" class="week" class:last-week={i === numWeeks - 1}> -->
 						
@@ -107,7 +107,8 @@
 							<div class="day" style:grid-column=1> X 
 							</div>			
 						{:else if startWeekOnSunday ? (month.start.getUTCDay() + day) % 7 === 0 : (month.start.getUTCDay() + day) % 7 === 1}
-							<div class="day" style:grid-column=1>{day+1}:{getISOWeekNumber(Date(month.start.getUTCFullYear(),month.start.getUTCMonth()+1,day+1), startWeekOnSunday)}</div>
+							<!-- currentDate = Date(month.start.getUTCFullYear(),month.date) -->
+							<div class="day" style:grid-column=1>{caldate}:{getISOWeekNumber(Date(month.start.getUTCFullYear(),month.start.getUTCMonth()+1,day+1), startWeekOnSunday)}</div>
 						{/if}
 						<a class="day"
 							style:grid-column={day > 0
