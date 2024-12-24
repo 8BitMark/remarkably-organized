@@ -125,7 +125,7 @@
     color: var(--text-low);
     writing-mode: vertical-lr;
     	text-orientation: mixed;
-	/* transform: rotate(180deg); /* Rotate text to start from bottom */
+        transform: rotate(180deg); /* Rotate text to start from bottom */
     	align-items: center; /* Align text to the bottom of the cell */
     	justify-content: center; /* Center text horizontally */
     	letter-spacing: 1.5px;
