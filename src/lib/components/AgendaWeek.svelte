@@ -115,8 +115,8 @@
     grid-column:1;
     width: 25px;
     height: auto;
-    border-left: 1px solid var(--outline-high);
-    border-bottom: 1px solid var(--outline-high);
+    border-right: 1px solid var(--outline-high);
+    border-top: 1px solid var(--outline-high);
     background-color: var(--outline);
     font-size: 0.8em;
     margin: 0px;    
