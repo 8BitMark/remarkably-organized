@@ -114,13 +114,13 @@
   .weekly-plan .day {
     grid-column:1;
     width: 25px;
-	height: auto;
-	border-left: 1px solid var(--outline-high);
+    height: auto;
+    border-left: 1px solid var(--outline-high);
     border-bottom: 1px solid var(--outline-high);
     background-color: var(--outline);
-font-size: 0.8em;
-    padding-top: 3px;
-   display:flex;
+    font-size: 0.8em;
+    padding 0px;
+    display:flex;
 	color: var(--text-low);
     	writing-mode: vertical-lr;
     	text-orientation: mixed;
@@ -161,11 +161,11 @@ font-size: 0.8em;
   }
 
   .weekly-plan h2 {
-		   grid-column:1 / span 2;
+     grid-column:1 / span 2;
      border-bottom: 2px solid var(--outline-high);
-					height: 25px;
+     height: 25px;
      margin-top: 5px;
-					padding-bottom: 5px;
+     padding-bottom: 5px;
      font-size: 1.2em;
      color: var(--text-low);
      padding-top: 5px;
