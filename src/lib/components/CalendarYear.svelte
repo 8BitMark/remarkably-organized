@@ -71,7 +71,7 @@
 					{/if}
 					{#each new Array(month.end.getUTCDate()) as _, day}
         {@const weekDate = new Date(month.start.getUTCFullYear(), month.start.getUTCMonth(), day+1)}
-					   {#let dayNumber =
+					   {@const dayNumber =
 								    (weekDate.getUTCDay() === 0 && !startWeekOnSunday) ? weekDate.getUTCDay() + 8 : 
 												startWeekOnSunday ? weekDate.getUTCDay() + 2 : 
 												weekDate.getUTCDay()+1}
