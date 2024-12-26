@@ -76,12 +76,12 @@
            {@const weekNum = getWeek(weekDate, startWeekOnSunday).weekSinceYear}
 						     	<a class="day" style:grid-column=1 href="#{month.start.getUTCFullYear()}-wk{weekNum}">{weekDate.getDate()}:{weekNum}</a>
 						   {/if}
-<!--
+
 						<a class="day"
 							style:grid-column={day>0 ? null : ((month.start.getUTCDay() - (startWeekOnSunday ? 0 : 1) + 7) % 7) + 2}
 							href="#{month.start.getUTCFullYear()}-{month.start.getUTCMonth() + 1}-{day+1}">
-							{day+1} 
-						</a> -->
+							{caldate.getDate()+1} 
+						</a> 
 					{/each}
 				</div>
 			</a>
