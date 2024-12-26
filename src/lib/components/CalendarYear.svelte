@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { Month, PlannerSettings} from '$lib';
+ import {getWeek} from '$lib';
 	import { formatToString } from '$lib';
 
 	let {
@@ -95,7 +96,7 @@
 						
 						{#if day === 0 || (startWeekOnSunday ? (month.start.getUTCDay() + day) % 7 === 0 : (month.start.getUTCDay() + day) % 7 === 1)}
        {@const weekDate = new Date(month.start.getUTCFullYear(), month.start.getUTCMonth(), day+1)}
-							<a class="day" style:grid-column=1 href="#{month.start.getUTCFullYear()}wk-{getISOWeekNumber(weekDate, startWeekOnSunday)}">{getISOWeekNumber(weekDate, startWeekOnSunday)}</a>
+							<a class="day" style:grid-column=1 href="#{month.start.getUTCFullYear()}-wk{getWeek(weekDate, startWeekOnSunday)}">{getWeek(weekDate, startWeekOnSunday)}</a>
 			
 						{/if}
 						<a class="day"
