@@ -106,7 +106,7 @@
 						{#if day === 0 : startWeekOnSunday ? (month.start.getUTCDay() + day) % 7 === 0 : (month.start.getUTCDay() + day) % 7 === 1}
        {@const weekDate = new Date(month.start.getUTCFullYear(), month.start.getUTCMonth(), day+1)}
 							<a class="day" style:grid-column=1 href="5">{getISOWeekNumber(weekDate, startWeekOnSunday)}</a>
-						
+			
 						{/if}
 						<a class="day"
 							style:grid-column={day > 0
@@ -165,7 +165,8 @@
 			font-size: 1.1em;
 			font-weight: var(--font-weight-bold);
 			line-height: 1.3rem;
-			color: var(--outline);
+			color: var(--text-high);
+			background-color: var(--outline-low);
 		}
 		.week-label {
 			display: flex;
