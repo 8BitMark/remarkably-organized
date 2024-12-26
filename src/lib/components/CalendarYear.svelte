@@ -93,9 +93,9 @@
 
 						<!-- <a href="#{week.id}" class="week" class:last-week={i === numWeeks - 1}> -->
 						
-						{#if day === 0 : startWeekOnSunday ? (month.start.getUTCDay() + day) % 7 === 0 : (month.start.getUTCDay() + day) % 7 === 1}
+						{#if day === 0 || startWeekOnSunday ? (month.start.getUTCDay() + day) % 7 === 0 : (month.start.getUTCDay() + day) % 7 === 1}
        {@const weekDate = new Date(month.start.getUTCFullYear(), month.start.getUTCMonth(), day+1)}
-							<a class="day" style:grid-column=1 href="#5">{getISOWeekNumber(weekDate, startWeekOnSunday)}</a>
+							<a class="day" style:grid-column=1 href="#{month.start.getUTCFullYear()}-{month.start.getUTCMonth()+1}-{getISOWeekNumber(weekDate, startWeekOnSunday)}">{getISOWeekNumber(weekDate, startWeekOnSunday)}</a>
 			
 						{/if}
 						<a class="day"
