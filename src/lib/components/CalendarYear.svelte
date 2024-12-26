@@ -78,7 +78,7 @@
 						   {/if}
 
 						<a class="day"
-							style:grid-column={startWeekOnSunday ? weekDate.getUTCDate() + 2 : (weekDate.getUTCDate() === 0 && !startWeekOnSunday) ? weekDate.getUTCDate() + 7 : weekDate.getUTCDate()}
+							style:grid-column={startWeekOnSunday ? weekDate.getUTCDay() + 2 : (weekDate.getUTCDay() === 0 && !startWeekOnSunday) ? weekDate.getUTCDay() + 7 : weekDate.getUTCDay()}
 							href="#{month.start.getUTCFullYear()}-{month.start.getUTCMonth() + 1}-{day+1}">
 							{weekDate.getDate()}
 						</a> 
