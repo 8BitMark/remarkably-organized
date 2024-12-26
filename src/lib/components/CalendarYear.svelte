@@ -48,27 +48,6 @@
 		if (day === 'Sun') return 'Su';
 		return day;
 	}
-
-
-	function getISOWeekNumber(date, startOnSunday = false) {
-		const targetDate = new Date(date);
-		const dayOfWeek = targetDate.getUTCDay();
-		const dayOfYear = Math.floor((targetDate - new Date(targetDate.getUTCFullYear(), 0, 1)) / 86400000) + 1;
-
-		// Adjust dayOfWeek for ISO week (Sunday = 0, Monday = 1)
-		const adjustedDayOfWeek = startOnSunday ? dayOfWeek : (dayOfWeek === 0 ? 7 : dayOfWeek);
-
-		// Calculate the week number
-		const weekNumber = Math.ceil((dayOfYear + 6 - adjustedDayOfWeek) / 7);
-
-		// Handle the case where the week number is 0 (belongs to the last week of the previous year)
-		if (weekNumber === 0) {
-			const lastDayOfLastYear = new Date(targetDate.getUTCFullYear() - 1, 11, 31);
-			return getISOWeekNumber(lastDayOfLastYear, startOnSunday);
-		}
-
-		return weekNumber;
-	}
 </script>
 
 {#if months.length}
@@ -95,7 +74,7 @@
 					
 					   	{#if day === 0 || (startWeekOnSunday ? weekDate.getUTCDay() === 0 : weekDate.getUTCDay() === 1)}
            {@const weekNum = getWeek(weekDate, startWeekOnSunday).weekSinceYear}
-						     	<a class="day" style:grid-column=1 href="#{month.start.getUTCFullYear()}-wk{weekNum}">{weekNum}</a>
+						     	<a class="day" style:grid-column=1 href="#{month.start.getUTCFullYear()}-wk{weekNum}">{weekDate.getUTCDay()}:{weekNum}</a>
 						   {/if}
 						<a class="day"
 							style:grid-column={day > 0
