@@ -1,6 +1,5 @@
 <script lang="ts">
 	import type { Month, PlannerSettings} from '$lib';
-	import { getWeek } from '$lib';
 	import { formatToString } from '$lib';
 
 	let {
@@ -50,15 +49,6 @@
 	}
 
 
-	function getWeekNumber(date) {
-   		const targetDate = new Date(date);
-    		const startOfYear = new Date(targetDate.getFullYear(), 0, 1);
-    		const pastDaysOfYear = (targetDate - startOfYear) / 86400000;
-
-    		return Math.ceil((pastDaysOfYear + startOfYear.getDay() + 1) / 7);
-  	}
-
-
 	function getISOWeekNumber(date, startOnSunday = false) {
 		const targetDate = new Date(date);
 		const dayOfWeek = targetDate.getUTCDay();
@@ -105,7 +95,7 @@
 						
 						{#if day === 0 : startWeekOnSunday ? (month.start.getUTCDay() + day) % 7 === 0 : (month.start.getUTCDay() + day) % 7 === 1}
        {@const weekDate = new Date(month.start.getUTCFullYear(), month.start.getUTCMonth(), day+1)}
-							<a class="day" style:grid-column=1 href="5">{getISOWeekNumber(weekDate, startWeekOnSunday)}</a>
+							<a class="day" style:grid-column=1 href="#5">{getISOWeekNumber(weekDate, startWeekOnSunday)}</a>
 			
 						{/if}
 						<a class="day"
