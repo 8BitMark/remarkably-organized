@@ -74,7 +74,7 @@
 					   {@const dayNumber =
 								    (weekDate.getUTCDay() === 0 && !startWeekOnSunday) ? weekDate.getUTCDay() + 8 : 
 												startWeekOnSunday ? weekDate.getUTCDay() + 2 : 
-												weekDate.getUTCDay()+1}
+												weekDate.getUTCDay()+2}
 
 					   	{#if day === 0 || (startWeekOnSunday && dayNumber === 2) || (!startWeekOnSunday &&  === 1)}
            {@const weekNum = getWeek(weekDate, startWeekOnSunday).weekSinceYear}
