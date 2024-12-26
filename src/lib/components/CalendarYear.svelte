@@ -96,7 +96,8 @@
 						
 						{#if day === 0 || (startWeekOnSunday ? (month.start.getUTCDay() + day) % 7 === 0 : (month.start.getUTCDay() + day) % 7 === 1)}
        {@const weekDate = new Date(month.start.getUTCFullYear(), month.start.getUTCMonth(), day+1)}
-							<a class="day" style:grid-column=1 href="#{month.start.getUTCFullYear()}-wk{getWeek(weekDate, startWeekOnSunday)}">{getWeek(weekDate, startWeekOnSunday)}</a>
+       {@const weekNum = getWeek(weekDate, startWeekOnSunday).weekSinceYear}
+							<a class="day" style:grid-column=1 href="#{month.start.getUTCFullYear()}-wk{weekNum}">{weekNum}</a>
 			
 						{/if}
 						<a class="day"
