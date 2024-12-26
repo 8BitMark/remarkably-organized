@@ -72,17 +72,17 @@
 					{#each new Array(month.end.getUTCDate()) as _, day}
 	       {@const weekDate = new Date(month.start.getUTCFullYear(), month.start.getUTCMonth(), day+1)}
 						  {@const dayNumber =
-								    (weekDate.getUTCDay() === 0 && !startWeekOnSunday) ? weekDate.getUTCDay() + 8 : 
-												startWeekOnSunday ? weekDate.getUTCDay() + 2 : 
-												weekDate.getUTCDay()+2}
+								    (weekDate.getUTCDay() === 0 && !startWeekOnSunday) ? weekDate.getUTCDay() + 7 : 
+												startWeekOnSunday ? weekDate.getUTCDay() + 1 : 
+												weekDate.getUTCDay()+1}
 
-					   	{#if day === 0 || (startWeekOnSunday && dayNumber === 2) || (!startWeekOnSunday && dayNumber === 2)}
+					   	{#if day === 0 || (startWeekOnSunday && dayNumber === 1) || (!startWeekOnSunday && dayNumber === 1)}
            {@const weekNum = getWeek(weekDate, startWeekOnSunday).weekSinceYear}
 						     	<a class="day" style:grid-column=1 href="#{month.start.getUTCFullYear()}-wk{weekNum}">{weekDate.getDate()}:{weekNum}</a>
 						   {/if}
 
 						<a class="day"
-							style:grid-column={dayNumber}
+							style:grid-column={dayNumber+1}
 							href="#{month.start.getUTCFullYear()}-{month.start.getUTCMonth() + 1}-{day+1}">
 							{weekDate.getDate()}
 						</a> 
