@@ -91,7 +91,7 @@
 						<div class="label">{getDayShortName(0)}</div>
 					{/if}
 					{#each new Array(month.end.getUTCDate()) as caldate, day}
-        {@const weekDate = new Date(month.start.getUTCFullYear(), month.start.getUTCMonth(), day)}
+        {@const weekDate = new Date(month.start.getUTCFullYear(), month.start.getUTCMonth(), day+1)}
 					
 					   	{#if day === 0 || (startWeekOnSunday ? weekDate.getUTCDay() === 0 : weekDate.getUTCDay() === 1)}
            {@const weekNum = getWeek(weekDate, startWeekOnSunday).weekSinceYear}
@@ -100,7 +100,7 @@
 						<a class="day"
 							style:grid-column={day > 0
 								? null
-								: ((month.start.getUTCDay() - (startWeekOnSunday ? 0 : 1) + 7) % 7) + 2}
+								: ((month.start.getUTCDay() - (startWeekOnSunday ? 0 : 1) + 7) % 7) + 1}
 							href="#{month.start.getUTCFullYear()}-{month.start.getUTCMonth() + 1}-{day+1}">
 							{day+1}
 						</a>
