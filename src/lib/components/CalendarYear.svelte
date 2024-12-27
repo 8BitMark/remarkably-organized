@@ -127,6 +127,8 @@
 			font-weight: var(--font-weight-bold);
 			color: var(--text-low);
 		}
+		
+		
 		.day {
 			font-size: 1.1em;
 			font-weight: var(--font-weight-light);
@@ -136,8 +138,9 @@
 			font-size: 1.1em;
 			font-weight: var(--font-weight-bold);
 			line-height: 1.3rem;
-			color: var(--text-high);
+			color: var(--text-low);
 			background-color: var(--outline);
+			margin:4px;
 		}
 		.week-label {
 			display: flex;
@@ -147,6 +150,7 @@
 			font-weight: var(--font-weight-bold);
 			color: var(--text-low);
 			background-color: var(--outline);
+			margin:4px;
 			border: 1px solid white;
 		}
 	}
