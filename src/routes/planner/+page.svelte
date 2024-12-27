@@ -10,6 +10,7 @@
 	import YearPage from './YearPage.svelte';
 	import QuarterPage from './QuarterPage.svelte';
 	import WeekPage from './WeekPage.svelte';
+ import WeekNotes from './WeekNotes.svelte';
 	import DayPage from './DayPage.svelte';
  import DayNotes from './DayNotes.svelte';
 	import CollectionPages from './CollectionPages.svelte';
@@ -857,6 +858,12 @@
 		{/each}
 	{/if}
 
+
+	{#if !settings.weekPage.disable && loadPages}
+		{#each settings.weeks as week, i (i)}
+			<WeekNotes {settings} {week} />
+		{/each}
+	{/if}
 	{#if !settings.dayPage.disable && loadPages}
 		{#each settings.days as day, i (i)}
 			<DayNotes {settings} {day} />
