@@ -11,6 +11,7 @@
 	import QuarterPage from './QuarterPage.svelte';
 	import WeekPage from './WeekPage.svelte';
 	import DayPage from './DayPage.svelte';
+ import DayNotes from './DayNotes.svelte';
 	import CollectionPages from './CollectionPages.svelte';
 	import HelpModal from './HelpModal.svelte';
 	import { browser } from '$app/environment';
@@ -855,6 +856,13 @@
 			<DayPage {settings} {day} />
 		{/each}
 	{/if}
+
+	{#if !settings.dayPage.disable && loadPages}
+		{#each settings.days as day, i (i)}
+			<DayNotes {settings} {day} />
+		{/each}
+	{/if}
+
 	{#if loadPages}
 		{#each settings.collections as collection (collection.id)}
 			<CollectionPages {settings} {collection} />
