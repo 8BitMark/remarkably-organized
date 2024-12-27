@@ -184,7 +184,7 @@
      <li><a href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}-pg2">DayNotes</a></li>
     {/if}
     {#if showWeekBreadcrumb}
-     <li><a href="#{timeframe.weekYear}-{timeframe.weekSinceYear}-pg2">WeekNotes</a></li>
+     <li><a href="#{timeframe.weekYear}-wk{timeframe.weekSinceYear}-pg2">WeekNotes</a></li>
     {/if}
 			</ol>
 		{/if}
