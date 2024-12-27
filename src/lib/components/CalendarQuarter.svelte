@@ -87,7 +87,7 @@
 		flex: 1;
 		align-items: start;
 		width: 100%;
-		border-bottom: solid 1px var(--outline);
+		border-bottom: solid 2px var(--outline-high);
 		padding: 1rem 0 0;
 		&:last-child {
 			border-bottom: none;
@@ -96,7 +96,7 @@
 	.notes {
 		flex: 1;
 		text-align: right;
-		padding-left:10px;
+		padding-left:15px;
 		/* border-top: solid 1px var(--outline);
 	width: 100%;
 		height: 35%;
