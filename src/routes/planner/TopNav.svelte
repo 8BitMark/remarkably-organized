@@ -180,6 +180,9 @@
 				{#each settings.collections as collection, i (collection.id)}
 					<li><a href="#{collection.id}">{collection.name}</a></li>
 				{/each}
+    {#if showDayBreadcrumb}
+     <li><a href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}-pg2">DayNotes</a></li>
+    {/if}
 			</ol>
 		{/if}
 	</nav>
