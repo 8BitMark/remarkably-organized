@@ -78,7 +78,7 @@
 
 					   	{#if day === 0 || dayNumber === 1}
            {@const weekNum = getWeek(weekDate, startWeekOnSunday).weekSinceYear}
-						     	<a class="day" style:grid-column=1 href="#{month.start.getUTCFullYear()}-wk{weekNum}">{weekDate.getDate()}:{weekNum}</a>
+						     	<a class="week-number" style:grid-column=1 href="#{month.start.getUTCFullYear()}-wk{weekNum}">{weekNum}</a>
 						   {/if}
 
 						<a class="day"
