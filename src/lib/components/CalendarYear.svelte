@@ -70,7 +70,7 @@
 						<div class="label">{getDayShortName(0)}</div>
 					{/if}
 					{#each new Array(month.end.getUTCDate()) as _, day}
-	       {@const weekDate = new Date(month.start.getUTCFullYear(),month.start.getUTCMonth()-1,day+1)}
+	       {@const weekDate = new Date(`${month.start.getUTCFullYear()}-${String(month.start.getUTCMonth() + 1).padStart(2, '0')}-${String(day + 1).padStart(2, '0')}`)}
 						  {@const dayNumber =
 								    (weekDate.getUTCDay() === 0 && !startWeekOnSunday) ? weekDate.getUTCDay() + 7 : 
 												startWeekOnSunday ? weekDate.getUTCDay() + 1 : 
