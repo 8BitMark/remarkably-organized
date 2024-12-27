@@ -13,20 +13,7 @@
 	<Page {settings} display={settings.dayPage.template} timeframe={day} />
 </article>
 
-{#if settings.dayPage.notePagesAmount > 0}
-	{#each new Array(settings.dayPage.notePagesAmount) as _, i}
-		<article
-			id="{day.id}-pg{i + 2}"
-			use:intersect={{ rootMargin: '1000px 0px 1000px 0px' }}>
-			<SideNav {settings} tabs={settings.dayPage.sideNavDisplay} timeframe={day} />
-			<TopNav
-				{settings}
-				timeframe={day}
-				breadcrumbs={[{ href: `#${day.id}-pg${i + 2}`, name: `Page ${i + 2}` }]} />
-			<Page display={settings.dayPage.notePagesTemplate} {settings} timeframe={day} />
-		</article>
-	{/each}
-{/if}
+
 
 <style lang="scss">
 	article {
