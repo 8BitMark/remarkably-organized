@@ -58,7 +58,7 @@
 					</div>
 				</a>
 				<div class="notes">
-					{#each Array(6) as _, i (i)}
+					{#each Array(10) as _, i (i)}
 						<div class="lines"></div>
 					{/each}
 				</div>
@@ -96,14 +96,15 @@
 	.notes {
 		flex: 1;
 		text-align: right;
-		border-top: solid 1px var(--outline);
-	/*	width: 100%;
+		padding-left:10px;
+		/* border-top: solid 1px var(--outline);
+	width: 100%;
 		height: 35%;
 		padding: 0 1rem 1rem;*/
 	}
 	.lines{
-      border-top: 1px solid var(--outline);
-      height: 22px;
+      border-bottom: 1px solid var(--outline);
+      height: 25px;
       padding: 0px;
     }
 	.days {
