@@ -133,7 +133,7 @@
 			{/if}
 			{#if showWeekBreadcrumb}
 				<li>
-					<a href="#{timeframe.weekYear}-wk{timeframe.weekSinceYear}">
+					<a href="#{timeframe.year}-wk{timeframe.weekSinceYear}">
 						{#if settings.weekPage.useWeekSinceYear}
 							{#if (!showYearBreadcrumb && !showMonthBreadcrumb) || (timeframe.weekYear && timeframe.weekYear !== year) || timeframe.year !== year}
 								{timeframe.weekYear || timeframe.year || year}
@@ -184,7 +184,7 @@
      <li><a href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}-pg2">DayNotes</a></li>
     {/if}
     {#if showWeekBreadcrumb}
-     <li><a href="#{timeframe.weekYear}-wk{timeframe.weekSinceYear}-pg2">WeekNotes</a></li>
+     <li><a href="#{timeframe.year}-wk{timeframe.weekSinceYear}-pg2">WeekNotes</a></li>
     {/if}
 			</ol>
 		{/if}
