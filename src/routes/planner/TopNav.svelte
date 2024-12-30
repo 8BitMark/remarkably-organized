@@ -177,9 +177,6 @@
 		<div style="flex: 1" />
 		{#if settings.topNav.showCollectionLinks && settings.collections?.length}
 			<ol class="links">
-				{#each settings.collections as collection, i (collection.id)}
-					<li><a href="#{collection.id}">{collection.name}</a></li>
-				{/each}
     {#if showDayBreadcrumb}
      <li><a href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}-pg2" class="planner-button">
 					  <svg width="16" height="16" viewBox="0 0 24 24">
@@ -187,7 +184,7 @@
 					    <line x1="16" y1="2" x2="16" y2="6"></line>
 					    <line x1="8" y1="2" x2="8" y2="6"></line>
 					    <line x1="3" y1="10" x2="21" y2="10"></line>
-					  </svg>DayNotes</a></li>
+					  </svg>Notes</a></li>
     {/if}
     {#if showWeekBreadcrumb}
      <li><a href="#{timeframe.year}-wk{timeframe.weekSinceYear}-pg2">WeekNotes</a></li>
@@ -303,9 +300,9 @@
     justify-content: center;
     width: 70px;
     height: 25px;
-    background-color: grey;
+    background-color: light-grey;
     border: none;
-    border-radius: 6px; /* Half the height for perfect rounded corners */
+    border-radius: 4px; /* Half the height for perfect rounded corners */
     color: white;
     text-decoration: none;
     font-family: Arial, sans-serif;
