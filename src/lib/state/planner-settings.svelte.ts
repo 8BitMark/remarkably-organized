@@ -222,7 +222,7 @@ export class PlannerSettings {
 	readonly dayPage = new (class DayPageSettings {
 		disable = $state(false);
 		template = $state('agenda-day' as PageTemplate);
-		notePagesTemplate = $state('lined' as PageTemplate);
+		notePagesTemplate = $state('day-review' as PageTemplate);
 		notePagesAmount = $state(1);
 		sideNavDisplay = $state(
 			'days-this-week' as
