@@ -71,7 +71,8 @@
       padding-top: 2px;
     }
 
-   .star-container { display: flex; align-items: flex-start; }
+   .star-container { display: flex; align-items: flex-start;
+      height: 35px; }
 
   .star {
     width: 25px;
