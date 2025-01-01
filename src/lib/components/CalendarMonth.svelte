@@ -98,10 +98,12 @@
 		justify-items: stretch;
 		align-items: stretch;
 		grid-gap: 0px;
-		padding: 0 1rem 1rem;
+		padding-left: 10px;
+		padding-right: 10px;
 		&.with-notes {
 			height: 70%;
-			padding: 0 1rem 0;
+			padding-left: 10px;
+			padding-right: 10px;
 		}
 	
 		.week {
