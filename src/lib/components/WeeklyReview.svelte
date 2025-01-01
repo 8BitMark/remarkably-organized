@@ -80,6 +80,6 @@
     fill: none;
     stroke: black;
     stroke-width: 1;
-    margin 2px;
+    margin: 2px;
   }
 </style>
