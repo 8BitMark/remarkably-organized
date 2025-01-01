@@ -11,8 +11,7 @@
 	import QuarterPage from './QuarterPage.svelte';
 	import WeekPage from './WeekPage.svelte';
  import WeekNotes from './WeekNotes.svelte';
- import WeeklyReview from './WeeklyReview.svelte';
-	import DayPage from './DayPage.svelte';
+ 	import DayPage from './DayPage.svelte';
  import DayNotes from './DayNotes.svelte';
 	import CollectionPages from './CollectionPages.svelte';
 	import HelpModal from './HelpModal.svelte';
