@@ -13,6 +13,7 @@
 	import AgendaDay from './AgendaDay.svelte';
 	import TaskProgress from './TaskProgress.svelte';
   import WeeklyReview from './WeeklyReview.svelte';
+ import QuarleryGoals from './GoalsQuarter.svelte';
 
 	let {
 		display = 'dotted' as Collection['type'],
@@ -68,6 +69,8 @@
 		<AgendaDay />
 	{:else if display === 'weekly-review'}
 		<WeeklyReview />
+	{:else if display === 'quarterly-goals'}
+		<QuarterlyGoals />
 	{:else if display === 'notes-quarter'}
 		<NotesQuarter
 			months={settings.months.filter(
