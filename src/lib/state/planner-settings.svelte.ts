@@ -130,9 +130,9 @@ export class PlannerSettings {
 		width = $state(702);
 		font = $state('Roboto');
 		fontDisplay = $state('Bebas Neue');
-		colorText = $state('#424242');
-		colorLines = $state('#e2e2e2');
-		colorDots = $state('#454545');
+		colorText = $state('#000000');
+		colorLines = $state('#4f4e4e');
+		colorDots = $state('#e6e6e6');
 	})();
 
 	/** Settings for changing the dates of the planner (like start & end dates) */
