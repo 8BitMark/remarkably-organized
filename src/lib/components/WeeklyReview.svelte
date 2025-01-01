@@ -24,7 +24,7 @@
           <div class="lines"></div>
         {/each}
 
- <div class="lines">Rating this week: 
+ <div class="star-container">Rating this week: 
   {#each Array(count) as _, i}
     <svg viewBox="0 0 24 24" class="star">
       <path d="M12 .587l3.688 7.455L24 9.803l-6 5.846 1.417 8.272L12 18.971l-7.417 4.95L6 15.649 0 9.803l8.313-1.76z"></path>
@@ -62,7 +62,7 @@
     letter-spacing: 1.5px;
     border-bottom: 1.5px solid var(--outline);
   }
-  .lines {
+  .lines, .star-container {
       border-bottom: 1px solid var(--outline-high);
       color: var(--text-high);
       text-transform: uppercase;
@@ -70,6 +70,8 @@
       height: 24px;
       padding-top: 2px;
     }
+
+   .star-container { display: flex; align-items: flex-start; }
 
   .star {
     width: 25px;
