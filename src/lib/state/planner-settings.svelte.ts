@@ -195,7 +195,7 @@ export class PlannerSettings {
 	readonly monthPage = new (class MonthPageSettings {
 		disable = $state(false);
 		template = $state('calendar-month-with-notes' as PageTemplate);
-		notePagesTemplate = $state('dotted' as PageTemplate);
+		notePagesTemplate = $state('monthly-review' as PageTemplate);
 		notePagesAmount = $state(1);
 	})();
 
