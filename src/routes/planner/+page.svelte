@@ -48,6 +48,7 @@
 		{ name: 'Notes - Weekly', value: 'notes-week' },
 		{ name: 'Notes - Weekly - Columns', value: 'notes-week-columns' },
 		{ name: 'Notes - Weekly - Rows', value: 'notes-week-rows' },
+		{ name: 'Day Review', value: 'day-review'},
   { name: 'Weekly Review', value: 'weekly-review'},
 		{ name: 'Monthly Review', value: 'monthly-review'},
 		{ name: 'Quarterly Goals', value: 'quarterly-goals'},
