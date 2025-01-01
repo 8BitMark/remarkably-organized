@@ -12,6 +12,7 @@
 	import AgendaWeek from './AgendaWeek.svelte';
 	import AgendaDay from './AgendaDay.svelte';
 	import TaskProgress from './TaskProgress.svelte';
+  import WeeklyReview from './WeeklyReview.svelte';
 
 	let {
 		display = 'dotted' as Collection['type'],
@@ -65,6 +66,8 @@
 		<AgendaWeek {timeframe} startWeekOnSunday={settings.date.startWeekOnSunday} />
 	{:else if display === 'agenda-day'}
 		<AgendaDay />
+	{:else if display === 'weekly-review'}
+		<WeeklyReview />
 	{:else if display === 'notes-quarter'}
 		<NotesQuarter
 			months={settings.months.filter(
