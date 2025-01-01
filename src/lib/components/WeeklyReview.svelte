@@ -29,7 +29,8 @@
     <svg viewBox="0 0 24 24" class="star">
       <path d="M12 .587l3.688 7.455L24 9.803l-6 5.846 1.417 8.272L12 18.971l-7.417 4.95L6 15.649 0 9.803l8.313-1.76z"></path>
     </svg>
-  {/each}      </div>
+  {/each}      
+        </div>
       </div>
     </div>
 </div>
@@ -71,10 +72,10 @@
     }
 
   .star {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     fill: none;
     stroke: black;
-    stroke-width: 2;
+    stroke-width: 1;
   }
 </style>
