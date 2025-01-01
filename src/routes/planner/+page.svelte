@@ -11,6 +11,7 @@
 	import QuarterPage from './QuarterPage.svelte';
 	import WeekPage from './WeekPage.svelte';
  import WeekNotes from './WeekNotes.svelte';
+import WeekReview from './WeekReview.svelte';
 	import DayPage from './DayPage.svelte';
  import DayNotes from './DayNotes.svelte';
 	import CollectionPages from './CollectionPages.svelte';
@@ -48,6 +49,7 @@
 		{ name: 'Notes - Weekly', value: 'notes-week' },
 		{ name: 'Notes - Weekly - Columns', value: 'notes-week-columns' },
 		{ name: 'Notes - Weekly - Rows', value: 'notes-week-rows' },
+  { name: 'Weekly Review', value: 'weekly-review'},
 		{ name: 'Notes - Daily', value: 'notes-day' },
 		{ name: 'Habit Checkboxes - Grouped by Week', value: 'habit-year-by-week' },
 		{ name: 'Habit Checkboxes - Grouped by Month', value: 'habit-year-by-month' },
