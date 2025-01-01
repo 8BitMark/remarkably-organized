@@ -12,7 +12,8 @@
 	import AgendaWeek from './AgendaWeek.svelte';
 	import AgendaDay from './AgendaDay.svelte';
 	import TaskProgress from './TaskProgress.svelte';
-  import WeeklyReview from './WeeklyReview.svelte';
+ import WeeklyReview from './WeeklyReview.svelte';
+ import MonthlyReview from './MonthlyReview.svelte';
  import QuarterlyGoals from './GoalsQuarter.svelte';
 
 	let {
@@ -69,6 +70,8 @@
 		<AgendaDay />
 	{:else if display === 'weekly-review'}
 		<WeeklyReview />
+	{:else if display === 'monthly-review'}
+		<MonthlyReview />
 	{:else if display === 'quarterly-goals'}
 		<QuarterlyGoals />
 	{:else if display === 'notes-quarter'}
