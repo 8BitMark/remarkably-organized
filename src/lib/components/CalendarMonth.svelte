@@ -118,8 +118,8 @@
 			color: var(--text-low);
 			border-top: solid 1px var(--outline-high);
 			border-left: solid 1px var(--outline-high);
-                        border-right: solid 1px var(--outline-high);
-			background-color: var(--outline);
+   border-right: solid 1px var(--outline-high);
+			background-color: var(--outline-low);
 			margin-bottom: 0px;
 			border-bottom: solid 1px var(--outline-high);
 		}
@@ -171,7 +171,7 @@
 		text-align: center;
 		width: 100%;
 		height: 30%;
-		padding: 0 1rem 1rem;
+		padding: 0;
 		h3 {
 			font-size: 1.8em;
 			font-weight: var(--font-weight-light);
