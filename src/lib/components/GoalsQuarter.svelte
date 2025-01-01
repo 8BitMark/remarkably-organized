@@ -22,7 +22,7 @@
         {/each}
         <div class="lines">Action Plan</div>
         {#each Array(6) as _, i}
-          <div class=-lines"></div>
+          <div class="lines"></div>
         {/each}
       </div>
     </div>
