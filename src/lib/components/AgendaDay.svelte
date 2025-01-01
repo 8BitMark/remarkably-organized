@@ -46,7 +46,11 @@
       flex-direction: column;
 	    padding-left: 10px;  
      }
-    
+
+   .right {
+    padding-right: 5px;
+    }
+
    .priorities {
     display: grid;
     grid-template-columns: 25px auto;
