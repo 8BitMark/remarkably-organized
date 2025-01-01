@@ -174,6 +174,8 @@
 		width: 100%;
 		height: 30%;
 		padding-top: 30px;
+		padding-left: 10px;
+		padding-right: 10px;
 		h3 {
 			font-size: 1.8em;
 			font-weight: var(--font-weight-light);
