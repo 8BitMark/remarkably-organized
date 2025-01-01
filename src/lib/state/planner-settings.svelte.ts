@@ -196,7 +196,7 @@ export class PlannerSettings {
 		disable = $state(false);
 		template = $state('calendar-month-with-notes' as PageTemplate);
 		notePagesTemplate = $state('dotted' as PageTemplate);
-		notePagesAmount = $state(0);
+		notePagesAmount = $state(1);
 	})();
 
 	/** Settings for changing how the weekly pages should work */
@@ -204,7 +204,7 @@ export class PlannerSettings {
 		disable = $state(false);
 		template = $state('agenda-week' as PageTemplate);
 		notePagesTemplate = $state('notes-week' as PageTemplate);
-		notePagesAmount = $state(0);
+		notePagesAmount = $state(1);
 		useWeekSinceYear = $state(true);
 		useWeekNumbersInSideNav = $state(false);
 		sideNavDisplay = $state(
