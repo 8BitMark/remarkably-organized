@@ -125,7 +125,7 @@
 			justify-content: center;
 			font-size: 0.65em;
 			font-weight: var(--font-weight-bold);
-			color: var(--text-low);
+			color: var(--text-high);
 		}
 		
 		
@@ -139,8 +139,7 @@
 			font-weight: var(--font-weight-bold);
 			line-height: 1.3rem;
 			color: var(--text-low);
-			background-color: var(--outline);
-			margin:4px;
+			background-color: var(--outline-low);
 		}
 		.week-label {
 			display: flex;
@@ -149,8 +148,7 @@
 			font-size: 0.65em;
 			font-weight: var(--font-weight-bold);
 			color: var(--text-low);
-			background-color: var(--outline);
-			margin:4px;
+			background-color: var(--outline-low);
 			border: 1px solid white;
 		}
 	}
