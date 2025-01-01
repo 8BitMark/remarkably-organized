@@ -7,7 +7,7 @@
     <div class="left-side">
       <div class="notes">
         <h2>Daily Notes/Review</h2>
-        {#each Array(26) as _, i}
+        {#each Array(30) as _, i}
           <div class="lines"></div>
         {/each}
       
