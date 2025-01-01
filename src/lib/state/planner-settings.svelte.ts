@@ -151,7 +151,7 @@ export class PlannerSettings {
 	/** Settings for changing the side navigation bar display */
 	readonly sideNav = new (class SideNavSettings {
 		disable = $state(false);
-		showCollectionLinks = $state(true);
+		showCollectionLinks = $state(false);
 		width = $state(52);
 		leftSide = $state(true);
 		font = $state('Bebas Neue');
@@ -160,7 +160,7 @@ export class PlannerSettings {
 	/** Settings for changing the top navigation bar display */
 	readonly topNav = new (class TopNavSettings {
 		disable = $state(false);
-		showCollectionLinks = $state(true);
+		showCollectionLinks = $state(false);
 		height = $state(45);
 		font = $state('Bebas Neue');
 	})();
@@ -171,7 +171,7 @@ export class PlannerSettings {
 		name = $state('');
 		email = $state('');
 		title = $state('');
-		showCollectionLinks = $state(true);
+		showCollectionLinks = $state(false);
 		showCurrentDay = $state(false);
 		darkBackground = $state(true);
 		font = $state('Bebas Neue');
@@ -181,7 +181,7 @@ export class PlannerSettings {
 	readonly yearPage = new (class YearPageSettings {
 		disable = $state(false);
 		notePagesTemplate = $state('notes-year' as PageTemplate);
-		notePagesAmount = $state(1);
+		notePagesAmount = $state(0);
 	})();
 
 	/** Settings for changing how the quarterly pages should work */
@@ -196,14 +196,14 @@ export class PlannerSettings {
 		disable = $state(false);
 		template = $state('calendar-month-with-notes' as PageTemplate);
 		notePagesTemplate = $state('dotted' as PageTemplate);
-		notePagesAmount = $state(2);
+		notePagesAmount = $state(0);
 	})();
 
 	/** Settings for changing how the weekly pages should work */
 	readonly weekPage = new (class WeekPageSettings {
 		disable = $state(false);
 		template = $state('agenda-week' as PageTemplate);
-		notePagesTemplate = $state('dotted' as PageTemplate);
+		notePagesTemplate = $state('notes-week' as PageTemplate);
 		notePagesAmount = $state(0);
 		useWeekSinceYear = $state(true);
 		useWeekNumbersInSideNav = $state(false);
@@ -236,7 +236,8 @@ export class PlannerSettings {
 	})();
 
 	/** The list of extra note/goals collections in addition to the planner pages */
-	collections = $state([
+	/** REMOVED BY MARK
+collections = $state([
 		{
 			id: 'notes',
 			name: 'Notes',
@@ -254,6 +255,7 @@ export class PlannerSettings {
 			numPagesPerItem: 1,
 		},
 	] as Collection[]);
+*/
 
 	/** The list of extra note/goals collections in addition to the planner pages */
 	calendars = $state([
