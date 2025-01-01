@@ -74,7 +74,8 @@
 		align-items: center;
 		width: 100%;
 		height: 100%;
-		padding: 0 2rem 0;
+		padding-left: 10px;
+		padding-right: 10px;
 		h2 {
 			text-align: center;
 			font-size: 0.85em;
