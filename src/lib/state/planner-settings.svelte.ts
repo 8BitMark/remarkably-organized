@@ -236,7 +236,6 @@ export class PlannerSettings {
 	})();
 
 	/** The list of extra note/goals collections in addition to the planner pages */
-	/** REMOVED BY MARK
 collections = $state([
 		{
 			id: 'notes',
@@ -255,7 +254,7 @@ collections = $state([
 			numPagesPerItem: 1,
 		},
 	] as Collection[]);
-*/
+
 
 	/** The list of extra note/goals collections in addition to the planner pages */
 	calendars = $state([
