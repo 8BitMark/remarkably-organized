@@ -190,7 +190,8 @@
 		width: 100%;
 		font-weight: var(--font-weight-light);
 		height: 100%;
-		padding: 0 0 calc(100% / var(--lines));
+		padding-left: 10px;
+		padding-right: 10px;
 		gap: 0 1rem;
 		.line {
 			color: var(--text);
