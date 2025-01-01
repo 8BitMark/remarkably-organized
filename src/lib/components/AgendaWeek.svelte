@@ -73,7 +73,7 @@
     }
 
    .right-side {
-	   padding-right: 5px;  
+	   padding-right: 15px;  
    }
 
    .priorities {
