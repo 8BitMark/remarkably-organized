@@ -192,7 +192,6 @@
 		height: 100%;
 		padding-left: 10px;
 		padding-right: 10px;
-		gap: 0 1rem;
 		.line {
 			color: var(--text);
 			border-bottom: solid 1px var(--outline);
