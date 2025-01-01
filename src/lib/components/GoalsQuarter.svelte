@@ -12,7 +12,7 @@
         {/each}
         <div class="lines">Key Results</div>
         {#each Array(6) as _, i}
-          <div class="lines">i.
+          <div class="lines">{i}.
  <div class="star-container">
   {#each Array(count) as _, i}
     <svg viewBox="0 0 24 24" class="star">
@@ -73,4 +73,5 @@
     stroke-width: 1;
     margin: 2px;
   }
+
 </style>
