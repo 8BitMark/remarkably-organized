@@ -12,6 +12,7 @@
 	import AgendaWeek from './AgendaWeek.svelte';
 	import AgendaDay from './AgendaDay.svelte';
 	import TaskProgress from './TaskProgress.svelte';
+import DayReview from './DayReview.svelte';
  import WeeklyReview from './WeeklyReview.svelte';
  import MonthlyReview from './MonthlyReview.svelte';
  import QuarterlyGoals from './GoalsQuarter.svelte';
@@ -68,6 +69,8 @@
 		<AgendaWeek {timeframe} startWeekOnSunday={settings.date.startWeekOnSunday} />
 	{:else if display === 'agenda-day'}
 		<AgendaDay />
+	{:else if display === 'day-review'}
+		<DayReview />
 	{:else if display === 'weekly-review'}
 		<WeeklyReview />
 	{:else if display === 'monthly-review'}
