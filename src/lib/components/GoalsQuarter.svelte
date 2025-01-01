@@ -22,7 +22,7 @@
         {/each}
         <div class="lines">Action Plan</div>
         {#each Array(6) as _, i}
-          <div class=-lines"><\div>
+          <div class=-lines"></div>
         {/each}
       </div>
     </div>
@@ -55,7 +55,7 @@
     letter-spacing: 1.5px;
     border-bottom: 1.5px solid var(--outline);
   }
-  .lines {
+  .lines, .kr-lines{
       border-bottom: 1px solid var(--outline-high);
       color: var(--text-high);
       text-transform: uppercase;
@@ -64,7 +64,7 @@
       padding-top: 2px;
     }
 
-  .star-container { display: flex; align-items: flex-start;
+  .kr-lines { display: flex; align-items: flex-start;
       height: 35px; }
 
   .star {
