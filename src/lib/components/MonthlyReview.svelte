@@ -7,15 +7,15 @@
     <div class="left-side">
       <div class="notes">
         <h2>Monthly Review</h2>
-        <div class="lines">What were my biggest accomplishments this week...</div>
+        <div class="lines">Accomplishments this month...</div>
         {#each Array(9) as _, i}
           <div class="lines"></div>
         {/each}
-        <div class="lines">What worked...</div>
+        <div class="lines">Challenges encountered...</div>
         {#each Array(9) as _, i}
           <div class="lines"></div>
         {/each}
-        <div class="lines">What didn't work...</div>
+        <div class="lines">Lessons learned...</div>
         {#each Array(9) as _, i}
           <div class="lines"></div>
         {/each}
