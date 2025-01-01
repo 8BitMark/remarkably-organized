@@ -7,18 +7,39 @@
         {/each}
       </div>
     </div>
-    <div class="right-side">
-      <div class="schedule">
-        <h2>Schedule</h2>
-        {#each Array(17) as _, i (i)}
-        <div class="hour">
-          {(i + 6)}
-<!--% 12 === 0 ? 12 : (i + 6) % 12} {i < 6 ? 'AM' : 'PM'}-->
-        </div>
-        <div class="half-hour"></div>
-        {/each}
-	<div class="hour"></div>
-	<div class="half-hour"></div>
-      </div>
-    </div>
 </div>
+
+style lang="scss">
+    .container {
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: repeat(17, 1fr);
+      gap: 5px;
+      padding-left: 10px;
+      height: 98%;
+      widgth: 95%;
+    }
+
+
+  .notes {
+    flex: 1;
+    display: grid;
+    gap: 2px;
+  }
+  .notes h2 {
+    margin-top: 5px;
+    font-size: 1.2em;
+    color: var(--text-high);
+    text-transform: uppercase;
+    padding-top: 5px;
+    letter-spacing: 1.5px;
+    border-bottom: 1.5px solid var(--outline);
+  }
+  .lines {
+      border-bottom: 1px solid var(--outline-high);
+      color: var(--text-high);
+      font-size: 0.7em;
+      height: 24px;
+      padding-top: 2px;
+    }
+</style>
