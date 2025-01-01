@@ -1,3 +1,6 @@
+<script>
+  export let count = 10;
+</script>
 
 <div class="container">
     <div class="left-side">
