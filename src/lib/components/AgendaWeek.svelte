@@ -83,7 +83,7 @@
   }
   .priorities h2 {
      grid-column:1 / span 2;
-     border-bottom: 1.5px solid var(--outline-high);
+     border-bottom: 1.5px solid var(--outline);
    }
   .priorities .icon {
     grid-column:1;
@@ -117,12 +117,12 @@
     height: auto;
     border-right: 1px solid var(--outline-high);
     border-top: 1px solid var(--outline-high);
-    background-color: var(--outline);
+    background-color: var(--outline-low);
     font-size: 0.8em;
     margin: 0px;    
     padding: 0px;
     display:flex;
-    color: var(--text-low);
+    color: var(--text-high);
     writing-mode: vertical-lr;
     	text-orientation: mixed;
         transform: rotate(180deg); /* Rotate text to start from bottom */
@@ -150,11 +150,11 @@
   }
 
   .priorities h2, .notes h2, .schedule h2 {
-    border-bottom: 2px solid var(--outline-high);
+    border-bottom: 2px solid var(--outline);
     height: 25px;
     margin-top: 5px;
     font-size: 1.2em;
-    color: var(--text-low);
+    color: var(--text-high);
     padding-top: 5px;
     letter-spacing: 1.5px;
     text-transform: uppercase;
@@ -162,12 +162,12 @@
 
   .weekly-plan h2 {
      grid-column:1 / span 2;
-     border-bottom: 2px solid var(--outline-high);
+     border-bottom: 2px solid var(--outline);
      height: 25px;
      margin-top: 5px;
      padding-bottom: 5px;
      font-size: 1.2em;
-     color: var(--text-low);
+     color: var(--text-high);
      padding-top: 5px;
      letter-spacing: 1.5px;
      text-transform: uppercase;
@@ -185,6 +185,6 @@
     }
     .half-hour {
       height: 22px;
-      border-bottom: 1px dashed var(--outline);
+      border-bottom: 1px dashed var(--outline-high);
     }
 </style>
