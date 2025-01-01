@@ -47,7 +47,7 @@
 	    padding-left: 10px;  
      }
 
-   .right {
+   .right-side {
     padding-right: 5px;
     }
 
