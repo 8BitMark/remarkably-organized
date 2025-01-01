@@ -203,7 +203,7 @@ export class PlannerSettings {
 	readonly weekPage = new (class WeekPageSettings {
 		disable = $state(false);
 		template = $state('agenda-week' as PageTemplate);
-		notePagesTemplate = $state('notes-week' as PageTemplate);
+		notePagesTemplate = $state('weekly-review' as PageTemplate);
 		notePagesAmount = $state(1);
 		useWeekSinceYear = $state(true);
 		useWeekNumbersInSideNav = $state(false);
