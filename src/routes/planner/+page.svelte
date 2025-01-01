@@ -49,6 +49,7 @@
 		{ name: 'Notes - Weekly - Columns', value: 'notes-week-columns' },
 		{ name: 'Notes - Weekly - Rows', value: 'notes-week-rows' },
   { name: 'Weekly Review', value: 'weekly-review'},
+		{ name: 'Monthly Review', value: 'monthly-review'},
 		{ name: 'Quarterly Goals', value: 'quarterly-goals'},
 		{ name: 'Notes - Daily', value: 'notes-day' },
 		{ name: 'Habit Checkboxes - Grouped by Week', value: 'habit-year-by-week' },
