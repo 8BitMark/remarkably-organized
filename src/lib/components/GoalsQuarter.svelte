@@ -62,11 +62,15 @@
       padding-top: 2px;
     }
 
+  .star-container { display: flex; align-items: flex-start;
+      height: 35px; }
+
   .star {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     fill: none;
     stroke: black;
-    stroke-width: 2;
+    stroke-width: 1;
+    margin: 2px;
   }
 </style>
