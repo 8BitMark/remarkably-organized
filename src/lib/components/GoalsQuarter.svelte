@@ -24,6 +24,33 @@
         {#each Array(6) as _, i}
           <div class="lines"></div>
         {/each}
+<svg width="500" height="50">
+  <!-- Define clip-paths for rounded corners -->
+  <defs>
+    <clipPath id="left-rounded">
+      <rect x="0" y="0" width="10" height="50" rx="5" />
+    </clipPath>
+    <clipPath id="right-rounded">
+      <rect x="0" y="0" width="10" height="50" rx="5" />
+    </clipPath>
+  </defs>
+  
+  <!-- Leftmost box with left rounded corner -->
+  <rect x="0" y="0" width="10" height="50" fill="blue" clip-path="url(#left-rounded)" />
+  
+  <!-- Middle boxes without rounded corners -->
+  <rect x="10" y="0" width="40" height="50" fill="blue" />
+  <rect x="50" y="0" width="40" height="50" fill="blue" />
+  <rect x="90" y="0" width="40" height="50" fill="blue" />
+  <rect x="130" y="0" width="40" height="50" fill="blue" />
+  <rect x="170" y="0" width="40" height="50" fill="blue" />
+  <rect x="210" y="0" width="40" height="50" fill="blue" />
+  <rect x="250" y="0" width="40" height="50" fill="blue" />
+  <rect x="290" y="0" width="40" height="50" fill="blue" />
+  
+  <!-- Rightmost box with right rounded corner -->
+  <rect x="330" y="0" width="10" height="50" fill="blue" clip-path="url(#right-rounded)" transform="scale(-1, 1) translate(-10, 0)" />
+</svg>
       </div>
     </div>
 </div>
