@@ -78,7 +78,7 @@
 		padding-right: 10px;
 		h2 {
 			text-align: center;
-			font-size: 1em;
+			font-size: 1.2em;
 			font-weight: var(--font-weight-normal);
 			padding: 0 0 0.5rem;
 		}
