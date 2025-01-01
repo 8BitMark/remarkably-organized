@@ -13,7 +13,7 @@
 	import AgendaDay from './AgendaDay.svelte';
 	import TaskProgress from './TaskProgress.svelte';
   import WeeklyReview from './WeeklyReview.svelte';
- import QuarleryGoals from './GoalsQuarter.svelte';
+ import QuarterlyGoals from './GoalsQuarter.svelte';
 
 	let {
 		display = 'dotted' as Collection['type'],
