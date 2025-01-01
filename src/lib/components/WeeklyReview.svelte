@@ -9,7 +9,7 @@
     </div>
 </div>
 
-style lang="scss">
+<style lang="scss">
     .container {
       display: grid;
       grid-template-columns: 100%;
