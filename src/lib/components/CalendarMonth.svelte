@@ -171,7 +171,7 @@
 		text-align: center;
 		width: 100%;
 		height: 30%;
-		padding: 0;
+		padding-top: 30px;
 		h3 {
 			font-size: 1.8em;
 			font-weight: var(--font-weight-light);
@@ -181,6 +181,7 @@
   .lines{
       border-top: 1px solid var(--outline-high);
       height: 25px;
-      padding: 0px;
+      padding-left: 10px;
+						padding-right: 10px;
     }
 </style>
