@@ -28,6 +28,7 @@
 
 {#if months.length}
 	<div class="months">
+<h2>Quarterly Plan</h2>
 		{#each months as month (month.id)}
 			<div class="month">
 				<a href="#{getMonthLink(month)}" class="calendar">
@@ -77,11 +78,15 @@
 		padding-left: 10px;
 		padding-right: 10px;
 		h2 {
-			text-align: center;
-			font-size: 1.2em;
-			font-weight: var(--font-weight-normal);
-			padding: 0 0 0.5rem;
-		}
+		  margin-top: 5px;
+    font-size: 1.2em;
+    color: var(--text-high);
+    text-transform: uppercase;
+    padding-top: 5px;
+    letter-spacing: 1.5px;
+    border-bottom: 1.5px solid var(--outline);
+				}
+				
 	}
 	.month {
 		display: flex;
@@ -92,6 +97,12 @@
 		padding: 1rem 0 0;
 		&:last-child {
 			border-bottom: none;
+		}
+		h2 {
+			text-align: center;
+			font-size: 1.2em;
+			font-weight: var(--font-weight-normal);
+			padding: 0 0 0.5rem;
 		}
 	}
 	.notes {
