@@ -103,12 +103,12 @@
 		flex: 1;
 		width: 100%;
 		height: 100%;
-		margin: 0 1.5rem 3.5rem;
+		padding: 0 1.5rem 3.5rem;
 		h2 {
 			text-align: centre;
 			font-size: 1.2em;
 			font-weight: var(--font-weight-normal);
-			margin: 0 0 0.25rem;
+			padding: 0 0 0.25rem;
 			line-height: 1.2rem;
 		}
 	}
