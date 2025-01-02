@@ -78,7 +78,9 @@
 		padding-left: 10px;
 		padding-right: 10px;
 		h2 {
-		  margin-top: 5px;
+		  width: 100%;
+				text-align: center;
+				margin-top: 0px;
     font-size: 1.2em;
     color: var(--text-high);
     text-transform: uppercase;
@@ -103,6 +105,7 @@
 			font-size: 1.2em;
 			font-weight: var(--font-weight-normal);
 			padding: 0 0 0.5rem;
+			border-bottom:0px;
 		}
 	}
 	.notes {
