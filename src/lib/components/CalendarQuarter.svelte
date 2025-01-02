@@ -79,7 +79,7 @@
 		padding-right: 10px;
 		h2 {
 		  width: 100%;
-				text-align: center;
+				text-align: left;
 				margin-top: 0px;
     font-size: 1.2em;
     color: var(--text-high);
@@ -96,7 +96,7 @@
 		align-items: start;
 		width: 100%;
 		border-bottom: solid 2px var(--outline-high);
-		padding: 1rem 0 0;
+		padding: 0.5rem 0 0;
 		&:last-child {
 			border-bottom: none;
 		}
@@ -104,7 +104,7 @@
 			text-align: center;
 			font-size: 1.2em;
 			font-weight: var(--font-weight-normal);
-			padding: 0 0 0.5rem;
+			padding: 0 0 0.3rem;
 			border-bottom:0px;
 		}
 	}
