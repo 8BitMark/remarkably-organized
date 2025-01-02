@@ -143,6 +143,7 @@
 			border-right: 1px solid var(--outline-low);
 			align-items: right;
 			justify-content: right;
+			text-align: right;
 			padding-right: 5px;
 		}
 		.week-label {
