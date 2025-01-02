@@ -141,15 +141,19 @@
 			line-height: 1.3rem;
 			color: var(--text-low);
 			border-right: 1px solid var(--outline-low);
+			align-items: right;
+			justify-content: right;
+			margin-right: 5px;
 		}
 		.week-label {
 			display: flex;
-			align-items: center;
-			justify-content: center;
+			align-items: right;
+			justify-content: right;
 			font-size: 0.65em;
 			font-weight: var(--font-weight-bold);
 			color: var(--text-low);
 			border-bottom: 1px solid var(--outline-low);
+			margin-right: 5px;
 		}
 	}
 </style>
