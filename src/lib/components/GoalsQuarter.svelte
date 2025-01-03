@@ -96,9 +96,9 @@
     top: 0;
     left: 0;
     height: 100%;
-    background-color: #9ee86a;
+    color: black;
     width: 0%;
-    border-radius: 10px 0 0 10px;
+    border-radius: 8px 0 0 8px;
     transition: width 0.3s;
   }
 
@@ -106,10 +106,9 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 4px;
-    height: 4px;
+    width: 2px;
+    height: 20px;
     background-color: black;
-    border-radius: 50%;
   }
 
   .marker:nth-child(1) { left: 10%; }
