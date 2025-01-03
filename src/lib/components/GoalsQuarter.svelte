@@ -6,13 +6,13 @@
     <div class="left-side">
       <div class="notes">
         <h2>Quarterly Goals</h2>
-        <div class="lines">Objective...</div>
+        <div class="lines">Objective</div>
         {#each Array(4) as _, i}
           <div class="lines"></div>
         {/each}
         <div class="lines">Key Results</div>
         {#each Array(6) as _, i}
-          <div class="kr-lines">{i+1}.
+          <div class="midline">{i+1}.
 
 <div class="progress-bar">
   <div class="marker"></div>
@@ -26,7 +26,7 @@
   <div class="marker"></div>
 </div>
           </div>
-   <div class="kr-midline">  </div>
+   <div class="lines"></div>
         {/each}
      
       <div class="priorities">
@@ -70,7 +70,7 @@
     letter-spacing: 1.5px;
     border-bottom: 1.5px solid var(--outline);
   }
-  .lines, .kr-lines, .kr-midline{
+  .lines, .midline{
       border-bottom: 1px solid var(--outline-high);
       color: var(--text-high);
       text-transform: uppercase;
@@ -79,11 +79,12 @@
       padding-top: 2px;
     }
 
-  .kr-lines { display: flex; align-items: flex-start;
-      height: 25px; }
-
-.kr-midline {
-  width:50%;
+  .midline { 
+    display: flex; 
+    align-items: flex-start;
+      height: 25px; 
+      width:50%;
+      align-items: right;
   }
 
   .star {
@@ -100,7 +101,6 @@
     background-color: #e0e0e0;
     border-radius: 8px;
     position: relative;
-    		align-items: right;
   }
 
   .progress-bar::before {
