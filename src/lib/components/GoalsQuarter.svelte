@@ -26,6 +26,7 @@
   <div class="marker"></div>
 </div>
           </div>
+   <div class="kr-midlines">  </div>
         {/each}
      
       <div class="priorities">
