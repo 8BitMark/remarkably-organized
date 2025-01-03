@@ -118,12 +118,12 @@
 		grid-template-rows: repeat(7, 1fr);
 		justify-items: right;
 		align-items: right;
-		margin: 0.15rem 0.25rem;
+		margin: 0.1rem 0.25rem;
 		.label {
 			display: flex;
 			align-items: right;
 			justify-content: right;
-			font-size: 0.65em;
+			font-size: 0.85em;
 			font-weight: var(--font-weight-bold);
 			color: var(--text-high);
 			border-bottom: 1px solid var(--outline-low);
@@ -137,7 +137,7 @@
 			line-height: 1.3rem;
 		}
 		.week-number {
-			font-size: 1.1em;
+			font-size: 1em;
 			font-weight: var(--font-weight-bold);
 			line-height: 1.3rem;
 			color: var(--text-low);
@@ -151,7 +151,7 @@
 			display: flex;
 			align-items: right;
 			justify-content: right;
-			font-size: 0.65em;
+			font-size: 0.85em;
 			font-weight: var(--font-weight-bold);
 			color: var(--text-low);
 			border-bottom: 1px solid var(--outline-low);
