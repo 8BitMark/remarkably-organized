@@ -115,7 +115,7 @@
 			{/if}
 			{#if showQuarterBreadcrumb}
 				<li>
-					<a >
+					<a href="#{year}-q{quarter}" >
 						{!showWeekBreadcrumb && !showMonthBreadcrumb && !showDayBreadcrumb
 							? 'Quarter '
 							: 'Q'}{quarter}
