@@ -101,7 +101,7 @@
 			: ''}>
 		<ol class="breadcrumbs">
 			<li>
-				<a href="#home" class="home">
+				<a href="#{year}" class="home">
 					<HomeIcon
 						width="1.35rem"
 						height="1.35rem"
@@ -115,7 +115,7 @@
 			{/if}
 			{#if showQuarterBreadcrumb}
 				<li>
-					<a href="#{year}-q{quarter}">
+					<a >
 						{!showWeekBreadcrumb && !showMonthBreadcrumb && !showDayBreadcrumb
 							? 'Quarter '
 							: 'Q'}{quarter}
