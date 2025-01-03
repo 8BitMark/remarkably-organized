@@ -9,7 +9,7 @@
 		breadcrumbs = [] as { name: string; href: string }[],
 	} = $props();
 
-	const showYearBreadcrumb = $derived(!settings.yearPage.disable && timeframe.year);
+	const showYearBreadcrumb = false; //$derived(!settings.yearPage.disable && timeframe.year);
 	const showQuarterBreadcrumb = $derived(
 		!settings.quarterPage.disable && timeframe.year && timeframe.quarter,
 	);
