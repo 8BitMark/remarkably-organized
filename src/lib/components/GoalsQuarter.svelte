@@ -7,7 +7,7 @@
       <div class="notes">
         <h2>Quarterly Goals</h2>
         <div class="lines">Objective...</div>
-        {#each Array(3) as _, i}
+        {#each Array(4) as _, i}
           <div class="lines"></div>
         {/each}
         <div class="lines">Key Results</div>
