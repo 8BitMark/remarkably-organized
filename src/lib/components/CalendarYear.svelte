@@ -132,7 +132,7 @@
 		
 		
 		.day {
-			font-size: 1.1em;
+			font-size: 1em;
 			font-weight: var(--font-weight-light);
 			line-height: 1.3rem;
 		}
