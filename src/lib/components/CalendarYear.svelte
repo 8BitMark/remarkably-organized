@@ -127,6 +127,7 @@
 			font-weight: var(--font-weight-bold);
 			color: var(--text-high);
 			border-bottom: 1px solid var(--outline-low);
+			width:100%;
 		}
 		
 		
