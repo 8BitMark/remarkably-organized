@@ -86,8 +86,8 @@
     width: 45%;
     height: 20px;
     background-color: #e0e0e0;
-    border-radius: 10px;
-    position: relative;
+    border-radius: 6px;
+
   }
 
   .progress-bar::before {
