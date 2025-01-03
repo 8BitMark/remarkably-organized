@@ -27,17 +27,12 @@
 </div>
           </div>
         {/each}
-        <div class="lines">Action Plantest</div>
-        {#each Array(6) as _, i}
-          <div class="lines"></div>
-        {/each}
-
+        <div class="lines">Action Plan</div>
       <div class="priorities">
-        <h2>Action Plan</h2>
         {#each Array(8) as _, i}
 	    <div class="icon"></div>
 	    <div class="content"></div>
-      <div class="date"></div>
+      <div class="date">    /    /</div>
         {/each}
 	</div>
 
@@ -160,6 +155,7 @@
   .priorities .date {
      grid-column:3;
      padding: 0px;
+     border-left: 1px solid var(--outline-high);
      border-bottom: 1px solid var(--outline-high);
      font-size: 0.9em;
      height: 24px;
