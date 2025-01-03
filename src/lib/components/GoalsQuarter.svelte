@@ -27,10 +27,21 @@
 </div>
           </div>
         {/each}
-        <div class="lines">Action Plan</div>
+        <div class="lines">Action Plantest</div>
         {#each Array(6) as _, i}
           <div class="lines"></div>
         {/each}
+
+      <div class="priorities">
+        <h2>Action Plan</h2>
+        {#each Array(8) as _, i}
+	    <div class="icon"></div>
+	    <div class="content"></div>
+      <div class="date"></div>
+        {/each}
+	</div>
+
+
       </div>
     </div>
 </div>
