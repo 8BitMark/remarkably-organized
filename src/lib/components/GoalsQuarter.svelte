@@ -29,11 +29,11 @@
         {/each}
      
       <div class="priorities">
-   <div class="lines">Action Plan</div>
+   <div class="lines" style="grid-column:1 / span 3;">Action Plan</div>
         {#each Array(12) as _, i}
 	    <div class="icon"></div>
 	    <div class="content"></div>
-      <div class="date">/    /</div>
+      <div class="date">/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/</div>
         {/each}
 	</div>
 
@@ -69,7 +69,7 @@
     letter-spacing: 1.5px;
     border-bottom: 1.5px solid var(--outline);
   }
-  .lines, .kr-lines{
+  .lines, .kr-lines, .kr-midline{
       border-bottom: 1px solid var(--outline-high);
       color: var(--text-high);
       text-transform: uppercase;
@@ -79,7 +79,11 @@
     }
 
   .kr-lines { display: flex; align-items: flex-start;
-      height: 35px; }
+      height: 25px; }
+
+.kr-midline {
+  width:50%;
+  }
 
   .star {
     width: 25px;
