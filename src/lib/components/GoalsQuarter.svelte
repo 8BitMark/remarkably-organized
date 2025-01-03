@@ -83,7 +83,7 @@
     margin: 2px;
   }
   .progress-bar {
-    width: 100%;
+    width: 45%;
     height: 20px;
     background-color: #e0e0e0;
     border-radius: 10px;
@@ -96,7 +96,7 @@
     top: 0;
     left: 0;
     height: 100%;
-    color: black;
+    color: white;
     width: 0%;
     border-radius: 8px 0 0 8px;
     transition: width 0.3s;
@@ -108,7 +108,7 @@
     transform: translateY(-50%);
     width: 2px;
     height: 20px;
-    background-color: black;
+    background-color: white;
   }
 
   .marker:nth-child(1) { left: 10%; }
