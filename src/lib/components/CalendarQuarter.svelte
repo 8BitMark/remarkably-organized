@@ -47,14 +47,14 @@
 							<div class="label">Su</div>
 						{/if}
 						{#each new Array(month.end.getUTCDate()) as _, day}
-							<div
-								class="day"
-								style:grid-column={day > 0
+	
+						<a class="day"
+							style:grid-column={day > 0
 									? null
-									: ((month.start.getUTCDay() - (startWeekOnSunday ? 0 : 1) + 7) % 7) +
-										1}>
+									: ((month.start.getUTCDay() - (startWeekOnSunday ? 0 : 1) + 7) % 7) +1}
+        href="#{month.start.getUTCFullYear()}-{month.start.getUTCMonth() + 1}-{day+1}">
 								{day + 1}
-							</div>
+							</a>
 						{/each}
 					</div>
 				</a>
