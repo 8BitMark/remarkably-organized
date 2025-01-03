@@ -118,7 +118,7 @@
 		grid-template-rows: repeat(7, 1fr);
 		justify-items: right;
 		align-items: right;
-		padding: 0.15rem 0.25rem;
+		margin: 0.15rem 0.25rem;
 		.label {
 			display: flex;
 			align-items: right;
