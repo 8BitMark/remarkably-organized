@@ -97,7 +97,7 @@
     left: 0;
     height: 100%;
     background-color: #9ee86a;
-    width: {value}%;
+    width: 0%;
     border-radius: 10px 0 0 10px;
     transition: width 0.3s;
   }
