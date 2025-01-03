@@ -120,4 +120,38 @@
   .marker:nth-child(7) { left: 70%; }
   .marker:nth-child(8) { left: 80%; }
   .marker:nth-child(9) { left: 90%; }
+
+  .priorities {
+    display: grid;
+    grid-template-columns: 25px auto 200px;
+    gap: 0px;
+  }
+  .priorities h2 {
+     grid-column:1 / span 2;
+     border-bottom: 1.5px solid var(--outline);
+     text-transform: uppercase;
+   }
+  .priorities .icon {
+    grid-column:1;
+    width: 25px;
+    height: 24px;
+    border-right: 1px solid var(--outline-high);
+    border-bottom: 1px solid var(--outline-high);
+  }
+  .priorities .content {
+     grid-column:2;
+     padding: 0px;
+     border-bottom: 1px solid var(--outline-high);
+     font-size: 0.9em;
+     height: 24px;
+     width: auto;
+  }
+  .priorities .date {
+     grid-column:3;
+     padding: 0px;
+     border-bottom: 1px solid var(--outline-high);
+     font-size: 0.9em;
+     height: 24px;
+     width: auto;
+  }
 </style>
