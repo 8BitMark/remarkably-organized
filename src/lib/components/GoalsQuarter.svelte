@@ -27,12 +27,13 @@
 </div>
           </div>
         {/each}
-        <div class="lines">Action Plan</div>
+     
       <div class="priorities">
-        {#each Array(8) as _, i}
+   <div class="lines">Action Plan</div>
+        {#each Array(12) as _, i}
 	    <div class="icon"></div>
 	    <div class="content"></div>
-      <div class="date">    /    /</div>
+      <div class="date">/    /</div>
         {/each}
 	</div>
 
@@ -129,7 +130,7 @@
 
   .priorities {
     display: grid;
-    grid-template-columns: 25px auto 200px;
+    grid-template-columns: 25px auto 150px;
     gap: 0px;
   }
   .priorities h2 {
@@ -155,9 +156,10 @@
   .priorities .date {
      grid-column:3;
      padding: 0px;
+    text-align: center;
      border-left: 1px solid var(--outline-high);
      border-bottom: 1px solid var(--outline-high);
-     font-size: 0.9em;
+     font-size: 1.2em;
      height: 24px;
      width: auto;
   }
