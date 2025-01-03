@@ -13,44 +13,24 @@
         <div class="lines">Key Results</div>
         {#each Array(6) as _, i}
           <div class="kr-lines">{i+1}.
-  {#each Array(count) as _, i}
-    <svg viewBox="0 0 24 24" class="star">
-      <path d="M12 .587l3.688 7.455L24 9.803l-6 5.846 1.417 8.272L12 18.971l-7.417 4.95L6 15.649 0 9.803l8.313-1.76z"></path>
-    </svg>
-  {/each}      
+
+<div class="progress-bar">
+  <div class="marker"></div>
+  <div class="marker"></div>
+  <div class="marker"></div>
+  <div class="marker"></div>
+  <div class="marker"></div>
+  <div class="marker"></div>
+  <div class="marker"></div>
+  <div class="marker"></div>
+  <div class="marker"></div>
+</div>
           </div>
         {/each}
         <div class="lines">Action Plan</div>
         {#each Array(6) as _, i}
           <div class="lines"></div>
         {/each}
-<svg width="500" height="50">
-  <!-- Define clip-paths for rounded corners -->
-  <defs>
-    <clipPath id="left-rounded">
-      <rect x="0" y="0" width="10" height="50" rx="5" />
-    </clipPath>
-    <clipPath id="right-rounded">
-      <rect x="0" y="0" width="10" height="50" rx="5" />
-    </clipPath>
-  </defs>
-  
-  <!-- Leftmost box with left rounded corner -->
-  <rect x="0" y="0" width="10" height="50" fill="blue" clip-path="url(#left-rounded)" />
-  
-  <!-- Middle boxes without rounded corners -->
-  <rect x="10" y="0" width="40" height="50" fill="blue" />
-  <rect x="50" y="0" width="40" height="50" fill="blue" />
-  <rect x="90" y="0" width="40" height="50" fill="blue" />
-  <rect x="130" y="0" width="40" height="50" fill="blue" />
-  <rect x="170" y="0" width="40" height="50" fill="blue" />
-  <rect x="210" y="0" width="40" height="50" fill="blue" />
-  <rect x="250" y="0" width="40" height="50" fill="blue" />
-  <rect x="290" y="0" width="40" height="50" fill="blue" />
-  
-  <!-- Rightmost box with right rounded corner -->
-  <rect x="330" y="0" width="10" height="50" fill="blue" clip-path="url(#right-rounded)" transform="scale(-1, 1) translate(-10, 0)" />
-</svg>
       </div>
     </div>
 </div>
@@ -102,5 +82,43 @@
     stroke-width: 1;
     margin: 2px;
   }
+  .progress-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    position: relative;
+  }
 
+  .progress-bar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #9ee86a;
+    width: {value}%;
+    border-radius: 10px 0 0 10px;
+    transition: width 0.3s;
+  }
+
+  .marker {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 4px;
+    background-color: black;
+    border-radius: 50%;
+  }
+
+  .marker:nth-child(1) { left: 10%; }
+  .marker:nth-child(2) { left: 20%; }
+  .marker:nth-child(3) { left: 30%; }
+  .marker:nth-child(4) { left: 40%; }
+  .marker:nth-child(5) { left: 50%; }
+  .marker:nth-child(6) { left: 60%; }
+  .marker:nth-child(7) { left: 70%; }
+  .marker:nth-child(8) { left: 80%; }
+  .marker:nth-child(9) { left: 90%; }
 </style>
