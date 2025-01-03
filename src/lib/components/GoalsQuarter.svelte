@@ -100,6 +100,7 @@
     background-color: #e0e0e0;
     border-radius: 8px;
     position: relative;
+    		align-items: right;
   }
 
   .progress-bar::before {
