@@ -116,13 +116,13 @@
 		display: grid;
 		grid-template-columns: repeat(8, 1fr);
 		grid-template-rows: repeat(7, 1fr);
-		justify-items: center;
-		align-items: center;
+		justify-items: right;
+		align-items: right;
 		padding: 0.15rem 0.25rem;
 		.label {
 			display: flex;
-			align-items: center;
-			justify-content: center;
+			align-items: right;
+			justify-content: right;
 			font-size: 0.65em;
 			font-weight: var(--font-weight-bold);
 			color: var(--text-high);
