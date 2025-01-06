@@ -232,7 +232,7 @@
 			{/if}
 		</ol>
 		<div style="flex: 1" />
-<ol class="breadcrumbs">
+<ol class="links">
 {#if tabs === 'quarters'}
 					{#each settings.quarters as quarter (quarter.id)}
 						{#if quarter.year === timeframe.year}
