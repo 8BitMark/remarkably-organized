@@ -327,8 +327,7 @@
 			margin: 0;
 			align-items: right;
 			display: flex;
-    			padding-top:5px;
-			padding-right:10px;
+    			padding-top:0px;
 			li {
 				display: flex;
 				text-align: center;
@@ -342,7 +341,7 @@
 				width: 70px;
     				height: 25px;
 				padding-right: 10px;
-				margin-right: 10px;
+				margin-right: 5px;
 				font-size:0.65em;
 			}
 		}
