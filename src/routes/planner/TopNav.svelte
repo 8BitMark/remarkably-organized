@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { formatToString, PlannerSettings, type Timeframe } from '$lib';
-	import HomeIcon from '~icons/material+symbols+outlined/calendar_month';
+	import HomeIcon from '~icons/material-symbols-light/calendar-rounded';
 	import { getFontInfo } from '../fonts/fonts';
 
 	let {
