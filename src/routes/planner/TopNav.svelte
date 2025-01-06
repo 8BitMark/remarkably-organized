@@ -247,11 +247,11 @@
 				{/if}
 
 {#if showDayBreadcrumb}
-     <li><a href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}" class="planner-button">Planner</a></li>
-      <li><a href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}-pg2" class="planner-button">Notes</a></li>
+     <li><a href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}">Planner</a></li>
+      <li><a href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}-pg2">Notes</a></li>
 {:else if showWeekBreadcrumb}
-     <li><a href="#{timeframe.year}-wk{timeframe.weekSinceYear}" class="planner-button">Planner</a></li>
-     <li><a href="#{timeframe.year}-wk{timeframe.weekSinceYear}-pg2" class="planner-button">Notes</a></li>
+     <li><a href="#{timeframe.year}-wk{timeframe.weekSinceYear}">Planner</a></li>
+     <li><a href="#{timeframe.year}-wk{timeframe.weekSinceYear}-pg2">Notes</a></li>
 {/if}
 </ol>
 </nav>
