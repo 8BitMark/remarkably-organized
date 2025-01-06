@@ -174,10 +174,7 @@
 {#if showQuarterBreadcrumb}
 					{#each settings.quarters as quarter (quarter.id)}
 						{#if quarter.year === timeframe.year}
-								<a
-									href="#{quarter.id}"
-									class:active={!disableActiveIndicator &&
-										timeframe.quarter === quarter.quarter}>
+								<a href="#{quarter.id}"}>
 									{quarter.nameShort}
 								</a>
 				
