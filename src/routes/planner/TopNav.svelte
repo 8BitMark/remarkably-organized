@@ -260,10 +260,18 @@ let {
 		</ol>
 		<div style="flex: 1" />
 <ol class="breadcrumbs">
-{#if showQuarterBreadcrumb}
-     <li>Hello</li>
-{/if}
-
+{#if tabs === 'quarters'}
+					{#each settings.quarters as quarter (quarter.id)}
+						{#if quarter.year === timeframe.year}
+							<li>
+								<a
+									href="#{quarter.id}">
+									{quarter.nameShort}
+								</a>
+							</li>
+						{/if}
+					{/each}
+				{/if}
   <!-- {#if showQuarterBreadcrumb}
 	{#each settings.quarters as quarter (quarter.id)}
 	     {#if quarter.year === timeframe.year}
