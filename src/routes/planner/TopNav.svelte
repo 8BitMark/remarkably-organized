@@ -232,19 +232,19 @@
 			{/if}
 		</ol>
 		<div style="flex: 1" />
+
 <ol class="links">
 {#if tabs === 'quarters'}
-					{#each settings.quarters as quarter (quarter.id)}
-						{#if quarter.year === timeframe.year}
-							<li>
-								<a
-									href="#{quarter.id}">
-									{quarter.nameShort}
-								</a>
-							</li>
-						{/if}
-					{/each}
-				{/if}
+	{#each settings.quarters as quarter (quarter.id)}
+		{#if quarter.year === timeframe.year}
+			<li>
+				<a href="#{quarter.id}">
+					{quarter.nameShort}
+				</a>
+			</li>
+		{/if}
+	{/each}
+{/if}
 
 {#if showDayBreadcrumb}
      <li><a href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}">Planner</a></li>
@@ -331,6 +331,7 @@
 				display: inline-block;
 				text-align: center;
 				align-items: center;
+				vertical-align: middle;
 				background-color: var(--fg-text-low);
     				border: none;
     				border-radius: 4px; /* Half the height for perfect rounded corners */
