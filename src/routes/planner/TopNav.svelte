@@ -174,14 +174,13 @@
 {#if tabs === 'quarters'}
 					{#each settings.quarters as quarter (quarter.id)}
 						{#if quarter.year === timeframe.year}
-							<li class="quarter">
 								<a
 									href="#{quarter.id}"
 									class:active={!disableActiveIndicator &&
 										timeframe.quarter === quarter.quarter}>
 									{quarter.nameShort}
 								</a>
-							</li>
+				
 						{/if}
 					{/each}
 				{/if}
