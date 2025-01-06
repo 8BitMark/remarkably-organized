@@ -245,27 +245,16 @@
 						{/if}
 					{/each}
 				{/if}
-  <!-- {#if showQuarterBreadcrumb}
-	{#each settings.quarters as quarter (quarter.id)}
-	     {#if quarter.year === timeframe.year}
-		  <li><a href="#{quarter.id}">
-			{quarter.nameShort}
-		</a>  </li>
-	      {/if}
-	{/each}
-     {/if}
--->
-    {#if showDayBreadcrumb}
 
-     <li><a href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}" class="planner-button">
-Planner</a></li>
+{#if showDayBreadcrumb}
+     <li><a href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}" class="planner-button">Planner</a></li>
       <li><a href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}-pg2" class="planner-button">Notes</a></li>
-			 {:else if showWeekBreadcrumb}
-     <li><a href="#{timeframe.year}-wk{timeframe.weekSinceYear}-pg2" class="planner-button">WeekNotes</a></li>
-
-    {/if}
+{:else if showWeekBreadcrumb}
+     <li><a href="#{timeframe.year}-wk{timeframe.weekSinceYear}" class="planner-button">Planner</a></li>
+     <li><a href="#{timeframe.year}-wk{timeframe.weekSinceYear}-pg2" class="planner-button">Notes</a></li>
+{/if}
 </ol>
-	</nav>
+</nav>
 {/if}
 
 <style lang="scss">
@@ -281,41 +270,6 @@ Planner</a></li>
 		right: 0;
 		height: var(--topnav-height);
 		padding: 0 0 0 var(--sidenav-width);
-		ol.links {
-			list-style: none;
-			list-style: none;
-			padding: 0;
-			margin: 0;
-			display: flex;
-			height: 100%;
-			li {
-				display: flex;
-				align-items: center;
-				height: 100%;
-				&:not(:last-child)::after {
-					content: '/';
-					color: var(--text-low);
-					font-size: 0.85em;
-				}
-				&:last-child {
-					padding-right: 0.75rem;
-				}
-			}
-			a {
-				font-size: 1em;
-				color: var(--text-low);
-				padding: 0 0.25rem;
-				line-height: 1;
-				:global(svg) {
-					font-size: 0.85em;
-				}
-				:global(.ordinal) {
-					color: currentColor;
-					font-size: 0.75em;
-					vertical-align: top;
-				}
-			}
-		}
 
 		ol.breadcrumbs {
 			list-style: none;
@@ -367,27 +321,26 @@ Planner</a></li>
 				}
 			}
 		}
+		ol.links {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			display: flex;
+			font-size: 1.0em;
+			width: 70px;
+    			height: 25px;
+    			background-color: grey;
+    			border: none;
+    			border-radius: 4px; /* Half the height for perfect rounded corners */
+    			color: var(--text-high);
+    			text-decoration: none;
+    			font-family: Arial, sans-serif;
+    			padding-top:10px;
+			li {
+				display: flex;
+				align-items: center;
+				height: 100%;
+			}
+		}
 	}
-  .planner-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 70px;
-    height: 25px;
-    background-color: grey;
-    border: none;
-    border-radius: 4px; /* Half the height for perfect rounded corners */
-    color: white;
-    text-decoration: none;
-    font-family: Arial, sans-serif;
-    font-size: 12px;
-				padding-top:10px;
-  }
-
-  .planner-button svg {
-    margin-right: 5px;
-    fill: none;
-    stroke: white;
-    stroke-width: 2;
-  }
 </style>
