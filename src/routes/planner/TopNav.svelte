@@ -90,6 +90,95 @@
 		['Roboto Condensed', '-.25rem'],
 		['Roboto Slab', '-.15rem'],
 	]);
+
+let {
+		timeframe = {} as Timeframe,
+		settings = {} as PlannerSettings,
+		tabs = 'month' as
+			| 'days-this-week'
+			| 'days-this-month'
+			| 'days-this-year'
+			| 'weeks-this-year'
+			| 'weeks-this-month'
+			| 'months'
+			| 'quarters'
+			| 'years'
+			| 'none',
+		numWeeksInSideNav = 15,
+		numDaysInSideNav = 15,
+		disableActiveIndicator = false,
+	} = $props();
+
+	const isFinalMonth = $derived(
+		settings.months.findIndex(
+			(m) =>
+				m.year === timeframe.start.getUTCFullYear() &&
+				m.month === timeframe.start.getUTCMonth() + 1,
+		) ===
+			settings.months.length - 1,
+	);
+	const isFinalWeek = $derived(
+		settings.weeks.findIndex((m) => m.start.getTime() === timeframe.start.getTime()) ===
+			settings.months.length - 1,
+	);
+	const year = $derived(
+		isFinalMonth || isFinalWeek || !timeframe.year
+			? timeframe.start.getUTCFullYear()
+			: timeframe.year,
+	);
+	const month = $derived(
+		isFinalMonth || isFinalWeek || !timeframe.month
+			? timeframe.start.getUTCMonth() + 1
+			: timeframe.month,
+	);
+	const weekList = $derived(
+		settings.weeks.filter(
+			(week, i) =>
+				week.year === timeframe.year &&
+				(tabs === 'weeks-this-year' || week.month === timeframe.month) &&
+				(tabs !== 'weeks-this-year' ||
+					settings.weeks[i - 1]?.weekSinceYear !== week.weekSinceYear),
+		),
+	);
+	const weekListActiveIndex = $derived(
+		weekList.findIndex((week) => week.weekSinceYear === timeframe.weekSinceYear),
+	);
+	const startWeek = $derived(
+		Math.min(
+			weekList.length - numWeeksInSideNav,
+			Math.ceil(Math.max(0, weekListActiveIndex - numWeeksInSideNav / 2)),
+		),
+	);
+	const weeks = $derived(weekList.slice(startWeek, startWeek + numWeeksInSideNav));
+
+	const dayList = $derived(
+		settings.days.filter((day) =>
+			tabs === 'days-this-week'
+				? day.weekYear === (timeframe.weekYear || timeframe.year) &&
+					day.weekSinceYear === timeframe.weekSinceYear
+				: tabs === 'days-this-month'
+					? day.year === year && month === day.month
+					: day.year === year,
+		),
+	);
+	const startDay = $derived(
+		Math.min(
+			dayList.length - numDaysInSideNav,
+			Math.ceil(
+				Math.max(
+					0,
+					(tabs === 'days-this-year'
+						? timeframe.daySinceYear || 0
+						: tabs === 'days-this-month'
+							? timeframe.daySinceMonth || 0
+							: timeframe.daySinceWeek || 0) -
+						numDaysInSideNav / 2,
+				),
+			),
+		),
+	);
+	const days = $derived(dayList.slice(startDay, startDay + numDaysInSideNav));
+
 </script>
 
 {#if !settings.topNav.disable}
