@@ -323,16 +323,15 @@
 		}
 		ol.links {
 			list-style: none;
-			padding: 0;
-			margin: 0;
+			margin-right: 10px;
 			align-items: right;
 			display: flex;
-    			padding-top:0px;
+    			padding: 0px;
 			li {
 				display: inline-block;
 				text-align: center;
 				align-items: center;
-				background-color: var(--outline-low);
+				background-color: var(--fg-text-low);
     				border: none;
     				border-radius: 4px; /* Half the height for perfect rounded corners */
     				color: var(--text-high);
@@ -340,7 +339,6 @@
     				font-family: Arial, sans-serif;
 				width: 70px;
     				height: 25px;
-				padding-right: 10px;
 				margin-right: 5px;
 				font-size:0.65em;
 			}
