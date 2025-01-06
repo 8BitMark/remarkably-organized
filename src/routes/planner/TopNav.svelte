@@ -329,7 +329,7 @@
 			display: flex;
     			padding-top:0px;
 			li {
-				display: flex;
+				display: inline-block;
 				text-align: center;
 				align-items: center;
 				background-color: var(--outline-low);
