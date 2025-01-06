@@ -171,6 +171,10 @@
 		</ol>
 		<div style="flex: 1" />
 <ol class="breadcrumbs">
+{#if showQuarterBreadcrumb}
+     <li>Hello</li>
+{/if}
+
   <!-- {#if showQuarterBreadcrumb}
 	{#each settings.quarters as quarter (quarter.id)}
 	     {#if quarter.year === timeframe.year}
