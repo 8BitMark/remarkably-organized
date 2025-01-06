@@ -171,7 +171,7 @@
 		</ol>
 		<div style="flex: 1" />
 
-{#if tabs === 'quarters'}
+{#if showQuarterBreadcrumb}
 					{#each settings.quarters as quarter (quarter.id)}
 						{#if quarter.year === timeframe.year}
 								<a
