@@ -186,22 +186,24 @@
 				{/if}
 
     {#if showDayBreadcrumb}
-     <a href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}" class="planner-button">
+<ol class="links">
+     <li><a href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}" class="planner-button">
 					  <svg width="16" height="16" viewBox="0 0 24 24">
 					    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
 					    <line x1="16" y1="2" x2="16" y2="6"></line>
 					    <line x1="8" y1="2" x2="8" y2="6"></line>
 					    <line x1="3" y1="10" x2="21" y2="10"></line>
-					  </svg>Planner</a>
-      <a href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}-pg2" class="planner-button">
+					  </svg>Planner</a></li>
+      <li><a href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}-pg2" class="planner-button">
 					  <svg width="16" height="16" viewBox="0 0 24 24">
 					    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
 					    <line x1="16" y1="2" x2="16" y2="6"></line>
 					    <line x1="8" y1="2" x2="8" y2="6"></line>
 					    <line x1="3" y1="10" x2="21" y2="10"></line>
-					  </svg>Notes</a>
+					  </svg>Notes</a></li>
 			 {:else if showWeekBreadcrumb}
-     <a href="#{timeframe.year}-wk{timeframe.weekSinceYear}-pg2">WeekNotes</a>
+     <li><a href="#{timeframe.year}-wk{timeframe.weekSinceYear}-pg2">WeekNotes</a></li>
+</ol>
     {/if}
 	</nav>
 {/if}
