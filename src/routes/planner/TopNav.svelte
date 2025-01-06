@@ -7,6 +7,19 @@
 		timeframe = {} as Timeframe,
 		settings = {} as PlannerSettings,
 		breadcrumbs = [] as { name: string; href: string }[],
+         	tabs = 'month' as
+			| 'days-this-week'
+			| 'days-this-month'
+			| 'days-this-year'
+			| 'weeks-this-year'
+			| 'weeks-this-month'
+			| 'months'
+			| 'quarters'
+			| 'years'
+			| 'none',
+		numWeeksInSideNav = 15,
+		numDaysInSideNav = 15,
+		disableActiveIndicator = false,
 	} = $props();
 
 	const showYearBreadcrumb = false; //$derived(!settings.yearPage.disable && timeframe.year);
@@ -90,24 +103,6 @@
 		['Roboto Condensed', '-.25rem'],
 		['Roboto Slab', '-.15rem'],
 	]);
-
-let {
-		timeframe = {} as Timeframe,
-		settings = {} as PlannerSettings,
-		tabs = 'month' as
-			| 'days-this-week'
-			| 'days-this-month'
-			| 'days-this-year'
-			| 'weeks-this-year'
-			| 'weeks-this-month'
-			| 'months'
-			| 'quarters'
-			| 'years'
-			| 'none',
-		numWeeksInSideNav = 15,
-		numDaysInSideNav = 15,
-		disableActiveIndicator = false,
-	} = $props();
 
 	const isFinalMonth = $derived(
 		settings.months.findIndex(
