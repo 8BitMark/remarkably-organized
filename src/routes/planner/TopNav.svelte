@@ -170,7 +170,7 @@
 			{/if}
 		</ol>
 		<div style="flex: 1" />
-<ol class="planner-button">
+<ol class="breadcrumbs">
   <!-- {#if showQuarterBreadcrumb}
 	{#each settings.quarters as quarter (quarter.id)}
 	     {#if quarter.year === timeframe.year}
@@ -187,7 +187,7 @@
 Planner</a></li>
       <li><a href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}-pg2" class="planner-button">Notes</a></li>
 			 {:else if showWeekBreadcrumb}
-     <li><a href="#{timeframe.year}-wk{timeframe.weekSinceYear}-pg2">WeekNotes</a></li>
+     <li><a href="#{timeframe.year}-wk{timeframe.weekSinceYear}-pg2" class="planner-button">WeekNotes</a></li>
 
     {/if}
 </ol>
