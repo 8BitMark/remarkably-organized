@@ -325,21 +325,23 @@
 			list-style: none;
 			padding: 0;
 			margin: 0;
+			align-items: right;
 			display: flex;
 			font-size: 1.0em;
 			width: 70px;
     			height: 25px;
-    			background-color: grey;
+    			background-color: var(--outline);
     			border: none;
     			border-radius: 4px; /* Half the height for perfect rounded corners */
     			color: var(--text-high);
     			text-decoration: none;
     			font-family: Arial, sans-serif;
-    			padding-top:10px;
+    			padding-top:5px;
 			li {
 				display: flex;
 				align-items: center;
 				height: 100%;
+font-size:0.8em;
 			}
 		}
 	}
