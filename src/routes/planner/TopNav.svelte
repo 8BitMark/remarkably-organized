@@ -327,22 +327,23 @@
 			margin: 0;
 			align-items: right;
 			display: flex;
-			
-    			
     			padding-top:5px;
+			padding-right:10px;
 			li {
 				display: flex;
 				text-align: center;
-				background-color: var(--outline);
-    			border: none;
-    			border-radius: 4px; /* Half the height for perfect rounded corners */
-    			color: var(--text-high);
-    			text-decoration: none;
-    			font-family: Arial, sans-serif;
+				align-items: center;
+				background-color: var(--outline-low);
+    				border: none;
+    				border-radius: 4px; /* Half the height for perfect rounded corners */
+    				color: var(--text-high);
+    				text-decoration: none;
+    				font-family: Arial, sans-serif;
 				width: 70px;
     				height: 25px;
 				padding-right: 10px;
-font-size:0.8em;
+				margin-right: 10px;
+				font-size:0.65em;
 			}
 		}
 	}
