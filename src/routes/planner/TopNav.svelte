@@ -170,20 +170,19 @@
 			{/if}
 		</ol>
 		<div style="flex: 1" />
-
-{#if showQuarterBreadcrumb}
-					{#each settings.quarters as quarter (quarter.id)}
-						{#if quarter.year === timeframe.year}
-								<a href="#{quarter.id}"}>
-									{quarter.nameShort}
-								</a>
-				
-						{/if}
-					{/each}
-				{/if}
+<ol class="links">
+   {#if showQuarterBreadcrumb}
+	{#each settings.quarters as quarter (quarter.id)}
+	     {#if quarter.year === timeframe.year}
+		  <li><a href="#{quarter.id}"}>
+			{quarter.nameShort}
+		</a>  </li>
+	      {/if}
+	{/each}
+     {/if}
 
     {#if showDayBreadcrumb}
-<ol class="links">
+
      <li><a href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}" class="planner-button">
 					  <svg width="16" height="16" viewBox="0 0 24 24">
 					    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
@@ -200,8 +199,9 @@
 					  </svg>Notes</a></li>
 			 {:else if showWeekBreadcrumb}
      <li><a href="#{timeframe.year}-wk{timeframe.weekSinceYear}-pg2">WeekNotes</a></li>
-</ol>
+
     {/if}
+</ol>
 	</nav>
 {/if}
 
