@@ -174,7 +174,7 @@
    {#if showQuarterBreadcrumb}
 	{#each settings.quarters as quarter (quarter.id)}
 	     {#if quarter.year === timeframe.year}
-		  <li><a href="#{quarter.id}"}>
+		  <li><a href="#{quarter.id}">
 			{quarter.nameShort}
 		</a>  </li>
 	      {/if}
