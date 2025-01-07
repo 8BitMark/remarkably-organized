@@ -360,7 +360,7 @@
     				color: var(--text-high);
     				text-decoration: none;
     				font-family: Arial, sans-serif;
-				width: 50px;
+				width: 40px;
     				height: 25px;
 				margin-right: 5px;
 				font-size:0.65em;
