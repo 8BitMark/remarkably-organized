@@ -25,6 +25,7 @@
 					timeframe={year}
 					disableActiveIndicator></SideNav>
 				<TopNav
+					tabs={!settings.monthPage.disable ? 'months' : 'none'}
 					{settings}
 					breadcrumbs={[{ name: collection.name, href: `#${collection.id}` }]} />
 				<div class="collection-index" style:--rows={rows + 1}>
@@ -60,6 +61,7 @@
 						timeframe={year}
 						disableActiveIndicator />
 					<TopNav
+						tabs={!settings.monthPage.disable ? 'months' : 'none'}
 						{settings}
 						breadcrumbs={[
 							{ name: collection.name, href: `#${collection.id}` },
