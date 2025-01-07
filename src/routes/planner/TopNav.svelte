@@ -268,11 +268,11 @@
 {/if}
 
 {#if showDayBreadcrumb}
-     <a href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}" class:active={isActive}><li>Planner</li></a>
-     <a href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}-pg2" class:active={isActive}><li>Notes</li></a>
+     <a href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}"><li>Planner</li></a>
+     <a href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}-pg2"><li>Notes</li></a>
 {:else if showWeekBreadcrumb}
-     <a href="#{timeframe.year}-wk{timeframe.weekSinceYear}" class:active={isActive}><li>Planner</li></a>
-     <a href="#{timeframe.year}-wk{timeframe.weekSinceYear}-pg2" class:active={isActive}><li>Notes</li></a>
+     <a href="#{timeframe.year}-wk{timeframe.weekSinceYear}"><li>Planner</li></a>
+     <a href="#{timeframe.year}-wk{timeframe.weekSinceYear}-pg2"><li>Notes</li></a>
 {/if}
 </ol>
 </nav>
