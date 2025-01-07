@@ -253,7 +253,7 @@
 		{@const highlighEnd = shouldHighlight && isSunday && i > 0}
 			<a
 				href="#{day.id}"
-				class="days"
+				style="width: 30px;"
 				class:active={isActive}
 				class:highlight={shouldHighlight}
 				class:highlight-start={highlightStart}
@@ -349,7 +349,7 @@
 			align-items: right;
 			display: flex;
     			padding: 0px;
-			a.day, a.pages {
+			a, a.day, a.pages {
 				display: inline-block;
 				text-align: center;
 				align-items: center;
@@ -369,7 +369,7 @@
 			a.day {
 				width: 30px;
 			}
-			a.pages {
+			a, a.pages {
 				width: 60px;
 			}
 			a.active {
