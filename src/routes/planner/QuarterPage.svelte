@@ -9,7 +9,7 @@
 
 <article id={quarter.id} use:intersect={{ rootMargin: '1000px 0px 1000px 0px' }}>
 	<SideNav {settings} tabs="quarters" timeframe={quarter}></SideNav>
-	<TopNav {settings} timeframe={quarter} />
+	<TopNav {settings} tabs="quarters" timeframe={quarter} />
 	<Page {settings} display="calendar-quarter" timeframe={quarter} />
 </article>
 
