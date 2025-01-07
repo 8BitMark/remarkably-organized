@@ -252,7 +252,7 @@
 		{@const highlightStart = shouldHighlight && isSaturday && i < days.length - 1}
 		{@const highlighEnd = shouldHighlight && isSunday && i > 0}
 			<a
-				href="#{day.id}" style="width: 20px;"
+				href="#{day.id}" 
 				class:active={isActive}
 				class:highlight={shouldHighlight}
 				class:highlight-start={highlightStart}
@@ -359,7 +359,7 @@
     				color: var(--text-high);
     				text-decoration: none;
     				font-family: Arial, sans-serif;
-				width: 70px;
+				width: 40px;
     				height: 25px;
 				margin-right: 5px;
 				font-size:0.65em;
