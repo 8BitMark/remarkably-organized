@@ -338,7 +338,7 @@
 				margin-right: 5px;
 				font-size:0.65em;
 				text-transform: uppercase;
-				margin-top:4px;
+				padding-top:4px;
 			}
 		}
 	}
