@@ -241,6 +241,33 @@
 	{/each}
 {/if}
 
+{#if tabs === 'days-this-year' || tabs === 'days-this-month' || tabs === 'days-this-week'}
+	{#each days as day, i (day.id)}
+		{@const isActive =
+			!disableActiveIndicator && timeframe.daySinceYear === day.daySinceYear}
+		{@const isSaturday = day.start.getUTCDay() === 6}
+		{@const isSunday = day.start.getUTCDay() === 0}
+		{@const isWeekend = isSaturday || isSunday}
+		{@const shouldHighlight = !isActive && isWeekend && tabs !== 'days-this-week'}
+		{@const highlightStart = shouldHighlight && isSaturday && i < days.length - 1}
+		{@const highlighEnd = shouldHighlight && isSunday && i > 0}
+			<a
+				href="#{day.id}"
+				class:active={isActive}
+				class:highlight={shouldHighlight}
+				class:highlight-start={highlightStart}
+				class:highlight-end={highlighEnd}><li>
+				<span class="weekday">
+					{day.start.toLocaleString('default', {
+						weekday: 'short',
+						timeZone: 'UTC',
+					})}
+				</span>
+				{day.daySinceMonth}
+			</li></a>
+	{/each}
+{/if}
+
 {#if showDayBreadcrumb}
      <a href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}"><li>Planner</li></a>
      <a href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}-pg2"><li>Notes</li></a>
@@ -333,7 +360,7 @@
     				color: var(--text-high);
     				text-decoration: none;
     				font-family: Arial, sans-serif;
-				width: 70px;
+				width: 50px;
     				height: 25px;
 				margin-right: 5px;
 				font-size:0.65em;
