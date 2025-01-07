@@ -252,7 +252,7 @@
 		{@const highlightStart = shouldHighlight && isSaturday && i < days.length - 1}
 		{@const highlighEnd = shouldHighlight && isSunday && i > 0}
 			<a
-				href="#{day.id}" 
+			        href="#{day.id}"
 				class:active={isActive}
 				class:highlight={shouldHighlight}
 				class:highlight-start={highlightStart}
@@ -261,7 +261,7 @@
 					{day.start.toLocaleString('default', {
 						weekday: 'short',
 						timeZone: 'UTC',
-					}).charAt(0)}
+					}).charAt(0)} 
 				</span>
 			</li></a>
 	{/each}
