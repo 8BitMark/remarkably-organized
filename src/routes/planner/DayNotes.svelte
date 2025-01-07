@@ -15,6 +15,7 @@
 			<SideNav {settings} tabs={settings.dayPage.sideNavDisplay} timeframe={day} />
 			<TopNav
 				{settings}
+				tabs={settings.dayPage.sideNavDisplay}
 				timeframe={day}
 				breadcrumbs={[{ href: `#${day.id}-pg${i + 2}`, name: `Page ${i + 2}` }]} />
 			<Page display={settings.dayPage.notePagesTemplate} {settings} timeframe={day} />
