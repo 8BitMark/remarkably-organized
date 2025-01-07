@@ -9,7 +9,7 @@
 
 <article id={day.id} use:intersect={{ rootMargin: '1000px 0px 1000px 0px' }}>
 	<SideNav tabs={settings.dayPage.sideNavDisplay} {settings} timeframe={day}></SideNav>
-	<TopNav {settings} timeframe={day} />
+	<TopNav {settings} tabs={settings.dayPage.sideNavDisplay} timeframe={day} />
 	<Page {settings} display={settings.dayPage.template} timeframe={day} />
 </article>
 
