@@ -263,17 +263,16 @@
 						timeZone: 'UTC',
 					}).charAt(0)}
 				</span>
-				{day.daySinceMonth}
 			</li></a>
 	{/each}
 {/if}
 
 {#if showDayBreadcrumb}
-     <a href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}"><li>Planner</li></a>
-     <a href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}-pg2"><li>Notes</li></a>
+     <a href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}" class:active={isActive}><li>Planner</li></a>
+     <a href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}-pg2" class:active={isActive}><li>Notes</li></a>
 {:else if showWeekBreadcrumb}
-     <a href="#{timeframe.year}-wk{timeframe.weekSinceYear}"><li>Planner</li></a>
-     <a href="#{timeframe.year}-wk{timeframe.weekSinceYear}-pg2"><li>Notes</li></a>
+     <a href="#{timeframe.year}-wk{timeframe.weekSinceYear}" class:active={isActive}><li>Planner</li></a>
+     <a href="#{timeframe.year}-wk{timeframe.weekSinceYear}-pg2" class:active={isActive}><li>Notes</li></a>
 {/if}
 </ol>
 </nav>
@@ -360,7 +359,7 @@
     				color: var(--text-high);
     				text-decoration: none;
     				font-family: Arial, sans-serif;
-				width: 50px;
+				width: 40px;
     				height: 25px;
 				margin-right: 5px;
 				font-size:0.65em;
