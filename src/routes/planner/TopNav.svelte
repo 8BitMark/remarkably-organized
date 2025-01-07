@@ -236,19 +236,17 @@
 <ol class="links">
 {#if tabs === 'quarters'}
 	{#each settings.quarters as quarter (quarter.id)}
-		{#if quarter.year === timeframe.year}
-			<li>
-				<a href="#{quarter.id}">
-					{quarter.nameShort}
-				</a>
-			</li>
-		{/if}
+		<li>
+			<a href="#{quarter.id}">
+				{quarter.nameShort}
+			</a>
+		</li>
 	{/each}
 {/if}
 
 {#if showDayBreadcrumb}
-     <li><a href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}">Planner</a></li>
-      <li><a href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}-pg2">Notes</a></li>
+     <a href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}"><li>Planner</li></a>
+     <a href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}-pg2"><li>Notes</li></a>
 {:else if showWeekBreadcrumb}
      <li><a href="#{timeframe.year}-wk{timeframe.weekSinceYear}">Planner</a></li>
      <li><a href="#{timeframe.year}-wk{timeframe.weekSinceYear}-pg2">Notes</a></li>
@@ -327,7 +325,7 @@
 			align-items: right;
 			display: flex;
     			padding: 0px;
-			li {
+			a {
 				display: inline-block;
 				text-align: center;
 				align-items: center;
