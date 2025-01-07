@@ -261,7 +261,7 @@
 					{day.start.toLocaleString('default', {
 						weekday: 'short',
 						timeZone: 'UTC',
-					})}
+					}).charAt(0)}
 				</span>
 				{day.daySinceMonth}
 			</li></a>
@@ -366,6 +366,9 @@
 				font-size:0.65em;
 				text-transform: uppercase;
 				padding-top:4px;
+			}
+			a.active {
+				background-color: yellow;
 			}
 		}
 	}
