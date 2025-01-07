@@ -173,9 +173,9 @@
      text-transform: uppercase;
    }
 
-.schedule {
+ .schedule {
 	padding-right: 10px;
-}
+ }
   
     .hour, .lines{
       border-bottom: 1px solid var(--outline-high);
