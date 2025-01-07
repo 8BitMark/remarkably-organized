@@ -21,6 +21,7 @@
 			<SideNav {settings} tabs="quarters" timeframe={quarter} />
 			<TopNav
 				{settings}
+				tabs="quarters" 
 				timeframe={quarter}
 				breadcrumbs={[{ href: `#${quarter.id}-pg${i + 2}`, name: `Page ${i + 2}` }]} />
 			<Page
