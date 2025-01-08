@@ -154,7 +154,7 @@ export class PlannerSettings {
 		showCollectionLinks = $state(false);
 		width = $state(52);
 		leftSide = $state(true);
-		font = $state('Bebas Neue');
+		font = $state('Roboto Condensed');
 	})();
 
 	/** Settings for changing the top navigation bar display */
@@ -162,7 +162,7 @@ export class PlannerSettings {
 		disable = $state(false);
 		showCollectionLinks = $state(false);
 		height = $state(45);
-		font = $state('Bebas Neue');
+		font = $state('Roboto Condensed');
 	})();
 
 	/** Settings for changing the cover page display */
@@ -240,18 +240,18 @@ collections = $state([
 		{
 			id: 'notes',
 			name: 'Notes',
-			total: 40,
+			total: 0,
 			type: 'dotted',
-			numIndexPages: 2,
-			numPagesPerItem: 1,
+			numIndexPages: 0,
+			numPagesPerItem: 0,
 		},
 		{
 			id: 'goals',
 			name: 'Goals',
-			total: 1,
+			total: 0,
 			type: 'habit-year-by-week',
 			numIndexPages: 0,
-			numPagesPerItem: 1,
+			numPagesPerItem: 0,
 		},
 	] as Collection[]);
 
