@@ -235,9 +235,11 @@
 
 <ol class="links">
 {#if tabs === 'quarters'}
-	{#each settings.quarters as quarter (quarter.id)}
-		<a href="#{quarter.id}"><li>
-			{quarter.nameShort}</li></a>
+	{#each settings.quarters as quarters (quarter.id)}
+		{@const isActive =
+			!disableActiveIndicator && quarter === quarters.nameShort}
+		<a href="#{quarters.id}" class:active={isActive}><li>
+			{quarters.nameShort}</li></a>
 	{/each}
 {/if}
 
@@ -268,11 +270,11 @@
 {/if}
 
 {#if showDayBreadcrumb}
-     <a href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}" style="width: 30px;"><li>Planner</li></a>
-     <a href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}-pg2" style="width: 30px;"><li>Notes</li></a>
+     <a href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}" style="width: 60px;"><li>Planner</li></a>
+     <a href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}-pg2" style="width: 60px;"><li>Notes</li></a>
 {:else if showWeekBreadcrumb}
-     <a href="#{timeframe.year}-wk{timeframe.weekSinceYear}" style="width: 30px;"><li>Planner</li></a>
-     <a href="#{timeframe.year}-wk{timeframe.weekSinceYear}-pg2" style="width: 30px;"><li>Notes</li></a>
+     <a href="#{timeframe.year}-wk{timeframe.weekSinceYear}" style="width: 60px;"><li>Planner</li></a>
+     <a href="#{timeframe.year}-wk{timeframe.weekSinceYear}-pg2" style="width: 60px;"><li>Notes</li></a>
 {/if}
 </ol>
 </nav>
@@ -353,21 +355,21 @@
 				text-align: center;
 				align-items: center;
 				vertical-align: middle;
-				background-color: var(--fg-text-low);
+				background-color: var(--nav-bg);
     				border: none;
     				border-radius: 4px; /* Half the height for perfect rounded corners */
     				color: var(--text-high);
     				text-decoration: none;
     				font-family: Arial, sans-serif;
     				height: 25px;
-				width: 40px;
+				width: 35px;
 				margin-right: 5px;
-				font-size:0.65em;
+				font-size:0.85em;
 				text-transform: uppercase;
 				padding-top:4px;
 			}
 			a.active {
-				background-color: yellow;
+				background-color: var(--fg-text-low);
 			}
 		}
 	}
