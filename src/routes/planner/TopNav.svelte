@@ -212,9 +212,16 @@
 					</a>
 				</li>
 			{/if}
+
+{#if breadcrumbs?.length}
+	{#each breadcrumbs as breadcrumb (breadcrumb.href)}
+		<li><a href={breadcrumb.href}>{breadcrumb.name}</a></li>
+	{/each}
+{/if}
+		</ol>
+
 			{#if showDayBreadcrumb}
-				<li>
-					<a href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}">
+				<a href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}">
 						{timeframe.start.toLocaleString('default', {
 							weekday: 'short',
 							timeZone: 'UTC',
@@ -228,9 +235,8 @@
 							html: true,
 						})}
 					</a>
-				</li>
 			{/if}
-		</ol>
+		
 		<div style="flex: 1" />
 
 <ol class="links">
@@ -268,6 +274,7 @@
 			</li></a>
 	{/each}
 {/if}
+
 
 {#if showDayBreadcrumb}
      <a href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}" style="width: 65px;"><li>Planner</li></a>
