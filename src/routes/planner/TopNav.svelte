@@ -275,12 +275,14 @@
 	{/each}
 {/if}
 
-{@const isActive = breadcrumbs?.length > 0}
+
 
 {#if showDayBreadcrumb}
+     {@const isActive = breadcrumbs?.length > 0}
      <a href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}" style="width: 65px;"><li>Planner</li></a>
      <a href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}-pg2" class:active={isActive}><li>Notes</li></a>
 {:else if showWeekBreadcrumb}
+     {@const isActive = breadcrumbs?.length > 0}
      <a href="#{timeframe.year}-wk{timeframe.weekSinceYear}" style="width: 65px;"><li>Planner</li></a>
      <a href="#{timeframe.year}-wk{timeframe.weekSinceYear}-pg2" style="width: 65px;"><li>Notes</li></a>
 {/if}
