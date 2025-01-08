@@ -275,9 +275,7 @@
 	{/each}
 {/if}
 
-{#if breadcrumbs?.length}
-	{@const isActive = true}
-{/if}
+{@const isActive = breadcrumbs?.length > 0}
 
 {#if showDayBreadcrumb}
      <a href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}" style="width: 65px;"><li>Planner</li></a>
