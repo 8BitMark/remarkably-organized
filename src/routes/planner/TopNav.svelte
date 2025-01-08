@@ -253,7 +253,6 @@
 		{@const highlighEnd = shouldHighlight && isSunday && i > 0}
 			<a
 				href="#{day.id}"
-				style="width: 30px;"
 				class:active={isActive}
 				class:highlight={shouldHighlight}
 				class:highlight-start={highlightStart}
@@ -269,11 +268,11 @@
 {/if}
 
 {#if showDayBreadcrumb}
-     <a href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}" class="pages"><li>Planner</li></a>
-     <a href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}-pg2" class="pages"><li>Notes</li></a>
+     <a href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}" style="width: 30px;"><li>Planner</li></a>
+     <a href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}-pg2" style="width: 30px;"><li>Notes</li></a>
 {:else if showWeekBreadcrumb}
-     <a href="#{timeframe.year}-wk{timeframe.weekSinceYear}" class="pages"><li>Planner</li></a>
-     <a href="#{timeframe.year}-wk{timeframe.weekSinceYear}-pg2" class="pages"><li>Notes</li></a>
+     <a href="#{timeframe.year}-wk{timeframe.weekSinceYear}" style="width: 30px;"><li>Planner</li></a>
+     <a href="#{timeframe.year}-wk{timeframe.weekSinceYear}-pg2" style="width: 30px;"><li>Notes</li></a>
 {/if}
 </ol>
 </nav>
@@ -349,7 +348,7 @@
 			align-items: right;
 			display: flex;
     			padding: 0px;
-			a, a.day, a.pages {
+			a {
 				display: inline-block;
 				text-align: center;
 				align-items: center;
@@ -361,16 +360,11 @@
     				text-decoration: none;
     				font-family: Arial, sans-serif;
     				height: 25px;
+				width: 40px;
 				margin-right: 5px;
 				font-size:0.65em;
 				text-transform: uppercase;
 				padding-top:4px;
-			}
-			a.day {
-				width: 30px;
-			}
-			a, a.pages {
-				width: 60px;
 			}
 			a.active {
 				background-color: yellow;
