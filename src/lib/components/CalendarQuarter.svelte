@@ -33,6 +33,7 @@
 			<div class="month">
 				<a href="#{getMonthLink(month)}" class="calendar">
 					<h2>{month.nameLong}</h2>
+				</a>
 					<div class="days">
 						{#if startWeekOnSunday}
 							<div class="label">Su</div>
@@ -57,7 +58,7 @@
 							</a>
 						{/each}
 					</div>
-				</a>
+				
 				<div class="notes">
 					{#each Array(10) as _, i (i)}
 						<div class="lines"></div>
