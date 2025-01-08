@@ -265,12 +265,12 @@
 				class:highlight={shouldHighlight}
 				class:highlight-start={highlightStart}
 				class:highlight-end={highlighEnd}><li>
-				<span class="weekday">
+				
 					{day.start.toLocaleString('default', {
 						weekday: 'short',
 						timeZone: 'UTC',
 					}).charAt(0)}
-				</span>
+				
 			</li></a>
 	{/each}
 {/if}
