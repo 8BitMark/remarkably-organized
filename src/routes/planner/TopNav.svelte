@@ -241,11 +241,11 @@
 
 <ol class="links">
 {#if tabs === 'quarters'}
-	{#each settings.quarters as quarters (quarter.id)}
+	{#each settings.quarters as quarters (quarters.id)}
 		{@const isActive =
 			!disableActiveIndicator && quarter === quarters.nameShort}
 		<a href="#{quarters.id}" class:active={isActive}><li>
-			{quarters.nameShort}</li></a>
+			{quarter}-{quarters.nameShort}</li></a>
 	{/each}
 {/if}
 
