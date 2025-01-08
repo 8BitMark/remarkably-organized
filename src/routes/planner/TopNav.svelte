@@ -270,11 +270,11 @@
 {/if}
 
 {#if showDayBreadcrumb}
-     <a href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}" style="width: 60px;"><li>Planner</li></a>
-     <a href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}-pg2" style="width: 60px;"><li>Notes</li></a>
+     <a href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}" style="width: 65px;"><li>Planner</li></a>
+     <a href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}-pg2" style="width: 65px;"><li>Notes</li></a>
 {:else if showWeekBreadcrumb}
-     <a href="#{timeframe.year}-wk{timeframe.weekSinceYear}" style="width: 60px;"><li>Planner</li></a>
-     <a href="#{timeframe.year}-wk{timeframe.weekSinceYear}-pg2" style="width: 60px;"><li>Notes</li></a>
+     <a href="#{timeframe.year}-wk{timeframe.weekSinceYear}" style="width: 65px;"><li>Planner</li></a>
+     <a href="#{timeframe.year}-wk{timeframe.weekSinceYear}-pg2" style="width: 65px;"><li>Notes</li></a>
 {/if}
 </ol>
 </nav>
@@ -360,9 +360,8 @@
     				border-radius: 4px; /* Half the height for perfect rounded corners */
     				color: var(--text-high);
     				text-decoration: none;
-    				font-family: Arial, sans-serif;
     				height: 25px;
-				width: 35px;
+				width: 25px;
 				margin-right: 5px;
 				font-size:0.85em;
 				text-transform: uppercase;
