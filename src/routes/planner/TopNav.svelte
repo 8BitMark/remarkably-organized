@@ -220,22 +220,22 @@
 {/if}
 		</ol>
 
-			{#if showDayBreadcrumb}
-				<p><a href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}">
-						{timeframe.start.toLocaleString('default', {
-							weekday: 'short',
-							timeZone: 'UTC',
-						})},
-						{timeframe.start.toLocaleString('default', {
-							month: !breadcrumbs.length ? 'long' : 'short',
-							timeZone: 'UTC',
-						})}
-						{@html formatToString(timeframe.daySinceMonth, {
-							type: 'ordinal',
-							html: true,
-						})}
-					</a></p>
-			{/if}
+		{#if showDayBreadcrumb}
+			<p><a href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}">
+					{timeframe.start.toLocaleString('default', {
+						weekday: 'long',
+						timeZone: 'UTC',
+					})},
+					{@html formatToString(timeframe.daySinceMonth, {
+						type: 'd',
+						html: true,
+					})}
+					{timeframe.start.toLocaleString('default', {
+						month: 'long',
+						timeZone: 'UTC',
+					})}
+				</a></p>
+		{/if}
 		
 		<div style="flex: 1" />
 
