@@ -170,8 +170,8 @@
 			<li>
 				<a href="#{year}" class="home">
 					<HomeIcon
-						width="1.35rem"
-						height="1.35rem"
+						width="28px"
+						height="28px"
 						style={homeIconAdjustments.get(font)
 							? `margin-top: ${homeIconAdjustments.get(font)}`
 							: null} />
@@ -184,8 +184,8 @@
 				<li>
 					<a href="#{year}-q{quarter}" >
 						<QuarterIcon
-						width="1.35rem"
-						height="1.35rem"
+						width="28px"
+						height="28px"
 						style={homeIconAdjustments.get(font)
 							? `margin-top: ${homeIconAdjustments.get(font)}`
 							: null} />
@@ -249,8 +249,7 @@
 <ol class="links">
 {#if tabs === 'quarters'}
 	{#each settings.quarters as quarters (quarters.id)}
-		{@const isActive =
-			!disableActiveIndicator && quarter === quarters.nameShort.charAt(1)}
+		{@const isActive = quarter === parseInt(quarters.nameShort.charAt(1),10)0}
 		<a href="#{quarters.id}" class:active={isActive}><li>
 			{quarter}-{quarters.nameShort}</li></a>
 	{/each}
