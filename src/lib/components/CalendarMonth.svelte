@@ -121,7 +121,7 @@
 			border-top: solid 1px var(--outline-high);
 			border-left: solid 1px var(--outline-high);
    			border-right: solid 1px var(--outline-high);
-			background-color: var(--outline-high);
+			background-color: var(--nav-bg);
 			margin-bottom: 0px;
 			border-bottom: solid 1px var(--outline-high);
 		}
