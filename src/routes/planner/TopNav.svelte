@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { formatToString, PlannerSettings, type Timeframe } from '$lib';
 	import HomeIcon from '~icons/material-symbols-light/calendar-month';
+	import QuarterIcon from '~icons/fluent/calendar-arrow-counterclockwise-28-regular';
 	import { getFontInfo } from '../fonts/fonts';
 
 	let {
@@ -178,9 +179,12 @@
 			{#if showQuarterBreadcrumb}
 				<li>
 					<a href="#{year}-q{quarter}" >
-						{!showWeekBreadcrumb && !showMonthBreadcrumb && !showDayBreadcrumb
-							? 'Quarter '
-							: 'Q'}{quarter}
+						<QuarterIcon
+						width="1.35rem"
+						height="1.35rem"
+						style={homeIconAdjustments.get(font)
+							? `margin-top: ${homeIconAdjustments.get(font)}`
+							: null} />
 					</a>
 				</li>
 			{/if}
