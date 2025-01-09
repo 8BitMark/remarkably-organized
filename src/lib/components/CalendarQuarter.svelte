@@ -31,7 +31,7 @@
 <h2>Quarterly Plan</h2>
 		{#each months as month (month.id)}
 			<div class="month">
-				<a href="#{getMonthLink(month)}" class="calendar">
+				<a href="#{getMonthLink(month)}">
 					<h2>{month.nameLong}</h2>
 				</a>
 					<div class="days">
