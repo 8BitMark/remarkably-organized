@@ -54,7 +54,7 @@
 	<div class="months">
 		{#each months as month (month.id)}
 			<a href="#{getMonthLink(month)}" class="month">
-				<h2>{month.nameLong}</h2>
+				<h2>{month.nameLong}</h2></a>
 				<div class="days">
 					<div class="week-label">Wk</div>
 					{#if startWeekOnSunday}
@@ -88,7 +88,6 @@
 						</a> 
 					{/each}
 				</div>
-			</a>
 		{/each}
 	</div>
 {/if}
