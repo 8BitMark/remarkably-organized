@@ -79,15 +79,15 @@
 		padding-left: 10px;
 		padding-right: 10px;
 		h2 {
-		  width: 100%;
-				text-align: left;
-				margin-top: 0px;
-    font-size: 1.2em;
-    color: var(--text-high);
-    text-transform: uppercase;
-    padding-top: 5px;
-    letter-spacing: 1.5px;
-    border-bottom: 1.5px solid var(--outline);
+		   width: 100%;
+			text-align: center;
+			margin-top: 0px;
+		    font-size: 1.2em;
+		    color: var(--text-high);
+		    text-transform: uppercase;
+		    padding-top: 5px;
+		    letter-spacing: 1.5px;
+		    border-bottom: 1.5px solid var(--outline);
 				}
 				
 	}
@@ -102,7 +102,6 @@
 			border-bottom: none;
 		}
 		h2 {
-			display: flex;
 			text-align: center;
 			font-size: 1.2em;
 			font-weight: var(--font-weight-normal);
