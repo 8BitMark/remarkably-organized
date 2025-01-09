@@ -1,7 +1,11 @@
 <script lang="ts">
 	import { formatToString, PlannerSettings, type Timeframe } from '$lib';
-	import HomeIcon from '~icons/material-symbols-light/calendar-month';
+	import HomeIcon from '~icons/fluent/calendar-28-filled';
 	import QuarterIcon from '~icons/fluent/calendar-arrow-counterclockwise-28-regular';
+	import PlannerIcon from '~icons/fluent/calendar-clock-24-filled';
+	import NotepadIcon from '~icons/fluent/notepad-28-filled';
+	import WeekIcon from '~icons/fluent/calendar-empty-28-regular';
+	
 	import { getFontInfo } from '../fonts/fonts';
 
 	let {
