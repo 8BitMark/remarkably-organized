@@ -192,7 +192,7 @@
 					</a>
 				</li>
 			{/if}
-			{#if showMonthBreadcrumb}
+			{#if showMonthBreadcrumb && tabs === 'months'}
 				<li>
 					<a href="#{year}-{month}">
 						{new Date(year, month - 1).toLocaleString('default', {
@@ -225,10 +225,10 @@
 					</a>
 				</li>
 			{/if}
-		</ol>
+		
 
 		{#if showDayBreadcrumb}
-			<div class="title"><a href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}">
+			<li><a href="#{year}-{month}">
 					{timeframe.start.toLocaleString('default', {
 						weekday: 'long',
 						timeZone: 'UTC',
@@ -241,10 +241,10 @@
 						month: 'long',
 						timeZone: 'UTC',
 					})}
-				</a></div>
+				</a></li>
 		{/if}
 		
-		<div style="flex: 1" />
+		</ol>
 
 <ol class="links">
 {#if tabs === 'quarters'}
@@ -322,7 +322,6 @@
 				align-items: center;
 				height: 100%;
 				&:not(:last-child)::after {
-					content: '/';
 					color: var(--text-low);
 					font-size: 0.8em;
 					opacity: 0.8;
