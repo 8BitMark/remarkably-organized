@@ -105,8 +105,7 @@
 		height: 100%;
 		padding: 0 1.5rem 3.5rem;
 		h2 { 
-			display: block;
-			text-align: centre;
+			text-align: center;
 			font-size: 1.2em;
 			font-weight: var(--font-weight-normal);
 			padding: 0 0 0.25rem;
