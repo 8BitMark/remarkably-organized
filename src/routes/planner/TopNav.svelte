@@ -215,9 +215,11 @@
 						{/if}
 
 		
-	<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+	<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" style={homeIconAdjustments.get(font)
+							? `margin-top: ${homeIconAdjustments.get(font)}`
+							: n>
 		<path fill="currentColor" d="M21.75 3A3.25 3.25 0 0 1 25 6.25v15.5A3.25 3.25 0 0 1 21.75 25H6.25A3.25 3.25 0 0 1 3 21.75V6.25A3.25 3.25 0 0 1 6.25 3zm1.75 6.503h-19V21.75c0 .966.784 1.75 1.75 1.75h15.5a1.75 1.75 0 0 0 1.75-1.75zM21.75 4.5H6.25A1.75 1.75 0 0 0 4.5 6.25v1.753h19V6.25a1.75 1.75 0 0 0-1.75-1.75" />
-		<text x="14" y="8" text-anchor="middle" fill="black" font-size="12">
+		<text x="14" y="18" text-anchor="middle" fill="black" font-size="12">
 						w{settings.weekPage.useWeekSinceYear
 							? timeframe.weekSinceYear
 							: timeframe.weekSinceMonth}</text>
@@ -250,8 +252,8 @@
 {#if tabs === 'quarters'}
 	{#each settings.quarters as quarters (quarters.id)}
 		{@const isActive = quarter === parseInt(quarters.nameShort.charAt(1),10)}
-		<a href="#{quarters.id}" class:active={isActive}><li>
-			{quarter}-{quarters.nameShort}</li></a>
+		<a href="#{quarters.id}" class:active={isActive}>
+			<li>{quarters.nameShort}</li></a>
 	{/each}
 {/if}
 
@@ -285,8 +287,21 @@
 
 {#if showDayBreadcrumb}
      {@const isActive = breadcrumbs?.length > 0}
-     <a href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}" style="width: 65px;"><li>Planner</li></a>
-     <a href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}-pg2" class:active={isActive}><li>Notes</li></a>
+     <a href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}"><li>
+						<PlannerIcon
+						width="28px"
+						height="28px"
+						style={homeIconAdjustments.get(font)
+							? `margin-top: ${homeIconAdjustments.get(font)}`
+							: null} /></li></a>
+     <a href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}-pg2"><li>
+						<NotesIcon
+						width="28px"
+						height="28px"
+						style={homeIconAdjustments.get(font)
+							? `margin-top: ${homeIconAdjustments.get(font)}`
+							: null} />
+					</li></a>
 {:else if showWeekBreadcrumb}
      {@const isActive = breadcrumbs?.length > 0}
      <a href="#{timeframe.year}-wk{timeframe.weekSinceYear}" style="width: 65px;"><li>Planner</li></a>
