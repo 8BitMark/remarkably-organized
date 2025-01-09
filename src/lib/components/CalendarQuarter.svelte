@@ -30,10 +30,10 @@
 	<div class="months">
 <h2>Quarterly Plan</h2>
 		{#each months as month (month.id)}
-			<div class="month">
-				<a href="#{getMonthLink(month)}">
+			
+				<a href="#{getMonthLink(month)}" class="month">
 					<h2>{month.nameLong}</h2>
-				</a>
+				</a><div class="month">
 					<div class="days">
 						{#if startWeekOnSunday}
 							<div class="label">Su</div>
