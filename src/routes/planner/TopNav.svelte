@@ -212,16 +212,10 @@
 					</a>
 				</li>
 			{/if}
-
-{#if breadcrumbs?.length}
-	{#each breadcrumbs as breadcrumb (breadcrumb.href)}
-		<li><a href={breadcrumb.href}>{breadcrumb.name}</a></li>
-	{/each}
-{/if}
 		</ol>
 
 		{#if showDayBreadcrumb}
-			<p><a href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}">
+			<div class="title"><a href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}">
 					{timeframe.start.toLocaleString('default', {
 						weekday: 'long',
 						timeZone: 'UTC',
@@ -234,7 +228,7 @@
 						month: 'long',
 						timeZone: 'UTC',
 					})}
-				</a></p>
+				</a></div>
 		{/if}
 		
 		<div style="flex: 1" />
@@ -381,5 +375,14 @@
 				background-color: var(--fg-text-low);
 			}
 		}
+		.title
+		{
+			padding: 0;
+			margin: 0;
+			display: flex;
+			height: 100%;
+			font-size: 1.2em;
+			align-items: center;
+		}				
 	}
 </style>
