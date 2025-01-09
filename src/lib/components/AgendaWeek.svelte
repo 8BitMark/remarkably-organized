@@ -117,7 +117,7 @@
     height: auto;
     border-right: 1px solid var(--outline-high);
     border-top: 1px solid var(--outline-high);
-    background-color: var(--fg-text-low);
+    background-color: var(--nav-bg);
     font-size: 0.8em;
     margin: 0px;    
     padding: 0px;
