@@ -249,7 +249,7 @@
 <ol class="links">
 {#if tabs === 'quarters'}
 	{#each settings.quarters as quarters (quarters.id)}
-		{@const isActive = quarter === parseInt(quarters.nameShort.charAt(1),10)0}
+		{@const isActive = quarter === parseInt(quarters.nameShort.charAt(1),10)}
 		<a href="#{quarters.id}" class:active={isActive}><li>
 			{quarter}-{quarters.nameShort}</li></a>
 	{/each}
