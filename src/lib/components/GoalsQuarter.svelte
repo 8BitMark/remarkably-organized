@@ -34,7 +34,7 @@
         {#each Array(12) as _, i}
 	    <div class="icon"></div>
 	    <div class="content"></div>
-      <div class="date">/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/</div>
+      <div class="date">/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/</div>
         {/each}
 	</div>
 
