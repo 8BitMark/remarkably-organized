@@ -53,7 +53,8 @@
 {#if months.length}
 	<div class="months">
 		{#each months as month (month.id)}
-			<a href="#{getMonthLink(month)}" class="month">
+			<div class="month">
+			<a href="#{getMonthLink(month)}">
 				<h2>{month.nameLong}</h2></a>
 				<div class="days">
 					<div class="week-label">Wk</div>
@@ -88,6 +89,7 @@
 						</a> 
 					{/each}
 				</div>
+			</div>
 		{/each}
 	</div>
 {/if}
