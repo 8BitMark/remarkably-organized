@@ -102,6 +102,7 @@
 			border-bottom: none;
 		}
 		h2 {
+			display: flex;
 			text-align: center;
 			font-size: 1.2em;
 			font-weight: var(--font-weight-normal);
