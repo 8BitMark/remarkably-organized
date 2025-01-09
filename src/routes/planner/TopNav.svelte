@@ -237,7 +237,7 @@
 {#if tabs === 'quarters'}
 	{#each settings.quarters as quarters (quarters.id)}
 		{@const isActive =
-			!disableActiveIndicator && quarter === quarters.nameShort}
+			!disableActiveIndicator && quarter === quarters.id}
 		<a href="#{quarters.id}" class:active={isActive}><li>
 			{quarter}-{quarters.nameShort}</li></a>
 	{/each}
