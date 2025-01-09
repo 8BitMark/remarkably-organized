@@ -195,7 +195,7 @@
 			{#if showMonthBreadcrumb && tabs !== 'days-this-week' && tabs !== 'days-this-month' && tabs !== 'days-this-year' && tabs !== 'weeks-this-month' && tabs !== 'weeks-this-year'}
 				<li>
 					<a href="#{year}-{month}">
-						{new Date(year, month - 1).toLocaleString('default', , { month: 'long' })}
+						{new Date(year, month - 1).toLocaleString('default', { month: 'long' })}
 					</a>
 				</li>
 			{/if}
