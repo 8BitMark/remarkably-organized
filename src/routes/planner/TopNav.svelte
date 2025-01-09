@@ -192,7 +192,7 @@
 					</a>
 				</li>
 			{/if}
-			{#if showMonthBreadcrumb && tabs === 'months'}
+			{#if showMonthBreadcrumb && tabs !== 'days-this-week' && tabs !== 'days-this-month' && tabs !== 'days-this-year'}
 				<li>
 					<a href="#{year}-{month}">
 						{new Date(year, month - 1).toLocaleString('default', {
@@ -215,11 +215,11 @@
 						{/if}
 
 		
-	<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" style={homeIconAdjustments.get(font)
+	<svg xmlns="http://www.w3.org/2000/svg" width="32" height="28" viewBox="0 0 28 28" style={homeIconAdjustments.get(font)
 							? `margin-top: ${homeIconAdjustments.get(font)}`
 							: n}>
-			<path fill="currentColor" d="M29 24.5a4.5 4.5 0 0 1-4.5 4.5h-17A4.5 4.5 0 0 1 3 24.5v-17A4.5 4.5 0 0 1 7.5 3h17A4.5 4.5 0 0 1 29 7.5zM7.5 4A3.5 3.5 0 0 0 4 7.5V10h24V7.5A3.5 3.5 0 0 0 24.5 4zM4 11v13.5A3.5 3.5 0 0 0 7.5 28h17a3.5 3.5 0 0 0 3.5-3.5V11z"/>		
-		<text x="14" y="22" text-anchor="middle" fill="black" font-size="11">
+			<path fill="currentColor" d="M21.75 3A3.25 3.25 0 0 1 25 6.25v15.5A3.25 3.25 0 0 1 21.75 25H6.25A3.25 3.25 0 0 1 3 21.75V6.25A3.25 3.25 0 0 1 6.25 3zm1.75 6.503h-19V21.75c0 .966.784 1.75 1.75 1.75h15.5a1.75 1.75 0 0 0 1.75-1.75zM21.75 4.5H6.25A1.75 1.75 0 0 0 4.5 6.25v1.753h19V6.25a1.75 1.75 0 0 0-1.75-1.75" />
+<text x="14" y="22" text-anchor="middle" fill="black" font-size="11">
 						w{settings.weekPage.useWeekSinceYear
 							? timeframe.weekSinceYear
 							: timeframe.weekSinceMonth}</text>
@@ -283,31 +283,42 @@
 	{/each}
 {/if}
 
-
+</ol>
 
 {#if showDayBreadcrumb}
      {@const isActive = breadcrumbs?.length > 0}
-     <a href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}"><li>
+     <a href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}">
 						<PlannerIcon
 						width="28px"
 						height="28px"
 						style={homeIconAdjustments.get(font)
 							? `margin-top: ${homeIconAdjustments.get(font)}`
-							: null} /></li></a>
-     <a href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}-pg2"><li>
+							: null} /></a>
+     <a href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}-pg2">
 						<NotepadIcon
 						width="28px"
 						height="28px"
 						style={homeIconAdjustments.get(font)
 							? `margin-top: ${homeIconAdjustments.get(font)}`
-							: null} />
-					</li></a>
+							: null} /></a>
 {:else if showWeekBreadcrumb}
      {@const isActive = breadcrumbs?.length > 0}
-     <a href="#{timeframe.year}-wk{timeframe.weekSinceYear}" style="width: 65px;"><li>Planner</li></a>
-     <a href="#{timeframe.year}-wk{timeframe.weekSinceYear}-pg2" style="width: 65px;"><li>Notes</li></a>
+     <a href="#{timeframe.year}-wk{timeframe.weekSinceYear}">
+						<PlannerIcon
+						width="28px"
+						height="28px"
+						style={homeIconAdjustments.get(font)
+							? `margin-top: ${homeIconAdjustments.get(font)}`
+							: null} /></a>
+     <a href="#{timeframe.year}-wk{timeframe.weekSinceYear}-pg2">
+						<NotepadIcon
+						width="28px"
+						height="28px"
+						style={homeIconAdjustments.get(font)
+							? `margin-top: ${homeIconAdjustments.get(font)}`
+							: null} /></a>
 {/if}
-</ol>
+
 </nav>
 {/if}
 
@@ -400,15 +411,6 @@
 			a.active {
 				background-color: var(--fg-text-low);
 			}
-		}
-		.title
-		{
-			padding: 0;
-			margin: 0;
-			display: block;
-			height: 100%;
-			font-size: 1.2em;
-			align-items: center;
-		}				
+		}			
 	}
 </style>
