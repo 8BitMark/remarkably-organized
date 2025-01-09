@@ -379,7 +379,7 @@
 		{
 			padding: 0;
 			margin: 0;
-			display: flex;
+			display: block;
 			height: 100%;
 			font-size: 1.2em;
 			align-items: center;
