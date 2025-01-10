@@ -84,7 +84,7 @@
   }
   .priorities h2, .notes h2, .schedule h2 {
     margin-top: 5px;
-    font-size: 1.2em;
+    font-size: 0.95em;
     color: var(--text-high);
     text-transform: uppercase;
     padding-top: 5px;
