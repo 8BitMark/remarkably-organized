@@ -21,6 +21,7 @@
 			<SideNav {settings} tabs="months" timeframe={month} />
 			<TopNav
 				{settings}
+				tabs="months"
 				timeframe={month}
 				breadcrumbs={[{ href: `#${month.id}-pg${i + 2}`, name: `Page ${i + 2}` }]} />
 			<Page display={settings.monthPage.notePagesTemplate} {settings} timeframe={month} />
