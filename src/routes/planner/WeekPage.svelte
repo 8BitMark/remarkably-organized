@@ -9,7 +9,7 @@
 
 <article id={week.id} use:intersect={{ rootMargin: '1000px 0px 1000px 0px' }}>
 	<SideNav tabs={settings.weekPage.sideNavDisplay} {settings} timeframe={week}></SideNav>
-	<TopNav {settings} timeframe={week} />
+	<TopNav {settings}  tabs={settings.weekPage.sideNavDisplay} timeframe={week} />
 	<Page {settings} display={settings.weekPage.template} timeframe={week} />
 </article>
 
