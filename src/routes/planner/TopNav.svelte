@@ -228,7 +228,7 @@
 					</a>
 				</li>
 			{/if}
-			{#if showMonthBreadcrumb && (tabs === 'months' &&& tabs === 'days-this-week' || tabs === 'days-this-month' || tabs === 'days-this-year' || tabs === 'weeks-this-month' || tabs === 'weeks-this-year'}
+			{#if showMonthBreadcrumb && (tabs === 'months' &&& tabs === 'days-this-week' || tabs === 'days-this-month' || tabs === 'days-this-year' || tabs === 'weeks-this-month' || tabs === 'weeks-this-year')}
 				<li>
 					<a href="#{year}-{month}">zzz
 						{new Date(year, month - 1).toLocaleString('default', { month: 'short' })}
