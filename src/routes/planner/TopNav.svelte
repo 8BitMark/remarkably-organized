@@ -232,12 +232,13 @@
 			{#if showMonthBreadcrumb && (tabs === 'months' || tabs === 'days-this-week' || tabs === 'days-this-month' || tabs === 'days-this-year' || tabs === 'weeks-this-month' || tabs === 'weeks-this-year')}
 				<li>
 					<a href="#{year}-{month}">
-						<MonthIcon
-						width="28px"
-						height="28px"
-						style={homeIconAdjustments.get(font)
-							? `margin-top: ${homeIconAdjustments.get(font)}`
-							: null} />
+						<svg xmlns="http://www.w3.org/2000/svg" width="32" height="28" viewBox="0 0 28 28" style={homeIconAdjustments.get(font)
+												? `margin-top: ${homeIconAdjustments.get(font)}`
+												: n}>
+								<path fill="currentColor" d="M21.75 3A3.25 3.25 0 0 1 25 6.25v15.5A3.25 3.25 0 0 1 21.75 25H6.25A3.25 3.25 0 0 1 3 21.75V6.25A3.25 3.25 0 0 1 6.25 3zm1.75 6.503h-19V21.75c0 .966.784 1.75 1.75 1.75h15.5a1.75 1.75 0 0 0 1.75-1.75zM21.75 4.5H6.25A1.75 1.75 0 0 0 4.5 6.25v1.753h19V6.25a1.75 1.75 0 0 0-1.75-1.75" />
+								<text x="14" y="21" text-anchor="middle" fill="black" font-size="12">
+											{timeframe.start.toLocaleString('default', { month: 'short' })}</text>
+						</svg>
 					</a>
 				</li>
 			{/if}
@@ -411,16 +412,16 @@
 				align-items: center;
 				vertical-align: middle;
 				background-color: var(--nav-bg);
-    				border: none;
+    				border: 1.5px solid black;
     				border-radius: 4px; /* Half the height for perfect rounded corners */
     				color: var(--text-high);
     				text-decoration: none;
     				height: 25px;
 				width: 25px;
 				margin-right: 5px;
-				font-size:0.85em;
+				font-size:0.95em;
 				text-transform: uppercase;
-				padding-top:4px;
+				padding-top:3px;
 			}
 			a.active {
 				background-color: var(--fg-text-low);
