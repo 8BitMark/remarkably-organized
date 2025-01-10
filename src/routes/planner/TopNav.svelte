@@ -2,8 +2,8 @@
 	import { formatToString, PlannerSettings, type Timeframe } from '$lib';
 	import HomeIcon from '~icons/fluent/calendar-28-filled';
 	import QuarterIcon from '~icons/fluent/calendar-reply-28-regular';
-	import PlannerIcon from '~icons/fluent/calendar-clock-24-filled';
-	import NotepadIcon from '~icons/fluent/notepad-28-filled';
+	import PlannerIcon from '~icons/fluent/calendar-clock-24-regular';
+	import NotepadIcon from '~icons/fluent/notepad-28-regular';
 	import WeekIcon from '~icons/fluent/calendar-empty-28-regular';
 	
 	import { getFontInfo } from '../fonts/fonts';
@@ -166,6 +166,42 @@
 		style:height={navHeightAdjustments.get(font)
 			? `calc(var(--topnav-height) + ${navHeightAdjustments.get(font)})`
 			: ''}>
+		<a href="#{year}" class="home">
+			<HomeIcon
+				width="28px"
+				height="28px"
+				style={homeIconAdjustments.get(font)
+					? `margin-top: ${homeIconAdjustments.get(font)}`
+					: null} />
+		</a>
+		{#if showYearBreadcrumb && tabs === 'years'}
+			<a href="#{year}">{year}</a>
+		{:else if showQuarterBreadcrumb
+			<a href="#{year}-q{quarter}">Quarter {quarter}</a>
+		{:else if showMonthBreadcrumb && tabs ==== 'months'}
+			<a href="#{year}-{month}">{new Date(year, month - 1).toLocaleString('default', { month: 'long' })}</a>
+		{:else if showWeekBreadcrumb && (tabs === 'weeks-this-month' || tabs === 'weeks-this-year')}
+			<a href="#{timeframe.year}-wk{timeframe.weekSinceYear}">Week {settings.weekPage.useWeekSinceYear
+				? timeframe.weekSinceYear
+				: timeframe.weekSinceMonth}</a>
+		{:else if showDayBreadcrumb && (tabs === 'days-this-week' || tabs === 'days-this-month' || tabs === 'days-this-year')}
+			<a href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}">
+					{timeframe.start.toLocaleString('default', {
+						weekday: 'long',
+						timeZone: 'UTC',
+					})},
+					{@html formatToString(timeframe.daySinceMonth, {
+						type: 'd',
+						html: true,
+					})}
+					{timeframe.start.toLocaleString('default', {
+						month: 'long',
+						timeZone: 'UTC',
+					})}</a>
+		{/if}
+			
+					
+
 		<ol class="breadcrumbs">
 			<li>
 				<a href="#{year}" class="home">
