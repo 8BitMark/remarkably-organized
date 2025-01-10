@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { formatToString, PlannerSettings, type Timeframe } from '$lib';
 	import HomeIcon from '~icons/fluent/calendar-28-filled';
-	import QuarterIcon from '~icons/arcticons/calendar-1';
+	import QuarterIcon from '~icons/fluent/calendar-reply-28-regular';
 	import MonthIcon from '~icons/fluent/calendar-arrow-counterclockwise-28-regular';
 	import PlannerIcon from '~icons/fluent/calendar-clock-24-regular';
 	import NotepadIcon from '~icons/fluent/notepad-28-regular';
@@ -204,20 +204,7 @@
 					
 
 		<ol class="breadcrumbs">
-			<li>
-				<a href="#{year}" class="home">
-					<HomeIcon
-						width="28px"
-						height="28px"
-						style={homeIconAdjustments.get(font)
-							? `margin-top: ${homeIconAdjustments.get(font)}`
-							: null} />
-				</a>
-			</li>
-			{#if showYearBreadcrumb}
-				<li><a href="#{year}">{year}</a></li>
-			{/if}
-			{#if showQuarterBreadcrumb}
+			{#if showQuarterBreadcrumb && tabs !== 'quarters'}
 				<li>
 					<a href="#{year}-q{quarter}" >
 						<QuarterIcon
@@ -229,7 +216,7 @@
 					</a>
 				</li>
 			{/if}
-			{#if showMonthBreadcrumb && (tabs === 'months' || tabs === 'days-this-week' || tabs === 'days-this-month' || tabs === 'days-this-year' || tabs === 'weeks-this-month' || tabs === 'weeks-this-year')}
+			{#if showMonthBreadcrumb && (tabs === 'days-this-week' || tabs === 'days-this-month' || tabs === 'days-this-year' || tabs === 'weeks-this-month' || tabs === 'weeks-this-year')}
 				<li>
 					<a href="#{year}-{month}">
 						<svg xmlns="http://www.w3.org/2000/svg" width="32" height="28" viewBox="0 0 28 28" style={homeIconAdjustments.get(font)
@@ -242,7 +229,7 @@
 					</a>
 				</li>
 			{/if}
-			{#if showWeekBreadcrumb}
+			{#if showWeekBreadcrumb && (tabs !== 'weeks' || tabs !== 'months' || tabs !== 'quarters')}
 				<li>
 					<a href="#{timeframe.year}-wk{timeframe.weekSinceYear}">
 	<svg xmlns="http://www.w3.org/2000/svg" width="32" height="28" viewBox="0 0 28 28" style={homeIconAdjustments.get(font)
