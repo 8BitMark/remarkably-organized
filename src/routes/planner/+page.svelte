@@ -613,6 +613,13 @@
 					<div class="checkbox">
 						<input
 							type="checkbox"
+							bind:checked={settings.sideNav.rmhacks}
+							id="sideNavRMHacks" />
+						<label for="sideNavRMHacks">Use narrow Sidebar (RM-Hacks)</label>
+					</div>
+					<div class="checkbox">
+						<input
+							type="checkbox"
 							bind:checked={settings.sideNav.showCollectionLinks}
 							id="sideNavShowCollectionLinks" />
 						<label for="sideNavShowCollectionLinks">Show Links to Collections</label>
