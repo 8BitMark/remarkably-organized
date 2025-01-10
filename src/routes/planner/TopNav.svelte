@@ -229,7 +229,7 @@
 					</a>
 				</li>
 			{/if}
-			{#if showWeekBreadcrumb && (tabs !== 'weeks' || tabs !== 'months' || tabs !== 'quarters')}
+			{#if showWeekBreadcrumb && (tabs !== 'weeks-this-year' || tabs !== 'weeks-this-month' || tabs !== 'months' || tabs !== 'quarters')}
 				<li>
 					<a href="#{timeframe.year}-wk{timeframe.weekSinceYear}">
 	<svg xmlns="http://www.w3.org/2000/svg" width="32" height="28" viewBox="0 0 28 28" style={homeIconAdjustments.get(font)
@@ -310,6 +310,22 @@
 							? `margin-top: ${homeIconAdjustments.get(font)}`
 							: null} /></a>
      <a href="#{timeframe.year}-wk{timeframe.weekSinceYear}-pg2">
+						<NotepadIcon
+						width="28px"
+						height="28px"
+						style={homeIconAdjustments.get(font)
+							? `margin-top: ${homeIconAdjustments.get(font)}`
+							: null} /></a>
+{:else if showMonthBreadcrumb}
+     {@const isActive = breadcrumbs?.length > 0}
+     <a href="#{timeframe.year}-{timeframe.month}">
+						<PlannerIcon
+						width="28px"
+						height="28px"
+						style={homeIconAdjustments.get(font)
+							? `margin-top: ${homeIconAdjustments.get(font)}`
+							: null} /></a>
+     <a href="#{timeframe.year}-{timeframe.month}-pg2">
 						<NotepadIcon
 						width="28px"
 						height="28px"
