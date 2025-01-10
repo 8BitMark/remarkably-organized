@@ -154,6 +154,7 @@ export class PlannerSettings {
 		showCollectionLinks = $state(false);
 		width = $state(52);
 		leftSide = $state(true);
+		rmHacks = $state(true);
 		font = $state('Roboto Condensed');
 	})();
 
