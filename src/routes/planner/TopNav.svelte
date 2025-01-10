@@ -282,6 +282,19 @@
 	{/each}
 {/if}
 
+{#if tabs === 'months'}
+	{#each settings.months as month (month.id)}
+		{#if month.year === timeframe.year}
+			<a
+				href="#{month.id}"
+				class:active={!disableActiveIndicator &&
+					timeframe.month === month.month}>
+				{month.nameShort.charAt(0)}
+			</a>
+		{/if}
+	{/each}
+{/if}
+
 </ol>
 
 {#if showDayBreadcrumb}
