@@ -351,6 +351,9 @@
 		right: 0;
 		height: var(--topnav-height);
 		padding: 0 0 0 var(--sidenav-width);
+		margin-top: 5px;
+    		margin-left: 10px;
+		font-size: 1.3em;
 
 		ol.breadcrumbs {
 			list-style: none;
