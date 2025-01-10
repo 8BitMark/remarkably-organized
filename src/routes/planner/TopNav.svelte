@@ -176,7 +176,7 @@
 		</a>
 		{#if showYearBreadcrumb && tabs === 'years'}
 			<a href="#{year}">{year}</a>
-		{:else if showQuarterBreadcrumb
+		{:else if showQuarterBreadcrumb && tabs === 'quarters'}
 			<a href="#{year}-q{quarter}">Quarter {quarter}</a>
 		{:else if showMonthBreadcrumb && tabs ==== 'months'}
 			<a href="#{year}-{month}">{new Date(year, month - 1).toLocaleString('default', { month: 'long' })}</a>
