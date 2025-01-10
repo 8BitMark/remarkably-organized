@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { formatToString, PlannerSettings, type Timeframe } from '$lib';
 	import HomeIcon from '~icons/fluent/calendar-28-filled';
-	import QuarterIcon from '~icons/fluent/calendar-reply-28-regular';
+	import QuarterIcon from '~icons/arcticons/calendar-1';
+	import MonthIcon from '~icons/fluent/calendar-arrow-counterclockwise-28-regular';
 	import PlannerIcon from '~icons/fluent/calendar-clock-24-regular';
 	import NotepadIcon from '~icons/fluent/notepad-28-regular';
 	import WeekIcon from '~icons/fluent/calendar-empty-28-regular';
@@ -231,24 +232,18 @@
 			{#if showMonthBreadcrumb && (tabs === 'months' || tabs === 'days-this-week' || tabs === 'days-this-month' || tabs === 'days-this-year' || tabs === 'weeks-this-month' || tabs === 'weeks-this-year')}
 				<li>
 					<a href="#{year}-{month}">
-						{new Date(year, month - 1).toLocaleString('default', { month: 'short' })}
+						<MonthIcon
+						width="28px"
+						height="28px"
+						style={homeIconAdjustments.get(font)
+							? `margin-top: ${homeIconAdjustments.get(font)}`
+							: null} />
 					</a>
 				</li>
 			{/if}
 			{#if showWeekBreadcrumb}
 				<li>
 					<a href="#{timeframe.year}-wk{timeframe.weekSinceYear}">
-						{#if settings.weekPage.useWeekSinceYear}
-							{#if (!showYearBreadcrumb && !showMonthBreadcrumb) || (timeframe.weekYear && timeframe.weekYear !== year) || timeframe.year !== year}
-								{timeframe.weekYear || timeframe.year || year}
-							{/if}
-						{:else if !showMonthBreadcrumb || (timeframe.weekMonth && timeframe.weekYear && timeframe.weekMonth !== timeframe.month) || timeframe.month !== month}
-							{new Date(timeframe.weekYear || timeframe.year!, (timeframe.weekMonth || timeframe.month!) - 1).toLocaleString('default', {
-								month: !showDayBreadcrumb && (!timeframe.weekMonth || timeframe.weekMonth === timeframe.month) && (!showMonthBreadcrumb || timeframe.month === month)  ? 'long' : 'short',
-							})}
-						{/if}
-
-		
 	<svg xmlns="http://www.w3.org/2000/svg" width="32" height="28" viewBox="0 0 28 28" style={homeIconAdjustments.get(font)
 							? `margin-top: ${homeIconAdjustments.get(font)}`
 							: n}>
