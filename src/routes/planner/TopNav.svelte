@@ -178,7 +178,7 @@
 			<a href="#{year}">{year}</a>
 		{:else if showQuarterBreadcrumb && tabs === 'quarters'}
 			<a href="#{year}-q{quarter}">Quarter {quarter}</a>
-		{:else if showMonthBreadcrumb && tabs ==== 'months'}
+		{:else if showMonthBreadcrumb && tabs === 'months'}
 			<a href="#{year}-{month}">{new Date(year, month - 1).toLocaleString('default', { month: 'long' })}</a>
 		{:else if showWeekBreadcrumb && (tabs === 'weeks-this-month' || tabs === 'weeks-this-year')}
 			<a href="#{timeframe.year}-wk{timeframe.weekSinceYear}">Week {settings.weekPage.useWeekSinceYear
