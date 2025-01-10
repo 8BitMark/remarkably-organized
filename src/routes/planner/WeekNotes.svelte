@@ -15,6 +15,7 @@
 			<SideNav {settings} tabs={settings.weekPage.sideNavDisplay} timeframe={week} />
 			<TopNav
 				{settings}
+				tabs={settings.weekPage.sideNavDisplay}
 				timeframe={week}
 				breadcrumbs={[{ href: `#${week.id}-pg${i + 2}`, name: `Page ${i + 2}` }]} />
 			<Page display={settings.weekPage.notePagesTemplate} {settings} timeframe={week} />
