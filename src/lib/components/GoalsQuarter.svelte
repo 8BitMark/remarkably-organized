@@ -63,7 +63,7 @@
   }
   .notes h2 {
     margin-top: 5px;
-    font-size: 1.2em;
+    font-size: 0.95em;
     color: var(--text-high);
     text-transform: uppercase;
     padding-top: 5px;
@@ -165,7 +165,7 @@
     text-align: center;
      border-left: 1px solid var(--outline-high);
      border-bottom: 1px solid var(--outline-high);
-     font-size: 1.2em;
+     font-size: 0.95em;
      height: 24px;
      width: auto;
   }
