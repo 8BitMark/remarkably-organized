@@ -110,7 +110,7 @@
 						</li>
 					{/each}
 				{/if}
-				{#if tabs === 'quarters'}
+				{#if tabs === 'quarters' && !settings.sideNav.rmHacks}
 					{#each settings.quarters as quarter (quarter.id)}
 						{#if quarter.year === timeframe.year}
 							<li class="quarter">
@@ -124,7 +124,7 @@
 						{/if}
 					{/each}
 				{/if}
-				{#if tabs === 'months'}
+				{#if tabs === 'months' && !settings.sideNav.rmHacks}
 					{#each settings.months as month (month.id)}
 						{#if month.year === timeframe.year}
 							<li class="month">
@@ -138,7 +138,7 @@
 						{/if}
 					{/each}
 				{/if}
-				{#if tabs === 'weeks-this-year' || tabs === 'weeks-this-month'}
+				{#if  (tabs === 'weeks-this-year' || tabs === 'weeks-this-month')  && !settings.sideNav.rmHacks}
 					{#each weeks as week, i (week.id)}
 						{@const isActive =
 							!disableActiveIndicator && timeframe.weekSinceYear === week.weekSinceYear}
@@ -181,7 +181,7 @@
 						</li>
 					{/each}
 				{/if}
-				{#if tabs === 'days-this-year' || tabs === 'days-this-month' || tabs === 'days-this-week'}
+				{#if (tabs === 'days-this-year' || tabs === 'days-this-month' || tabs === 'days-this-week')  && !settings.sideNav.rmHacks}
 					{#each days as day, i (day.id)}
 						{@const isActive =
 							!disableActiveIndicator && timeframe.daySinceYear === day.daySinceYear}
@@ -212,7 +212,7 @@
 			</ol>
 		{/if}
 		<div class="spacer"></div>
-		{#if settings.sideNav.showCollectionLinks && settings.collections.length}
+		{#if settings.sideNav.showCollectionLinks && settings.collections.length &&  !settings.sideNav.rmHacks}
 			<ol class="links">
 				{#each [...settings.collections].reverse() as collection, i (collection.id)}
 					<li><a href="#{collection.id}">{collection.name}</a></li>
