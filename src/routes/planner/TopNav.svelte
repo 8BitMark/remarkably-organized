@@ -182,7 +182,7 @@
 		{:else if showMonthBreadcrumb && tabs === 'months'}
 			<a href="#{year}-{month}">{new Date(year, month - 1).toLocaleString('default', { month: 'long' })}</a>
 		{:else if showWeekBreadcrumb && (tabs === 'weeks-this-month' || tabs === 'weeks-this-year')}
-			<a href="#{timeframe.year}-wk{timeframe.weekSinceYear}">Week {settings.weekPage.useWeekSinceYear
+			<a href="#{timeframe.year}-wk{timeframe.weekSinceYear}">{new Date(year, month - 1).toLocaleString('default', { month: 'long' })} - Week {settings.weekPage.useWeekSinceYear
 				? timeframe.weekSinceYear
 				: timeframe.weekSinceMonth}</a>
 		{:else if showDayBreadcrumb && (tabs === 'days-this-week' || tabs === 'days-this-month' || tabs === 'days-this-year')}
