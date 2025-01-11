@@ -163,18 +163,13 @@
 {#if !settings.topNav.disable}
 	<nav
 		style:font-family="'{font}'"
-		style:font-size="{getFontInfo(font)?.size || 1}rem"
-		style:height={navHeightAdjustments.get(font)
-			? `calc(var(--topnav-height) + ${navHeightAdjustments.get(font)})`
-			: ''}>
+		>
 	<div class="left-header">
 		<a href="#{year}" class="home">
 			<HomeIcon
 				width="28px"
 				height="28px"
-				style={homeIconAdjustments.get(font)
-					? `margin-top: ${homeIconAdjustments.get(font)}`
-					: null} />
+				style="margin-top:10px"/>
 		</a>
 		{#if showYearBreadcrumb && tabs === 'years'}
 			<a href="#{year}">{year}</a>
@@ -245,7 +240,7 @@
 			{#each settings.quarters as quarters (quarters.id)}
 			{@const isActive = quarter === parseInt(quarters.nameShort.charAt(1),10)}
 				<a class="buttons" href="#{quarters.id}" class:active={isActive}>
-					<li>{quarters.nameShort}</li></a>
+					{quarters.nameShort}</a>
 			{/each}
 		{/if}
 		
@@ -254,10 +249,10 @@
 				{@const isActive =
 					!disableActiveIndicator && timeframe.weekSinceYear === week.weekSinceYear}
 					<a class="buttons" href="#{week.id}"
-						class:active={isActive} style="text-transform: lowercase"><li><small>w{settings.weekPage.useWeekSinceYear
+						class:active={isActive} style="text-transform: lowercase"><small>w{settings.weekPage.useWeekSinceYear
 								? week.weekSinceYear
 								: week.weekSinceMonth}</small>
-						</li></a>
+						</a>
 			{/each}
 		{/if}
 		
@@ -276,14 +271,12 @@
 						class:active={isActive}
 						class:highlight={shouldHighlight}
 						class:highlight-start={highlightStart}
-						class:highlight-end={highlighEnd}><li>
-						
+						class:highlight-end={highlighEnd}>
 							{day.start.toLocaleString('default', {
 								weekday: 'short',
 								timeZone: 'UTC',
 							}).charAt(0)}
-						
-					</li></a>
+					</a>
 			{/each}
 		{/if}
 
@@ -371,7 +364,7 @@
 		padding: 0 0 0 var(--sidenav-width);
 		margin-top: 5px;
     		margin-left: 10px;
-		font-size: 1.3em;
+		font-size: 1.5em;
 	}
 	.left-header {
 		grid-column:1;
