@@ -225,12 +225,12 @@
 				</a>	
 		{/if}
 
-<span class="buttons">	
+	
 		{#if tabs === 'quarters'}
 			{#each settings.quarters as quarters (quarters.id)}
 			{@const isActive = quarter === parseInt(quarters.nameShort.charAt(1),10)}
-				<a href="#{quarters.id}" class:active={isActive}>
-					{quarters.nameShort}</a>
+				<span class="buttons"><a href="#{quarters.id}" class:active={isActive}>
+					{quarters.nameShort}</a></span>
 			{/each}
 		{/if}
 		
@@ -282,7 +282,7 @@
 				{/if}
 			{/each}
 		{/if}
-</span>
+
 	{#if showDayBreadcrumb}
 	     {@const isActive = breadcrumbs?.length > 0}
 	     <a class="icon" href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}">
