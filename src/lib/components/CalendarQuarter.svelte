@@ -71,7 +71,7 @@
 	.months {
 		display: grid;
 		grid-template-columns: 35% 65%;
-		grid-template-rows repeat(17, 1fr);
+		grid-template-rows: repeat(17, 1fr);
 		flex-direction: column;
 		align-items: left;
 		width: 100%;
