@@ -819,7 +819,7 @@
 <main
 	style:--doc-width="{702}px"
 	style:--doc-height="{702 * (1 / (settings.design.aspectRatio || 1))}px"
-	style:--sidenav-width="{settings.sideNav.disable ? 0 : (settings.sideNav.rmHacks ? settings.sideNav.width * 0.25 : settings.sideNav.width)}px"
+	style:--sidenav-width="{settings.sideNav.disable ? 0 : (settings.sideNav.rmHacks ? settings.sideNav.width * 0.75 : settings.sideNav.width)}px"
 	style:--topnav-height="{settings.topNav.disable ? 0 : settings.topNav.height}px"
 	style:--font="'{font.name}'"
 	style:--font-size="{font.size}rem"
