@@ -166,7 +166,7 @@
      height: 25px;
      margin-top: 5px;
      padding-bottom: 5px;
-     font-size: 1.2em;
+     font-size: 0.95em;
      color: var(--text-high);
      padding-top: 5px;
      letter-spacing: 1.5px;
