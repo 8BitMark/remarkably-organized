@@ -355,6 +355,11 @@
       		grid-template-columns: 30% 70%;
      		grid-template-rows: 1fr;
       		gap: 0px;
+		align-items: center;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
 		height: var(--topnav-height);
 		padding: 0 0 0 var(--sidenav-width);
 		margin-top: 5px;
