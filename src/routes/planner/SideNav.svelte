@@ -96,7 +96,7 @@
 		class:right={!settings.sideNav.leftSide}
 		style:font-family="'{settings.sideNav.font}'"
 		style:font-size="{getFontInfo(settings.sideNav.font)?.size || 1}rem"
-		style:width="{settings.sideNav.rmHacks ? settings.sideNav.width * 0.25 : settings.sideNav.width}px">
+		style:width="{settings.sideNav.rmHacks ? settings.sideNav.width * 0.75 : settings.sideNav.width}px">
 		{#if tabs !== 'none'}
 			<ol class="tabs">
 				{#if tabs === 'years' && settings.years.length > 1}
