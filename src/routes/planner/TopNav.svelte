@@ -161,9 +161,7 @@
 </script>
 
 {#if !settings.topNav.disable}
-	<nav
-		style:font-family="'{font}'"
-		>
+	<nav style:font-family="'{font}'">
 	<div class="left-header">
 		<a href="#{year}" class="home">
 			<HomeIcon
@@ -198,7 +196,6 @@
 		{/if}
 	</div>		
 					
-
 	<div class="right-header">
 		{#if showQuarterBreadcrumb && tabs !== 'quarters'}
 				<a href="#{year}-q{quarter}" >
@@ -369,6 +366,8 @@
 	.left-header {
 		grid-column:1;
 		font-size: 1.5em;
+		align-items: start;
+		justify-content: flex-start;
 	}
 	.right-header {
 		grid-column:2;
