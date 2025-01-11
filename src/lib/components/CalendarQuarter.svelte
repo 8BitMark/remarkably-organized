@@ -100,7 +100,7 @@
 		&:last-child {
 			border-bottom: none;
 		}
-		h2 {
+		h2 {width:100%;
 			text-align: center;
 			font-size: 0.95em;
 			font-weight: var(--font-weight-normal);
