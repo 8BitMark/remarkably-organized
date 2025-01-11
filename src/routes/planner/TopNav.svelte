@@ -229,7 +229,7 @@
 					</a>
 				</li>
 			{/if}
-			{#if showWeekBreadcrumb && (tabs !== 'weeks-this-year' || tabs !== 'weeks-this-month' || tabs !== 'months' || tabs !== 'quarters')}
+			{#if showWeekBreadcrumb && (tabs === 'days-this-week' || tabs === 'days-this-month' || tabs === 'days-this-year' )}
 				<li>
 					<a href="#{timeframe.year}-wk{timeframe.weekSinceYear}">
 	<svg xmlns="http://www.w3.org/2000/svg" width="32" height="28" viewBox="0 0 28 28" style={homeIconAdjustments.get(font)
@@ -261,19 +261,11 @@
 		{@const isActive =
 			!disableActiveIndicator && timeframe.weekSinceYear === week.weekSinceYear}
 			<a href="#{week.id}"
-				class:active={isActive}><li>
-				{settings.weekPage.useWeekNumbersInSideNav
-						? 'w'
-						: week.start.toLocaleString('default', {
+				class:active={isActive} style="text-transform: lowercase"><li>w{week.start.toLocaleString('default', {
 								month: 'short',
 								timeZone: 'UTC',
 							})}
-				{!settings.weekPage.useWeekNumbersInSideNav
-					? week.start.getUTCDate()
-					: settings.weekPage.useWeekSinceYear
-						? week.weekSinceYear
-						: week.weekSinceMonth}
-			</li></a>
+				</li></a>
 	{/each}
 {/if}
 
