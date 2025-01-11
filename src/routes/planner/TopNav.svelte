@@ -256,6 +256,29 @@
 	{/each}
 {/if}
 
+{#if  (tabs === 'weeks-this-year' || tabs === 'weeks-this-month')  && !settings.sideNav.rmHacks}
+	{#each weeks as week, i (week.id)}
+		{@const isActive =
+			!disableActiveIndicator && timeframe.weekSinceYear === week.weekSinceYear}
+			<a
+				href="#{week.id}"
+				class:active={isActive}>
+				{settings.weekPage.useWeekNumbersInSideNav
+						? 'w'
+						: week.start.toLocaleString('default', {
+								month: 'short',
+								timeZone: 'UTC',
+							})}
+				{!settings.weekPage.useWeekNumbersInSideNav
+					? week.start.getUTCDate()
+					: settings.weekPage.useWeekSinceYear
+						? week.weekSinceYear
+						: week.weekSinceMonth}
+			</a>
+		</li>
+	{/each}
+{/if}
+
 {#if tabs === 'days-this-year' || tabs === 'days-this-month' || tabs === 'days-this-week'}
 	{#each days as day, i (day.id)}
 		{@const isActive =
