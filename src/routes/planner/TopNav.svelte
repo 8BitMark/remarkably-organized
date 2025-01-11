@@ -365,9 +365,11 @@
 	}
 	.right-header {
 		grid-column:2;
+                display:flex;
 		text-align: right;
-    		margin-top: 2px;
     		margin-right: 5px;
+                justify-content: flex-end;
+                align-items:center;
 	}
 	.title {
 		vertical-align: text-top;
