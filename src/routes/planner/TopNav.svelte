@@ -225,11 +225,11 @@
 				</a>	
 		{/if}
 
-	
+<span class="buttons">	
 		{#if tabs === 'quarters'}
 			{#each settings.quarters as quarters (quarters.id)}
 			{@const isActive = quarter === parseInt(quarters.nameShort.charAt(1),10)}
-				<a class="buttons" href="#{quarters.id}" class:active={isActive}>
+				<a href="#{quarters.id}" class:active={isActive}>
 					{quarters.nameShort}</a>
 			{/each}
 		{/if}
@@ -238,7 +238,7 @@
 			{#each weeks as week, i (week.id)}
 				{@const isActive =
 					!disableActiveIndicator && timeframe.weekSinceYear === week.weekSinceYear}
-					<a class="buttons" href="#{week.id}"
+					<a href="#{week.id}"
 						class:active={isActive} style="text-transform: lowercase"><small>w</small>{settings.weekPage.useWeekSinceYear
 								? week.weekSinceYear
 								: week.weekSinceMonth}
@@ -256,7 +256,7 @@
 				{@const shouldHighlight = !isActive && isWeekend && tabs !== 'days-this-week'}
 				{@const highlightStart = shouldHighlight && isSaturday && i < days.length - 1}
 				{@const highlighEnd = shouldHighlight && isSunday && i > 0}
-					<a class="buttons"
+					<a 
 						href="#{day.id}"
 						class:active={isActive}
 						class:highlight={shouldHighlight}
@@ -273,7 +273,7 @@
 		{#if tabs === 'months'}
 			{#each settings.months as month (month.id)}
 				{#if month.year === timeframe.year}
-					<a class="buttons"
+					<a 
 						href="#{month.id}"
 						class:active={!disableActiveIndicator &&
 							timeframe.month === month.month}>
@@ -282,7 +282,7 @@
 				{/if}
 			{/each}
 		{/if}
-
+</span>
 	{#if showDayBreadcrumb}
 	     {@const isActive = breadcrumbs?.length > 0}
 	     <a class="icon" href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}">
@@ -374,26 +374,28 @@
 	.title {
 		vertical-align: text-top;
 	}
-	.buttons {
+	buttons {
+         a {
 		display: inline-block;
 		text-align: center;
 		vertical-align: top;
 		background-color: var(--nav-bg);
-		border: 1.5px solid black;
+		border: 1.8px solid black;
 		border-radius: 4px; /* Half the height for perfect rounded corners */
 		color: var(--text-high);
 		text-decoration: none;
 		height: 26px;
 		width: 26px;
-		margin-right: 5px;
-                margin-left:4px;
+		margin-right: 3px;
+                margin-left:3px;
 		font-size:0.95em;
 		text-transform: uppercase;
-		padding-top:wpx;
+		padding-top:3px;
 	}
-	.buttons:active {
+	a.active {
 		background-color: var(--fg-text-low);
 	}
+}
 
 	.icon {
 		text-decoration: none;
