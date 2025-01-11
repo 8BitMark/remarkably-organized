@@ -28,12 +28,11 @@
 
 {#if months.length}
 	<div class="months">
-<h2>Quarterly Plan</h2>
+		<h2>Quarterly Plan</h2>
 		{#each months as month (month.id)}
-			
-				<a href="#{getMonthLink(month)}" class="month">
-					<h2>{month.nameLong}</h2>
-				</a><div class="month">
+			<div class="month">
+				<a href="#{getMonthLink(month)}" class="month"><h2>{month.nameLong}</h2>
+				</a>
 					<div class="days">
 						{#if startWeekOnSunday}
 							<div class="label">Su</div>
@@ -73,14 +72,14 @@
 	.months {
 		display: flex;
 		flex-direction: column;
-		align-items: center;
+		align-items: left;
 		width: 100%;
 		height: 100%;
 		padding-left: 10px;
 		padding-right: 10px;
 		h2 {
 		   width: 100%;
-			text-align: center;
+			text-align: left;
 			margin-top: 0px;
 		    font-size: 0.95em;
 		    color: var(--text-high);
