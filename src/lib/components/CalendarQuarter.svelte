@@ -57,20 +57,21 @@
 							</a>
 						{/each}
 					</div>
-				
-				<div class="notes">
-					{#each Array(10) as _, i (i)}
-						<div class="lines"></div>
-					{/each}
-				</div>
-			</div>
+			</div>	
+			<div class="notes">
+				{#each Array(10) as _, i (i)}
+					<div class="lines"></div>
+				{/each}
+			</div>	
 		{/each}
 	</div>
 {/if}
 
 <style lang="scss">
 	.months {
-		display: flex;
+		display: grid;
+		grid-template-columns: 35% 655;
+		grid-template-rows 1fr 1ft 1ft;
 		flex-direction: column;
 		align-items: left;
 		width: 100%;
@@ -92,7 +93,7 @@
 	}
 	.month {
 		display: flex;
-		flex: 1;
+		grid-column: 1; 
 		align-items: start;
 		width: 100%;
 		padding: 0.5rem 0 0;
@@ -108,11 +109,11 @@
 		}
 	}
 	.notes {
-		flex: 1;
+		grid-column: 2;
 		text-align: right;
 		padding-left:15px;
 		/* border-top: solid 1px var(--outline);
-	width: 100%;
+		width: 100%;
 		height: 35%;
 		padding: 0 1rem 1rem;*/
 	}
