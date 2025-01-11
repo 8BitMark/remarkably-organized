@@ -31,8 +31,9 @@
 <h2>Quarterly Plan</h2>
 		{#each months as month (month.id)}
 			<div class="month">
+      <span class="calendar">
 				<a href="#{getMonthLink(month)}" class="calendar">
-					<h2>{month.nameLong}</h2>
+					<h2>{month.nameLong}</h2></a>
 					<div class="days">
 						{#if startWeekOnSunday}
 							<div class="label">Su</div>
@@ -57,7 +58,7 @@
 							</a>
 						{/each}
 					</div>
-				</a>
+				</span>
 				<div class="notes">
 					{#each Array(10) as _, i (i)}
 						<div class="lines"></div>
