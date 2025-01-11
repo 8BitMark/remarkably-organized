@@ -613,7 +613,7 @@
 					<div class="checkbox">
 						<input
 							type="checkbox"
-							bind:checked={settings.sideNav.rmhacks}
+							bind:checked={settings.sideNav.rmHacks}
 							id="sideNavRMHacks" />
 						<label for="sideNavRMHacks">Use narrow Sidebar (RM-Hacks)</label>
 					</div>
