@@ -3,9 +3,9 @@
 	import HomeIcon from '~icons/fluent/calendar-32-filled';
 	import QuarterIcon from '~icons/fluent/calendar-empty-32-regular';
 	import MonthIcon from '~icons/fluent/calendar-arrow-counterclockwise-28-regular';
-	import PlannerIcon from '~icons/fluent/calendar-clock-24-regular';
-	import NotepadIcon from '~icons/fluent/notepad-28-regular';
-	import WeekIcon from '~icons/fluent/calendar-empty-28-regular';
+	import PlannerIcon from '~icons/fluent/calendar-edit-32-regular';
+	import NotepadIcon from '~icons/fluent/notepad-32-regular';
+	import WeekIcon from '~icons/fluent/calendar-empty-32-regular';
 	
 	import { getFontInfo } from '../fonts/fonts';
 
@@ -287,66 +287,50 @@
 	     {@const isActive = breadcrumbs?.length > 0}
 	     <a class="icon" href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}">
 							<PlannerIcon
-							width="30px"
-							height="30px"
-							style={homeIconAdjustments.get(font)
-								? `margin-top: ${homeIconAdjustments.get(font)}`
-								: null} /></a>
+							width="32px"
+							height="32px"/>
+							</a>
 	     <a class="icon" href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}-pg2">
 							<NotepadIcon
-							width="30px"
-							height="30px"
-							style={homeIconAdjustments.get(font)
-								? `margin-top: ${homeIconAdjustments.get(font)}`
-								: null} /></a>
+							width="32px"
+							height="32px"/>
+							</a>
 	{:else if showWeekBreadcrumb}
 	     {@const isActive = breadcrumbs?.length > 0}
 	     <a class="icon" href="#{timeframe.year}-wk{timeframe.weekSinceYear}">
 							<PlannerIcon
-							width="28px"
-							height="28px"
-							style={homeIconAdjustments.get(font)
-								? `margin-top: ${homeIconAdjustments.get(font)}`
-								: null} /></a>
+							width="32px"
+							height="32px"/>
+							</a>
 	     <a class="icon" href="#{timeframe.year}-wk{timeframe.weekSinceYear}-pg2">
 							<NotepadIcon
-							width="28px"
-							height="28px"
-							style={homeIconAdjustments.get(font)
-								? `margin-top: ${homeIconAdjustments.get(font)}`
-								: null} /></a>
+							width="32px"
+							height="32px"/>
+							</a>
 	{:else if showMonthBreadcrumb}
 	     {@const isActive = breadcrumbs?.length > 0}
 	     <a class="icon" href="#{timeframe.year}-{timeframe.month}">
 							<PlannerIcon
-							width="28px"
-							height="28px"
-							style={homeIconAdjustments.get(font)
-								? `margin-top: ${homeIconAdjustments.get(font)}`
-								: null} /></a>
+							width="32px"
+							height="32px"/>
+							</a>
 	     <a class="icon" href="#{timeframe.year}-{timeframe.month}-pg2">
 							<NotepadIcon
-							width="28px"
-							height="28px"
-							style={homeIconAdjustments.get(font)
-								? `margin-top: ${homeIconAdjustments.get(font)}`
-								: null} /></a>
+							width="32px"
+							height="32px"/>
+							</a>
 	{:else if showQuarterBreadcrumb}
 	     {@const isActive = breadcrumbs?.length > 0}
 	     <a class="icon" href="#{year}-q{quarter}">
 							<PlannerIcon
-							width="28px"
-							height="28px"
-							style={homeIconAdjustments.get(font)
-								? `margin-top: ${homeIconAdjustments.get(font)}`
-								: null} /></a>
+							width="32px"
+							height="32px"/>
+							</a>
 	     <a class="icon" href="#{year}-q{quarter}-pg2">
 							<NotepadIcon
-							width="28px"
-							height="28px"
-							style={homeIconAdjustments.get(font)
-								? `margin-top: ${homeIconAdjustments.get(font)}`
-								: null} /></a>
+							width="32px"
+							height="32px"/>
+							</a>
 	{/if}
 	</div>
 </nav>
