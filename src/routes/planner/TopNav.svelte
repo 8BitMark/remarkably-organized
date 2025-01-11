@@ -169,17 +169,17 @@
 				height="30px"/>
 		</a>
 		{#if showYearBreadcrumb && tabs === 'years'}
-			<a href="#{year}">{year}</a>
+			<a class="title" href="#{year}">{year}</a>
 		{:else if showQuarterBreadcrumb && tabs === 'quarters'}
-			<a href="#{year}-q{quarter}">Quarter {quarter}</a>
+			<a class="title" href="#{year}-q{quarter}">Quarter {quarter}</a>
 		{:else if showMonthBreadcrumb && tabs === 'months'}
-			<a href="#{year}-{month}">{new Date(year, month - 1).toLocaleString('default', { month: 'long' })}</a>
+			<a class="title" href="#{year}-{month}">{new Date(year, month - 1).toLocaleString('default', { month: 'long' })}</a>
 		{:else if showWeekBreadcrumb && (tabs === 'weeks-this-month' || tabs === 'weeks-this-year')}
-			<a href="#{timeframe.year}-wk{timeframe.weekSinceYear}">{new Date(year, month - 1).toLocaleString('default', { month: 'long' })} - Week {settings.weekPage.useWeekSinceYear
+			<a class="title" href="#{timeframe.year}-wk{timeframe.weekSinceYear}">{new Date(year, month - 1).toLocaleString('default', { month: 'long' })} - Week {settings.weekPage.useWeekSinceYear
 				? timeframe.weekSinceYear
 				: timeframe.weekSinceMonth}</a>
 		{:else if showDayBreadcrumb && (tabs === 'days-this-week' || tabs === 'days-this-month' || tabs === 'days-this-year')}
-			<a href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}">
+			<a class="title" href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}">
 					{timeframe.start.toLocaleString('default', {
 						weekday: 'long',
 						timeZone: 'UTC',
@@ -245,9 +245,9 @@
 				{@const isActive =
 					!disableActiveIndicator && timeframe.weekSinceYear === week.weekSinceYear}
 					<a class="buttons" href="#{week.id}"
-						class:active={isActive} style="text-transform: lowercase"><small>w{settings.weekPage.useWeekSinceYear
+						class:active={isActive} style="text-transform: lowercase"><small>w</small>{settings.weekPage.useWeekSinceYear
 								? week.weekSinceYear
-								: week.weekSinceMonth}</small>
+								: week.weekSinceMonth}
 						</a>
 			{/each}
 		{/if}
@@ -293,15 +293,15 @@
 	     {@const isActive = breadcrumbs?.length > 0}
 	     <a href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}">
 							<PlannerIcon
-							width="28px"
-							height="28px"
+							width="30px"
+							height="30px"
 							style={homeIconAdjustments.get(font)
 								? `margin-top: ${homeIconAdjustments.get(font)}`
 								: null} /></a>
 	     <a href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}-pg2">
 							<NotepadIcon
-							width="28px"
-							height="28px"
+							width="30px"
+							height="30px"
 							style={homeIconAdjustments.get(font)
 								? `margin-top: ${homeIconAdjustments.get(font)}`
 								: null} /></a>
@@ -331,6 +331,22 @@
 								? `margin-top: ${homeIconAdjustments.get(font)}`
 								: null} /></a>
 	     <a href="#{timeframe.year}-{timeframe.month}-pg2">
+							<NotepadIcon
+							width="28px"
+							height="28px"
+							style={homeIconAdjustments.get(font)
+								? `margin-top: ${homeIconAdjustments.get(font)}`
+								: null} /></a>
+	{:else if showQuarterBreadcrumb}
+	     {@const isActive = breadcrumbs?.length > 0}
+	     <a href="#{year}-q{quarter}">
+							<PlannerIcon
+							width="28px"
+							height="28px"
+							style={homeIconAdjustments.get(font)
+								? `margin-top: ${homeIconAdjustments.get(font)}`
+								: null} /></a>
+	     <a href="#{year}-q{quarter}-pg2">
 							<NotepadIcon
 							width="28px"
 							height="28px"
@@ -373,6 +389,9 @@
 		text-align: right;
     		margin-top: 5px;
     		margin-right: 5px;
+	}
+	.title {
+		vertical-align: text-top;
 	}
 	.buttons {
 		display: inline-block;
