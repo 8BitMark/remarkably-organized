@@ -256,7 +256,7 @@
 	{/each}
 {/if}
 
-{#if  (tabs === 'weeks-this-year' || tabs === 'weeks-this-month')  && !settings.sideNav.rmHacks}
+{#if  (tabs === 'weeks-this-year' || tabs === 'weeks-this-month')}
 	{#each weeks as week, i (week.id)}
 		{@const isActive =
 			!disableActiveIndicator && timeframe.weekSinceYear === week.weekSinceYear}
