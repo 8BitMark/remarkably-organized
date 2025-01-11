@@ -31,8 +31,7 @@
 		<h2>Quarterly Plan</h2>
 		{#each months as month (month.id)}
 			<div class="month">
-				<a href="#{getMonthLink(month)}" class="month"><h2>{month.nameLong}</h2>
-				</a>
+				<a href="#{getMonthLink(month)}" class="month">{month.nameLong}</a>
 					<div class="days">
 						{#if startWeekOnSunday}
 							<div class="label">Su</div>
