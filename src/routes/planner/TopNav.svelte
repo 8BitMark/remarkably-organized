@@ -163,11 +163,10 @@
 {#if !settings.topNav.disable}
 	<nav style:font-family="'{font}'">
 	<div class="left-header">
-		<a href="#{year}" class="home">
+		<a href="#{year}">
 			<HomeIcon
-				width="28px"
-				height="28px"
-				style="margin-top:10px"/>
+				width="30px"
+				height="30px"/>
 		</a>
 		{#if showYearBreadcrumb && tabs === 'years'}
 			<a href="#{year}">{year}</a>
@@ -220,7 +219,7 @@
 		{/if}
 		{#if showWeekBreadcrumb && (tabs === 'days-this-week' || tabs === 'days-this-month' || tabs === 'days-this-year' )}
 				<a href="#{timeframe.year}-wk{timeframe.weekSinceYear}">
-					<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" style={homeIconAdjustments.get(font)
+					<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" style={homeIconAdjustments.get(font)
 											? `margin-top: ${homeIconAdjustments.get(font)}`
 											: n}>
 						<path fill="currentColor" d="M21.75 3A3.25 3.25 0 0 1 25 6.25v15.5A3.25 3.25 0 0 1 21.75 25H6.25A3.25 3.25 0 0 1 3 21.75V6.25A3.25 3.25 0 0 1 6.25 3zm1.75 6.503h-19V21.75c0 .966.784 1.75 1.75 1.75h15.5a1.75 1.75 0 0 0 1.75-1.75zM21.75 4.5H6.25A1.75 1.75 0 0 0 4.5 6.25v1.753h19V6.25a1.75 1.75 0 0 0-1.75-1.75" />
@@ -371,13 +370,14 @@
 	}
 	.right-header {
 		grid-column:2;
-		justify-content: end;
+		text-align: right;
+    		margin-top: 5px;
+    		margin-right: 5px;
 	}
 	.buttons {
 		display: inline-block;
 		text-align: center;
-		align-items: top;
-		vertical-align: middle;
+		vertical-align: top;
 		background-color: var(--nav-bg);
 		border: 1.5px solid black;
 		border-radius: 4px; /* Half the height for perfect rounded corners */
