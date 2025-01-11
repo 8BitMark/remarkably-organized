@@ -262,9 +262,9 @@
 		{@const isActive =
 			!disableActiveIndicator && timeframe.weekSinceYear === week.weekSinceYear}
 			<a href="#{week.id}"
-				class:active={isActive} style="text-transform: lowercase"><li>w{settings.weekPage.useWeekSinceYear
+				class:active={isActive} style="text-transform: lowercase"><li><small>w{settings.weekPage.useWeekSinceYear
 						? week.weekSinceYear
-						: week.weekSinceMonth}
+						: week.weekSinceMonth}</small>
 				</li></a>
 	{/each}
 {/if}
