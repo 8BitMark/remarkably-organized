@@ -165,8 +165,8 @@
 	<div class="left-header">
 		<a href="#{year}">
 			<HomeIcon
-				width="30px"
-				height="30px"/>
+				width="32px"
+				height="32px"/>
 		</a>
 		{#if showYearBreadcrumb && tabs === 'years'}
 			<a class="title" href="#{year}">{year}</a>
@@ -197,31 +197,27 @@
 					
 	<div class="right-header">
 		{#if showQuarterBreadcrumb && tabs !== 'quarters'}
-				<a href="#{year}-q{quarter}" >
-					<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28"style={homeIconAdjustments.get(font)
-											? `margin-top: ${homeIconAdjustments.get(font)}`
-											: n}>
+				<a class="icon" href="#{year}-q{quarter}" >
+					<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
 						<path fill="currentColor" d="M21.75 3A3.25 3.25 0 0 1 25 6.25v8.25a7.5 7.5 0 0 0-1.5-.876V9.503h-19V21.75c0 .966.784 1.75 1.75 1.75h7.374c.234.535.529 1.038.875 1.5H6.25A3.25 3.25 0 0 1 3 21.75V6.25A3.25 3.25 0 0 1 6.25 3zm0 1.5H6.25A1.75 1.75 0 0 0 4.5 6.25v1.753h19V6.25a1.75 1.75 0 0 0-1.75-1.75m5.25 16a6.5 6.5 0 1 1-13 0a6.5 6.5 0 0 1 13 0m-8.146-2.646a.5.5 0 0 0-.708-.708l-2 2a.5.5 0 0 0 0 .708l2 2a.5.5 0 0 0 .708-.708L17.707 20h2.543A2.75 2.75 0 0 1 23 22.75V23a.5.5 0 0 0 1 0v-.25A3.75 3.75 0 0 0 20.25 19h-2.543z" />
 						<text x="10" y="21" text-anchor="middle" fill="black" font-size="12">{quarter}</text>
 					</svg>
 				</a>
 		{/if}
 		{#if showMonthBreadcrumb && (tabs === 'days-this-week' || tabs === 'days-this-month' || tabs === 'days-this-year' || tabs === 'weeks-this-month' || tabs === 'weeks-this-year')}	
-				<a href="#{year}-{month}">
-					<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" style={homeIconAdjustments.get(font)
-											? `margin-top: ${homeIconAdjustments.get(font)}`
-											: n}>
+				<a class="icon" href="#{year}-{month}">
+					<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
 						<path fill="currentColor" d="M21.75 3A3.25 3.25 0 0 1 25 6.25v15.5A3.25 3.25 0 0 1 21.75 25H6.25A3.25 3.25 0 0 1 3 21.75V6.25A3.25 3.25 0 0 1 6.25 3zm1.75 6.503h-19V21.75c0 .966.784 1.75 1.75 1.75h15.5a1.75 1.75 0 0 0 1.75-1.75zM21.75 4.5H6.25A1.75 1.75 0 0 0 4.5 6.25v1.753h19V6.25a1.75 1.75 0 0 0-1.75-1.75" />
-						<text x="14" y="21" text-anchor="middle" fill="black" font-size="12">
+						<text x="16" y="24" text-anchor="middle" fill="black" font-size="14">
 							{timeframe.start.toLocaleString('default', { month: 'short' })}</text>
 					</svg>
 				</a>
 		{/if}
 		{#if showWeekBreadcrumb && (tabs === 'days-this-week' || tabs === 'days-this-month' || tabs === 'days-this-year' )}
-				<a href="#{timeframe.year}-wk{timeframe.weekSinceYear}">
+				<a class="icon" href="#{timeframe.year}-wk{timeframe.weekSinceYear}">
 					<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
 					<path fill="currentColor" d="M7.5 3A4.5 4.5 0 0 0 3 7.5v17A4.5 4.5 0 0 0 7.5 29h17a4.5 4.5 0 0 0 4.5-4.5v-17A4.5 4.5 0 0 0 24.5 3zM5 7.5A2.5 2.5 0 0 1 7.5 5h17A2.5 2.5 0 0 1 27 7.5V9H5zM5 11h22v13.5a2.5 2.5 0 0 1-2.5 2.5h-17A2.5 2.5 0 0 1 5 24.5z"/>
-					<text x="14" y="21" text-anchor="middle" fill="black" font-size="12">
+					<text x="16" y="24" text-anchor="middle" fill="black" font-size="14">
 							{settings.weekPage.useWeekSinceYear
 								? timeframe.weekSinceYear
 								: timeframe.weekSinceMonth}</text>
@@ -289,14 +285,14 @@
 
 	{#if showDayBreadcrumb}
 	     {@const isActive = breadcrumbs?.length > 0}
-	     <a href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}">
+	     <a class="icon" href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}">
 							<PlannerIcon
 							width="30px"
 							height="30px"
 							style={homeIconAdjustments.get(font)
 								? `margin-top: ${homeIconAdjustments.get(font)}`
 								: null} /></a>
-	     <a href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}-pg2">
+	     <a class="icon" href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}-pg2">
 							<NotepadIcon
 							width="30px"
 							height="30px"
@@ -305,14 +301,14 @@
 								: null} /></a>
 	{:else if showWeekBreadcrumb}
 	     {@const isActive = breadcrumbs?.length > 0}
-	     <a href="#{timeframe.year}-wk{timeframe.weekSinceYear}">
+	     <a class="icon" href="#{timeframe.year}-wk{timeframe.weekSinceYear}">
 							<PlannerIcon
 							width="28px"
 							height="28px"
 							style={homeIconAdjustments.get(font)
 								? `margin-top: ${homeIconAdjustments.get(font)}`
 								: null} /></a>
-	     <a href="#{timeframe.year}-wk{timeframe.weekSinceYear}-pg2">
+	     <a class="icon" href="#{timeframe.year}-wk{timeframe.weekSinceYear}-pg2">
 							<NotepadIcon
 							width="28px"
 							height="28px"
@@ -321,14 +317,14 @@
 								: null} /></a>
 	{:else if showMonthBreadcrumb}
 	     {@const isActive = breadcrumbs?.length > 0}
-	     <a href="#{timeframe.year}-{timeframe.month}">
+	     <a class="icon" href="#{timeframe.year}-{timeframe.month}">
 							<PlannerIcon
 							width="28px"
 							height="28px"
 							style={homeIconAdjustments.get(font)
 								? `margin-top: ${homeIconAdjustments.get(font)}`
 								: null} /></a>
-	     <a href="#{timeframe.year}-{timeframe.month}-pg2">
+	     <a class="icon" href="#{timeframe.year}-{timeframe.month}-pg2">
 							<NotepadIcon
 							width="28px"
 							height="28px"
@@ -337,14 +333,14 @@
 								: null} /></a>
 	{:else if showQuarterBreadcrumb}
 	     {@const isActive = breadcrumbs?.length > 0}
-	     <a href="#{year}-q{quarter}">
+	     <a class="icon" href="#{year}-q{quarter}">
 							<PlannerIcon
 							width="28px"
 							height="28px"
 							style={homeIconAdjustments.get(font)
 								? `margin-top: ${homeIconAdjustments.get(font)}`
 								: null} /></a>
-	     <a href="#{year}-q{quarter}-pg2">
+	     <a class="icon" href="#{year}-q{quarter}-pg2">
 							<NotepadIcon
 							width="28px"
 							height="28px"
@@ -385,7 +381,7 @@
 	.right-header {
 		grid-column:2;
 		text-align: right;
-    		margin-top: 5px;
+    		margin-top: 2px;
     		margin-right: 5px;
 	}
 	.title {
@@ -411,6 +407,11 @@
 		background-color: var(--fg-text-low);
 	}
 
+	.icon {
+		text-decoration: none;
+		color: var(--text);
+    		margin-top: 4px;
+	}
 
 	ol.breadcrumbs {
 			list-style: none;
