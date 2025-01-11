@@ -352,10 +352,10 @@
 	}
 	nav {
 		display: grid;
-      		grid-template-columns: 30% 70%;
+      		grid-template-columns: auto auto; /* Two columns with auto widths */
      		grid-template-rows: 1fr;
       		gap: 0px;
-		align-items: center;
+		align-items: start; /* Align items to the top */
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -373,7 +373,6 @@
 	.right-header {
 		grid-column:2;
 		justify-content: end;
-		vertical-align: middle;
 	}
 	.buttons {
 		display: inline-block;
