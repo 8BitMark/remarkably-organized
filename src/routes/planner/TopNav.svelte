@@ -378,7 +378,7 @@
 	.buttons {
 		display: inline-block;
 		text-align: center;
-		align-items: center;
+		align-items: top;
 		vertical-align: middle;
 		background-color: var(--nav-bg);
 		border: 1.5px solid black;
