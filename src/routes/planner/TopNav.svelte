@@ -367,7 +367,10 @@
 		padding: 0 var(--sidenav-width) 0 0;
 	}
 	nav {
-		display: flex;
+		display: grid;
+      		grid-template-columns: 30% 70%;
+     		grid-template-rows: 1fr;
+      		gap: 0px;
 		align-items: center;
 		position: absolute;
 		top: 0;
@@ -378,8 +381,9 @@
 		margin-top: 5px;
     		margin-left: 10px;
 		font-size: 1.3em;
-
-		ol.breadcrumbs {
+	}
+	ol.breadcrumbs {
+			grid-column:1;
 			list-style: none;
 			padding: 0;
 			margin: 0;
@@ -429,6 +433,7 @@
 			}
 		}
 		ol.links {
+			grid-column:2;
 			list-style: none;
 			margin-right: 10px;
 			align-items: right;
@@ -455,5 +460,4 @@
 				background-color: var(--fg-text-low);
 			}
 		}			
-	}
 </style>
