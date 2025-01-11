@@ -82,7 +82,7 @@
 		  width: 100%;
 				text-align: left;
 				margin-top: 0px;
-    font-size: 1.2em;
+    font-size: 0.95em;
     color: var(--text-high);
     text-transform: uppercase;
     padding-top: 5px;
@@ -103,7 +103,7 @@
 		}
 		h2 {
 			text-align: center;
-			font-size: 1.2em;
+			font-size: 0.95em;
 			font-weight: var(--font-weight-normal);
 			padding: 0 0 0.3rem;
 			border-bottom:0px;
