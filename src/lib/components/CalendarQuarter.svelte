@@ -95,7 +95,6 @@
 		flex: 1;
 		align-items: start;
 		width: 100%;
-		border-bottom: solid 2px var(--outline-high);
 		padding: 0.5rem 0 0;
 		&:last-child {
 			border-bottom: none;
