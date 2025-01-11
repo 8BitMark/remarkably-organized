@@ -27,13 +27,13 @@
 </script>
 
 {#if months.length}
-<h2>Quarterly Plan</h2>
 	<div class="months">
-		
+<h2>Quarterly Plan</h2>
 		{#each months as month (month.id)}
 			<div class="month">
-				<!--<a href="#{getMonthLink(month)}" class="month">{month.nameLong}</a>
-					--> <div class="days">
+				<a href="#{getMonthLink(month)}" class="calendar">
+					<h2>{month.nameLong}</h2>
+					<div class="days">
 						{#if startWeekOnSunday}
 							<div class="label">Su</div>
 						{/if}
@@ -57,62 +57,63 @@
 							</a>
 						{/each}
 					</div>
-			</div>	
-			<div class="notes">
-				{#each Array(10) as _, i (i)}
-					<div class="lines"></div>
-				{/each}
-			</div>	
+				</a>
+				<div class="notes">
+					{#each Array(10) as _, i (i)}
+						<div class="lines"></div>
+					{/each}
+				</div>
+			</div>
 		{/each}
 	</div>
 {/if}
 
 <style lang="scss">
 	.months {
-		display: grid;
-		grid-template-columns: 35% 65%;
-		grid-template-rows: repeat(3, 1fr);
+		display: flex;
 		flex-direction: column;
-		align-items: left;
+		align-items: center;
 		width: 100%;
 		height: 100%;
 		padding-left: 10px;
-		padding-right: 10px;		
-	}
-h2 {
-		   width: 100%;
-			text-align: left;
-			margin-top: 0px;
-		    font-size: 0.95em;
-		    color: var(--text-high);
-		    text-transform: uppercase;
-		    padding-top: 5px;
-		    letter-spacing: 1.5px;
-		    border-bottom: 1.5px solid var(--outline);
+		padding-right: 10px;
+		h2 {
+		  width: 100%;
+				text-align: left;
+				margin-top: 0px;
+    font-size: 1.2em;
+    color: var(--text-high);
+    text-transform: uppercase;
+    padding-top: 5px;
+    letter-spacing: 1.5px;
+    border-bottom: 1.5px solid var(--outline);
 				}
+				
+	}
 	.month {
 		display: flex;
-		grid-column: 1; 
+		flex: 1;
 		align-items: start;
 		width: 100%;
+		border-bottom: solid 2px var(--outline-high);
 		padding: 0.5rem 0 0;
 		&:last-child {
 			border-bottom: none;
 		}
-		h2 {width:100%;
+		h2 {
 			text-align: center;
-			font-size: 0.95em;
+			font-size: 1.2em;
 			font-weight: var(--font-weight-normal);
 			padding: 0 0 0.3rem;
 			border-bottom:0px;
 		}
 	}
 	.notes {
-		grid-column: 2;
+		flex: 1;
 		text-align: right;
 		padding-left:15px;
 		/* border-top: solid 1px var(--outline);
-		width: 100%;
+	width: 100%;
 		height: 35%;
 		padding: 0 1rem 1rem;*/
 	}
@@ -140,5 +141,5 @@ h2 {
 			font-size: 0.9em;
 			font-weight: var(--font-weight-light);
 		}
-	}
+}
 </style>
