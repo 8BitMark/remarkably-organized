@@ -374,6 +374,7 @@
 	}
 	.left-header {
 		grid-column:1;
+                display:flex;
 		font-size: 1.5em;
 		align-items: start;
 		justify-content: flex-start;
