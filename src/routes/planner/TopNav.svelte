@@ -3,7 +3,7 @@
 	import HomeIcon from '~icons/fluent/calendar-32-filled';
 	import QuarterIcon from '~icons/fluent/calendar-empty-32-regular';
 	import MonthIcon from '~icons/fluent/calendar-arrow-counterclockwise-28-regular';
-	import PlannerIcon from '~icons/fluent/calendar-edit-32-regular';
+	import PlannerIcon from '~icons/fluent/calendar-record-32-regular';
 	import NotepadIcon from '~icons/fluent/notepad-32-regular';
 	import WeekIcon from '~icons/fluent/calendar-empty-32-regular';
 	
