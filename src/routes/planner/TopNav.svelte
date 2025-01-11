@@ -371,6 +371,8 @@
 	}
 	.right-header {
 		grid-column:2;
+		justify-content: end;
+		vertical-align: middle;
 	}
 	.buttons {
 		display: inline-block;
