@@ -380,31 +380,26 @@
 		grid-column:2;
 	}
 	.buttons {
-		list-style: none;
-		display: flex;
-		padding: 0px;
-		a {
-			display: inline-block;
-			text-align: center;
-			align-items: center;
-			vertical-align: middle;
-			background-color: var(--nav-bg);
-			border: 1.5px solid black;
-			border-radius: 4px; /* Half the height for perfect rounded corners */
-			color: var(--text-high);
-			text-decoration: none;
-			height: 25px;
-			width: 25px;
-			margin-right: 5px;
-			font-size:0.95em;
-			text-transform: uppercase;
-			padding-top:3px;
-		}
-		a.active {
-			background-color: var(--fg-text-low);
-		}
-
+		display: inline-block;
+		text-align: center;
+		align-items: center;
+		vertical-align: middle;
+		background-color: var(--nav-bg);
+		border: 1.5px solid black;
+		border-radius: 4px; /* Half the height for perfect rounded corners */
+		color: var(--text-high);
+		text-decoration: none;
+		height: 25px;
+		width: 25px;
+		margin-right: 5px;
+		font-size:0.95em;
+		text-transform: uppercase;
+		padding-top:3px;
 	}
+	.buttons:active {
+		background-color: var(--fg-text-low);
+	}
+
 
 	ol.breadcrumbs {
 			list-style: none;
