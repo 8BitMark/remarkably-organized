@@ -260,9 +260,8 @@
 	{#each weeks as week, i (week.id)}
 		{@const isActive =
 			!disableActiveIndicator && timeframe.weekSinceYear === week.weekSinceYear}
-			<a
-				href="#{week.id}"
-				class:active={isActive}>
+			<a href="#{week.id}"
+				class:active={isActive}><li>
 				{settings.weekPage.useWeekNumbersInSideNav
 						? 'w'
 						: week.start.toLocaleString('default', {
@@ -274,8 +273,7 @@
 					: settings.weekPage.useWeekSinceYear
 						? week.weekSinceYear
 						: week.weekSinceMonth}
-			</a>
-		</li>
+			</li></a>
 	{/each}
 {/if}
 
