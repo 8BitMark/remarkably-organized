@@ -27,12 +27,13 @@
 </script>
 
 {#if months.length}
+<h2>Quarterly Plan</h2>
 	<div class="months">
-		<h2>Quarterly Plan</h2>
+		
 		{#each months as month (month.id)}
 			<div class="month">
-				<a href="#{getMonthLink(month)}" class="month">{month.nameLong}</a>
-					<div class="days">
+				<!--<a href="#{getMonthLink(month)}" class="month">{month.nameLong}</a>
+					--> <div class="days">
 						{#if startWeekOnSunday}
 							<div class="label">Su</div>
 						{/if}
@@ -70,14 +71,15 @@
 	.months {
 		display: grid;
 		grid-template-columns: 35% 65%;
-		grid-template-rows: repeat(17, 1fr);
+		grid-template-rows: repeat(3, 1fr);
 		flex-direction: column;
 		align-items: left;
 		width: 100%;
 		height: 100%;
 		padding-left: 10px;
-		padding-right: 10px;
-		h2 {
+		padding-right: 10px;		
+	}
+h2 {
 		   width: 100%;
 			text-align: left;
 			margin-top: 0px;
@@ -88,8 +90,6 @@
 		    letter-spacing: 1.5px;
 		    border-bottom: 1.5px solid var(--outline);
 				}
-				
-	}
 	.month {
 		display: flex;
 		grid-column: 1; 
