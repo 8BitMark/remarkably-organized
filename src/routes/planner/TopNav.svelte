@@ -383,12 +383,13 @@
 		border-radius: 4px; /* Half the height for perfect rounded corners */
 		color: var(--text-high);
 		text-decoration: none;
-		height: 25px;
-		width: 25px;
+		height: 26px;
+		width: 26px;
 		margin-right: 5px;
+                margin-left:4px;
 		font-size:0.95em;
 		text-transform: uppercase;
-		padding-top:3px;
+		padding-top:wpx;
 	}
 	.buttons:active {
 		background-color: var(--fg-text-low);
