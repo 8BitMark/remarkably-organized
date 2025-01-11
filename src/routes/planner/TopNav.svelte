@@ -240,11 +240,11 @@
 				</a>	
 		{/if}
 
-	<ol class="links">
+	
 		{#if tabs === 'quarters'}
 			{#each settings.quarters as quarters (quarters.id)}
 			{@const isActive = quarter === parseInt(quarters.nameShort.charAt(1),10)}
-				<a href="#{quarters.id}" class:active={isActive}>
+				<a class="buttons" href="#{quarters.id}" class:active={isActive}>
 					<li>{quarters.nameShort}</li></a>
 			{/each}
 		{/if}
@@ -253,7 +253,7 @@
 			{#each weeks as week, i (week.id)}
 				{@const isActive =
 					!disableActiveIndicator && timeframe.weekSinceYear === week.weekSinceYear}
-					<a href="#{week.id}"
+					<a class="buttons" href="#{week.id}"
 						class:active={isActive} style="text-transform: lowercase"><li><small>w{settings.weekPage.useWeekSinceYear
 								? week.weekSinceYear
 								: week.weekSinceMonth}</small>
@@ -271,7 +271,7 @@
 				{@const shouldHighlight = !isActive && isWeekend && tabs !== 'days-this-week'}
 				{@const highlightStart = shouldHighlight && isSaturday && i < days.length - 1}
 				{@const highlighEnd = shouldHighlight && isSunday && i > 0}
-					<a
+					<a class="buttons"
 						href="#{day.id}"
 						class:active={isActive}
 						class:highlight={shouldHighlight}
@@ -290,7 +290,7 @@
 		{#if tabs === 'months'}
 			{#each settings.months as month (month.id)}
 				{#if month.year === timeframe.year}
-					<a
+					<a class="buttons"
 						href="#{month.id}"
 						class:active={!disableActiveIndicator &&
 							timeframe.month === month.month}>
@@ -299,7 +299,6 @@
 				{/if}
 			{/each}
 		{/if}
-	</ol>
 
 	{#if showDayBreadcrumb}
 	     {@const isActive = breadcrumbs?.length > 0}
@@ -379,6 +378,32 @@
 	}
 	.right-header {
 		grid-column:2;
+	}
+	.buttons {
+		list-style: none;
+		display: flex;
+		padding: 0px;
+		a {
+			display: inline-block;
+			text-align: center;
+			align-items: center;
+			vertical-align: middle;
+			background-color: var(--nav-bg);
+			border: 1.5px solid black;
+			border-radius: 4px; /* Half the height for perfect rounded corners */
+			color: var(--text-high);
+			text-decoration: none;
+			height: 25px;
+			width: 25px;
+			margin-right: 5px;
+			font-size:0.95em;
+			text-transform: uppercase;
+			padding-top:3px;
+		}
+		a.active {
+			background-color: var(--fg-text-low);
+		}
+
 	}
 
 	ol.breadcrumbs {
