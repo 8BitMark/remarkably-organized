@@ -35,7 +35,7 @@
    <div class="lines" style="grid-column:1 / span 2;">Action Plan</div>
    <div class="lines" style="grid-column:3;">Due Date</div>
    
-   {#each Array(12) as _, i}
+   {#each Array(15) as _, i}
 	    <div class="icon"></div>
 	    <div class="content"></div>
       <div class="date"></div>
