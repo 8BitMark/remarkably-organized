@@ -123,13 +123,10 @@
     padding: 0px;
     display:flex;
     color: var(--text-high);
-    writing-mode: vertical-lr;
-    	text-orientation: mixed;
-        transform: rotate(180deg); /* Rotate text to start from bottom */
-    	align-items: center; /* Align text to the bottom of the cell */
-    	justify-content: center; /* Center text horizontally */
-    	letter-spacing: 1.5px;
-    	text-transform: uppercase;
+    align-items: center; /* Align text to the bottom of the cell */
+    justify-content: center; /* Center text horizontally */
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
 }
 
   .weekly-plan .content {
