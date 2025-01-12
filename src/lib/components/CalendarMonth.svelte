@@ -136,7 +136,7 @@ transform: rotate(270deg);
 			justify-content: start;
 			font-size: 1.05em;
 			font-weight: var(--font-weight-light);
-			border-top: solid 1px var(--outline-high);
+			border-bottom: solid 1px var(--outline-high);
 			border-right: solid 1px var(--outline-high);
 			line-height: 1;
 
@@ -158,8 +158,8 @@ transform: rotate(270deg);
 .week:nth-child(1) {
 border-top: solid 1px var(--outline-high);
 }
-.day:nth-last-child(-n + 7) {
-border-bottom: solid 1px var(--outline-high);
+.day:nth-child(1) {
+border-top: solid 1px var(--outline-high);
 }
 		.events {
 			display: flex;
