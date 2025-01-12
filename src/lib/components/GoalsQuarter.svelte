@@ -137,4 +137,47 @@
      height: 24px;
      width: auto;
   }
+
+  .progress-bar {
+display:flex;
+    width: 30%;
+    height: 20px;
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    position: relative;
+text-align: right;
+ justify-content: flex-end;
+                align-items:center;
+  }
+
+  .progress-bar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    color: white;
+    width: 0%;
+    border-radius: 8px 0 0 8px;
+    transition: width 0.3s;
+  }
+
+  .marker {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2px;
+    height: 20px;
+    background-color: white;
+  }
+
+  .marker:nth-child(1) { left: 10%; }
+  .marker:nth-child(2) { left: 20%; }
+  .marker:nth-child(3) { left: 30%; }
+  .marker:nth-child(4) { left: 40%; }
+  .marker:nth-child(5) { left: 50%; }
+  .marker:nth-child(6) { left: 60%; }
+  .marker:nth-child(7) { left: 70%; }
+  .marker:nth-child(8) { left: 80%; }
+  .marker:nth-child(9) { left: 90%; }
 </style>
