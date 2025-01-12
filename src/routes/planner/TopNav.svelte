@@ -200,7 +200,7 @@
 				<a class="icon" href="#{year}-q{quarter}" >
 					<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
 						<path fill="currentColor" d="M2 6.5A4.5 4.5 0 0 1 6.5 2h15A4.5 4.5 0 0 1 26 6.5v15a4.5 4.5 0 0 1-4.5 4.5h-15A4.5 4.5 0 0 1 2 21.5zM6.5 4A2.5 2.5 0 0 0 4 6.5V7h20v-.5A2.5 2.5 0 0 0 21.5 4zM4 21.5A2.5 2.5 0 0 0 6.5 24h15a2.5 2.5 0 0 0 2.5-2.5V9H4zm24-12V5.757c1.206.808 2 2.183 2 3.743V22a8 8 0 0 1-8 8H9.5a4.5 4.5 0 0 1-3.742-2H22a6 6 0 0 0 6-6z"/>
-                                                <text x="10" y="21" text-anchor="middle" fill="black" font-size="12">{quarter}</text>
+                                                <text x="14" y="21" text-anchor="middle" fill="black" font-size="12">Q{quarter}</text>
 					</svg>
 				</a>
 		{/if}
@@ -208,7 +208,7 @@
 				<a class="icon" href="#{year}-{month}">
 					<svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34">
   <path fill="currentColor" d="m4.25 9.563a5.313 5.313 0 0 1 5.313-5.312h14.875a5.313 5.313 0 0 1 5.313 5.313v14.875a5.313 5.313 0 0 1-5.312 5.313h-14.875a5.313 5.313 0 0 1-5.312-5.312v-4.25a1.063 1.063 0 1 1 2.125 0v4.25a3.188 3.188 0 0 0 3.188 3.188h14.875a3.188 3.188 0 0 0 3.188-3.187v-11.687h-16.692a2.656 2.656 0 0 0 0-2.125h16.692v-1.062a3.188 3.188 0 0 0-3.187-3.187h-14.875a3.188 3.188 0 0 0-3.187 3.188v2.748l1.374-1.374a1.063 1.063 0 1 1 1.502 1.502l-3.187 3.188a1.063 1.063 0 0 1-1.502 0l-3.188-3.187a1.063 1.063 0 1 1 1.502-1.502l1.371 1.371"/>
-  					<text x="16" y="24" text-anchor="middle" fill="black" font-size="14">
+  					<text x="17" y="24" text-anchor="middle" fill="black" font-size="12">
 							{timeframe.start.toLocaleString('default', { month: 'short' })}</text>
 					</svg>
 				</a>
