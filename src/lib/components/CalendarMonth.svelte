@@ -108,9 +108,7 @@
 	
 		.week {
 			grid-column: 1;
-			writing-mode: vertical-lr;
-			text-orientation: mixed;
-			transform: rotate(180deg);
+			
 			display: flex;
 			align-items: center;
 			justify-content: center;
@@ -120,6 +118,7 @@
 			color: var(--text-low);
 			border-top: solid 1px var(--outline-high);
    			border-right: solid 1px var(--outline-high);
+                        border-right: solid 1px var(--outline-high);
 			background-color: var(--nav-bg);
 			margin-bottom: 0px;
 			
