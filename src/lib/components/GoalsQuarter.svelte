@@ -80,11 +80,12 @@
     }
 
   .midline { 
-    display: flex; 
-    align-items: flex-start;
+    display: flex;
       height: 25px; 
       width:50%;
-      align-items: right;
+text-align: right;
+                justify-content: flex-end;
+                align-items:center;
   }
 
   .star {
