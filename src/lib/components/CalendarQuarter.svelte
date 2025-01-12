@@ -113,13 +113,13 @@
 		flex: 1;
 		text-align: right;
 		padding-left:15px;
-		/* border-top: solid 1px var(--outline);
+		/* border-top: solid 1px var(--outline-high);
 	width: 100%;
 		height: 35%;
 		padding: 0 1rem 1rem;*/
 	}
 	.lines{
-      border-bottom: 1px solid var(--outline);
+      border-bottom: 1px solid var(--outline-high);
       height: 25px;
       padding: 0px;
     }
