@@ -3,7 +3,7 @@
 	import HomeIcon from '~icons/fluent/calendar-32-filled';
 	import QuarterIcon from '~icons/fluent/calendar-empty-32-regular';
 	import MonthIcon from '~icons/fluent/calendar-ltr-32-regular';
-	import PlannerIcon from '~icons/fluent/textbox-checkmark-32-regular';
+	import PlannerIcon from '~icons/fluent/text-bullet-list-square-32-regular';
 	import NotepadIcon from '~icons/fluent/clipboard-text-edit-32-regular';
 	import WeekIcon from '~icons/fluent/calendar-empty-32-regular';
 	
@@ -225,15 +225,15 @@
 				</a>	
 		{/if}
 
-	
+     <ol class="links">
 		{#if tabs === 'quarters'}
 			{#each settings.quarters as quarters (quarters.id)}
 			{@const isActive = quarter === parseInt(quarters.nameShort.charAt(1),10)}
-				<span class="buttons"><a href="#{quarters.id}" class:active={isActive}>
-					{quarters.nameShort}</a></span>
+				<a href="#{quarters.id}" class:active={isActive}><li>
+					{quarters.nameShort}</li></a>
 			{/each}
 		{/if}
-		
+		</ol>
 		{#if  (tabs === 'weeks-this-year' || tabs === 'weeks-this-month')}
 			{#each weeks as week, i (week.id)}
 				{@const isActive =
