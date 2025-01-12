@@ -18,17 +18,7 @@
    			<div class="lines"></div>
 		</div>
 		<div class="right-side">
-			<div class="progress-bar">
-			  <div class="marker"></div>
-			  <div class="marker"></div>
-			  <div class="marker"></div>
-			  <div class="marker"></div>
-			  <div class="marker"></div>
-			  <div class="marker"></div>
-			  <div class="marker"></div>
-			  <div class="marker"></div>
-			  <div class="marker"></div>
-			</div>
+			
 		</div>
         {/each}
      </div>
