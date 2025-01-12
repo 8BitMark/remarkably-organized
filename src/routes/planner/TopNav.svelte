@@ -2,8 +2,8 @@
 	import { formatToString, PlannerSettings, type Timeframe } from '$lib';
 	import HomeIcon from '~icons/fluent/calendar-32-filled';
 	import QuarterIcon from '~icons/fluent/calendar-empty-32-regular';
-	import MonthIcon from '~icons/fluent/calendar-arrow-counterclockwise-28-regular';
-	import PlannerIcon from '~icons/fluent/calendar-record-32-regular';
+	import MonthIcon from '~icons/fluent/calendar-ltr-32-regular';
+	import PlannerIcon from '~icons/fluent/text-bullet-list-square-32-regular';
 	import NotepadIcon from '~icons/fluent/notepad-32-regular';
 	import WeekIcon from '~icons/fluent/calendar-empty-32-regular';
 	
@@ -207,8 +207,8 @@
 		{#if showMonthBreadcrumb && (tabs === 'days-this-week' || tabs === 'days-this-month' || tabs === 'days-this-year' || tabs === 'weeks-this-month' || tabs === 'weeks-this-year')}	
 				<a class="icon" href="#{year}-{month}">
 					<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-						<path fill="currentColor" d="M21.75 3A3.25 3.25 0 0 1 25 6.25v15.5A3.25 3.25 0 0 1 21.75 25H6.25A3.25 3.25 0 0 1 3 21.75V6.25A3.25 3.25 0 0 1 6.25 3zm1.75 6.503h-19V21.75c0 .966.784 1.75 1.75 1.75h15.5a1.75 1.75 0 0 0 1.75-1.75zM21.75 4.5H6.25A1.75 1.75 0 0 0 4.5 6.25v1.753h19V6.25a1.75 1.75 0 0 0-1.75-1.75" />
-						<text x="16" y="24" text-anchor="middle" fill="black" font-size="14">
+  <path fill="currentColor" d="m4,9 a5,5,0,0,1,5,-5 h14 a5,5,0,0,1,5,5 v14 a5,5,0,0,1,-5,5 h-14 a5,5,0,0,1,-5,-5 v-4 a1,1,0,1,1,2,0 v4 a3,3,0,0,0,3,3 h14 a3,3,0,0,0,3,-3 v-11 h-15.71 a2.5,2.5,0,0,0,0,-2 h15.71 v-1 a3,3,0,0,0,-3,-3 h-14 a3,3,0,0,0,-3,3 v2.586 l1.293,-1.293 a1,1,0,1,1,1.414,1.414 l-3,3 a1,1,0,0,1,-1.414,0 l-3,-3 a1,1,0,1,1,1.414,-1.414 l1.29,1.29
+  					<text x="16" y="24" text-anchor="middle" fill="black" font-size="14">
 							{timeframe.start.toLocaleString('default', { month: 'short' })}</text>
 					</svg>
 				</a>
