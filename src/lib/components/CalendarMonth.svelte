@@ -155,10 +155,10 @@ transform: rotate(270deg);
 			}
 		}
 
-.week:nth-child(8) {
+.week:nth-child(1) {
 border-top: solid 1px var(--outline-high);
 }
-.day:nth-child(1) {
+.day:nth-child(7) {
 border-top: solid 1px var(--outline-high);
 }
 		.events {
