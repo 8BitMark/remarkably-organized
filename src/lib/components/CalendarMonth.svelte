@@ -118,7 +118,7 @@
     			letter-spacing: 1.5px;
     			text-transform: uppercase;
 			color: var(--text-low);
-			border-left: solid 1px var(--outline-high);
+			border-top: solid 1px var(--outline-high);
    			border-right: solid 1px var(--outline-high);
 			background-color: var(--nav-bg);
 			margin-bottom: 0px;
