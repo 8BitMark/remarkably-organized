@@ -158,6 +158,9 @@ border-bottom: solid 1px var(--outline-high);
 				align-items: start;
 			}
 		}
+.day:nth-last-child(-n + 1) {
+border-bottom: solid 1px var(--outline-high);
+}
 		.events {
 			display: flex;
 			flex-direction: column;
