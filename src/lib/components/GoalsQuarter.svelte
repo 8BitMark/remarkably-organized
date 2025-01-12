@@ -15,18 +15,19 @@
       <div class="lines" style="grid-column:1 / span 2;">Key Results</div>
       {#each Array(6) as _, i}
 	    	<div class="krlines" style="grid-column:1;">{i+1}.</div>
-   			<div class="krlines" style="grid-column:1;"></div>
-<div class="progress-bar">
-  <div class="marker"></div>
-  <div class="marker"></div>
-  <div class="marker"></div>
-  <div class="marker"></div>
-  <div class="marker"></div>
-  <div class="marker"></div>
-  <div class="marker"></div>
-  <div class="marker"></div>
-  <div class="marker"></div>
-</div>
+		<div class="progress-bar" style="grid-column:2;">
+		  <div class="marker"></div>
+		  <div class="marker"></div>
+		  <div class="marker"></div>
+		  <div class="marker"></div>
+		  <div class="marker"></div>
+		  <div class="marker"></div>
+		  <div class="marker"></div>
+		  <div class="marker"></div>
+		  <div class="marker"></div>
+		</div>
+   		<div class="krlines" style="grid-column:1;"></div>
+
       {/each}
 </div>
 
@@ -139,15 +140,18 @@
   }
 
   .progress-bar {
-display:flex;
-    width: 30%;
-    height: 20px;
-    background-color: #e0e0e0;
-    border-radius: 8px;
-    position: relative;
-text-align: right;
+	display:flex;
+    	width: 100%;
+	    height: 20px;
+	    background-color: var(--nav-bg);
+    	border-radius: 8px;
+    	position: relative;
+	text-align: right;
  justify-content: flex-end;
                 align-items:center;
+	margin-top:4px;
+	margin-left:10px;
+	margin-right:10px;
   }
 
   .progress-bar::before {
