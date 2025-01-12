@@ -400,7 +400,7 @@
 	.icon {
 		text-decoration: none;
 		color: var(--text);
-    		margin-top: -8px;
+    		margin-top: -6px;
 	}
 
 	ol.breadcrumbs {
