@@ -154,7 +154,11 @@ transform: rotate(270deg);
 				align-items: start;
 			}
 		}
-.day:nth-last-child(-n + 8) {
+
+.week:nth-last-child(-n + 1) {
+border-bottom: solid 1px var(--outline-high);
+}
+.day:nth-last-child(-n + 7) {
 border-bottom: solid 1px var(--outline-high);
 }
 		.events {
