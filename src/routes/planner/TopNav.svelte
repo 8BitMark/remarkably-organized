@@ -233,16 +233,16 @@
 					{quarters.nameShort}</li></a>
 			{/each}
 		{/if}
-		</ol>
+		
 		{#if  (tabs === 'weeks-this-year' || tabs === 'weeks-this-month')}
 			{#each weeks as week, i (week.id)}
 				{@const isActive =
 					!disableActiveIndicator && timeframe.weekSinceYear === week.weekSinceYear}
 					<a href="#{week.id}"
-						class:active={isActive} style="text-transform: lowercase"><small>w</small>{settings.weekPage.useWeekSinceYear
+						class:active={isActive} style="text-transform: lowercase"><li><small>w</small>{settings.weekPage.useWeekSinceYear
 								? week.weekSinceYear
 								: week.weekSinceMonth}
-						</a>
+						</li></a>
 			{/each}
 		{/if}
 		
@@ -261,12 +261,12 @@
 						class:active={isActive}
 						class:highlight={shouldHighlight}
 						class:highlight-start={highlightStart}
-						class:highlight-end={highlighEnd}>
+						class:highlight-end={highlighEnd}><li>
 							{day.start.toLocaleString('default', {
 								weekday: 'short',
 								timeZone: 'UTC',
 							}).charAt(0)}
-					</a>
+					</li></a>
 			{/each}
 		{/if}
 
@@ -276,13 +276,13 @@
 					<a 
 						href="#{month.id}"
 						class:active={!disableActiveIndicator &&
-							timeframe.month === month.month}>
+							timeframe.month === month.month}><li>
 						{month.nameShort.charAt(0)}
-					</a>
+					</li></a>
 				{/if}
 			{/each}
 		{/if}
-
+</ol>
 	{#if showDayBreadcrumb}
 	     {@const isActive = breadcrumbs?.length > 0}
 	     <a class="icon" href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}">
@@ -464,16 +464,17 @@
 				align-items: center;
 				vertical-align: middle;
 				background-color: var(--nav-bg);
-    				border: 1.5px solid black;
+    				border: 1.8px solid black;
     				border-radius: 4px; /* Half the height for perfect rounded corners */
     				color: var(--text-high);
     				text-decoration: none;
-    				height: 25px;
-				width: 25px;
-				margin-right: 5px;
-				font-size:0.95em;
-				text-transform: uppercase;
-				padding-top:3px;
+    				height: 26px;
+		width: 26px;
+		margin-right: 3px;
+                margin-left:3px;
+		font-size:0.95em;
+		text-transform: uppercase;
+		padding-top:3px;
 			}
 			a.active {
 				background-color: var(--fg-text-low);
