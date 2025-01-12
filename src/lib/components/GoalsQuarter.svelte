@@ -3,7 +3,6 @@
 </script>
 
 <div class="container">
-    <div class="left-side">
       <div class="notes">
         <h2>Quarterly Goals</h2>
         <div class="lines">Objective</div>
@@ -22,7 +21,8 @@
 		</div>
         {/each}
      </div>
-      <div class="priorities">
+
+<div class="priorities">
    <div class="lines" style="grid-column:1 / span 3;">Action Plan</div>
         {#each Array(12) as _, i}
 	    <div class="icon"></div>
@@ -33,7 +33,6 @@
 
 
       </div>
-    </div>
 </div>
 
 <style lang="scss">
@@ -63,7 +62,7 @@
     letter-spacing: 1.5px;
     border-bottom: 1.5px solid var(--outline);
   }
-  .lines, .midline{
+  .lines {
       border-bottom: 1px solid var(--outline-high);
       color: var(--text-high);
       text-transform: uppercase;
@@ -100,13 +99,7 @@
 	align-items:center;
     }
 
-  .midline { 
-    display: flex;
-      height: 25px; 
-      width:70%;
-  }
-
-  .star {
+.star {
     width: 25px;
     height: 25px;
     fill: none;
@@ -114,47 +107,6 @@
     stroke-width: 1;
     margin: 2px;
   }
-  .progress-bar {
-   display:flex;
-    width: 30%;
-    height: 20px;
-    background-color: #e0e0e0;
-    border-radius: 8px;
-text-align: right;
- justify-content: flex-end;
-                align-items:center;
-  }
-
-  .progress-bar::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    color: white;
-    width: 0%;
-    border-radius: 8px 0 0 8px;
-    transition: width 0.3s;
-  }
-
-  .marker {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 2px;
-    height: 20px;
-    background-color: white;
-  }
-
-  .marker:nth-child(1) { left: 10%; }
-  .marker:nth-child(2) { left: 20%; }
-  .marker:nth-child(3) { left: 30%; }
-  .marker:nth-child(4) { left: 40%; }
-  .marker:nth-child(5) { left: 50%; }
-  .marker:nth-child(6) { left: 60%; }
-  .marker:nth-child(7) { left: 70%; }
-  .marker:nth-child(8) { left: 80%; }
-  .marker:nth-child(9) { left: 90%; }
 
   .priorities {
     display: grid;
