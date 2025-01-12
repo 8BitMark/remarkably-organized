@@ -18,8 +18,8 @@
 		{#if timeframe.weekStart}
 			<a class="day"
 				href="#{date.getUTCFullYear()}-{date.getUTCMonth() + 1}-{date.getUTCDate()}">
-				{date.toLocaleString('default', { weekday: 'short', timeZone: 'UTC' })} {date.getUTCDate()}
-			</a>
+				<div class="label">{date.toLocaleString('default', { weekday: 'short', timeZone: 'UTC' })} {date.getUTCDate()}
+			</div></a>
 		{:else}
 			<div class="day">
 				{date.toLocaleString('default', { weekday: 'short', timeZone: 'UTC' })}
@@ -127,7 +127,7 @@
     justify-content: center; /* Center text horizontally */
     letter-spacing: 1.5px;
     text-transform: uppercase;
-.day{
+.label{
 width:auto;
 white-space: nowrap;
 transform: rotate(270deg);
