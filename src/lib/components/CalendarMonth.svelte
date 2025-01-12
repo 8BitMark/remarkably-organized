@@ -155,7 +155,7 @@ transform: rotate(270deg);
 			}
 		}
 
-.week:nth-last-child(-n + 1) {
+.week:nth-last-child(-n + 2) {
 border-bottom: solid 1px var(--outline-high);
 }
 .day:nth-last-child(-n + 7) {
