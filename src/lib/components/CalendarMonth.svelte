@@ -117,7 +117,7 @@
     			text-transform: uppercase;
 			color: var(--text-low);
 			border-top: solid 1px var(--outline-high);
-   			border-right: solid 1px var(--outline-high);
+   			border-left: solid 1px var(--outline-high);
                         border-right: solid 1px var(--outline-high);
 			background-color: var(--nav-bg);
 			margin-bottom: 0px;
@@ -133,7 +133,7 @@
 			border-right: solid 1px var(--outline-high);
 			line-height: 1;
 
-                        &:nth-last-child(-n + 1) {
+                        &:last-child {
 border-bottom: solid 1px var(--outline-high);
 }
 			small {
