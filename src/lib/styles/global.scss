@@ -17,6 +17,9 @@ html {
 	--text-low: #696969; // text on the bg in a de-emphasized state - like disabled or metadata
 	--text-high: #4e4e4e; // text on the bg in an emphasized state - like hover or focus
 
+	--outline-low: #e6e6e6;// oklch(from var(--outline) calc(l + 0.03) c h);
+	--outline-high: #bdbdbd;
+
 	--fg: #ebebeb; // default background color for a foreground element - like a card
 	--fg-low: #f2f2f2; // the de-emphasized state of 'fg' - like disabled card
 	--fg-high: #e0e0e0; // the emphasized state of 'fg' - like on hover or focus
