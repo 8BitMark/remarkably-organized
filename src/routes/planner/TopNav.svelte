@@ -359,7 +359,7 @@
 	.left-header {
 		grid-column:1;
                 display:flex;
-		font-size: 1.5em;
+		font-size: 1.4em;
 		align-items: start;
 		justify-content: flex-start;
 	}
@@ -455,6 +455,7 @@
 		ol.links {
 			list-style: none;
 			margin-right: 0px;
+margin-top:-5px;
 			align-items: right;
 			display: flex;
     			padding: 0px;
@@ -470,7 +471,7 @@
     				text-decoration: none;
     				height: 26px;
 		width: 26px;
-		margin-right: 3px;
+		margin-right:3px;
                 margin-left:3px;
 		font-size:0.95em;
 		text-transform: uppercase;
