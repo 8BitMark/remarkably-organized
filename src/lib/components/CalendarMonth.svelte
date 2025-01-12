@@ -121,11 +121,12 @@
                         border-right: solid 1px var(--outline-high);
 			background-color: var(--nav-bg);
 			margin-bottom: 0px;
-&:last-week {
+.last-week {
 border-bottom: solid 1px var(--outline-high);
 }
 .label{
-width:150px;
+width:auto;
+white-space: nowrap;
 transform: rotate(270deg);
 }
 
