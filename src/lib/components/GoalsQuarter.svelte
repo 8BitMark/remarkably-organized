@@ -141,7 +141,7 @@
 
   .progress-bar {
 	display:flex;
-    	width: 100%;
+    	width: 95%;
 	    height: 20px;
 	    background-color: var(--nav-bg);
     	border-radius: 8px;
