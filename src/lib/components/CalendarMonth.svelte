@@ -121,9 +121,7 @@
                         border-right: solid 1px var(--outline-high);
 			background-color: var(--nav-bg);
 			margin-bottom: 0px;
-.last-week {
-border-bottom: solid 1px var(--outline-high);
-}
+
 .label{
 width:auto;
 white-space: nowrap;
@@ -142,9 +140,7 @@ transform: rotate(270deg);
 			border-right: solid 1px var(--outline-high);
 			line-height: 1;
 
-                        &:last-week {
-border-bottom: solid 1px var(--outline-high);
-}
+                        
 			small {
 				font-size: 0.65em;
 				opacity: 1;
@@ -158,7 +154,7 @@ border-bottom: solid 1px var(--outline-high);
 				align-items: start;
 			}
 		}
-.day:nth-last-child(-n + 1) {
+.day:nth-last-child(-n + 8) {
 border-bottom: solid 1px var(--outline-high);
 }
 		.events {
