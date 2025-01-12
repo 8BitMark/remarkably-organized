@@ -11,25 +11,27 @@
           <div class="lines"></div>
         {/each}
         <div class="lines">Key Results</div>
+        <div class="results">
         {#each Array(6) as _, i}
-          {i+1}.
-
-<div class="progress-bar">
-  <div class="marker"></div>
-  <div class="marker"></div>
-  <div class="marker"></div>
-  <div class="marker"></div>
-  <div class="marker"></div>
-  <div class="marker"></div>
-  <div class="marker"></div>
-  <div class="marker"></div>
-  <div class="marker"></div>
-</div>
-<div class="midline">
-          </div>
-   <div class="lines"></div>
+	 	<div class="left-side">
+          		<div class="lines">{i+1}.</div>
+   			<div class="lines"></div>
+		</div>
+		<div class="right-side">
+			<div class="progress-bar">
+			  <div class="marker"></div>
+			  <div class="marker"></div>
+			  <div class="marker"></div>
+			  <div class="marker"></div>
+			  <div class="marker"></div>
+			  <div class="marker"></div>
+			  <div class="marker"></div>
+			  <div class="marker"></div>
+			  <div class="marker"></div>
+			</div>
+		</div>
         {/each}
-     
+     </div>
       <div class="priorities">
    <div class="lines" style="grid-column:1 / span 3;">Action Plan</div>
         {#each Array(12) as _, i}
@@ -78,6 +80,34 @@
       font-size: 0.7em;
       height: 24px;
       padding-top: 2px;
+    }
+
+   .results{
+	display: grid;
+      	grid-template-columns: 70% 30%; /* Two columns with auto widths */
+     	grid-template-rows: 28px repeat(6, 1fr);
+      	gap: 0px;
+	border-bottom: 1px solid var(--outline-high);
+      	color: var(--text-high);
+      	text-transform: uppercase;
+      	font-size: 0.7em;
+      	height: 24px;
+      	padding-top: 2px;
+    }
+
+    .left-header {
+	grid-column:1;
+	display:flex;
+	align-items: start;
+	justify-content: flex-start;
+    }
+    .right-header {
+	grid-column:2;
+	display:flex;
+	text-align: right;
+	margin-right: 5px;
+	justify-content: flex-end;
+	align-items:center;
     }
 
   .midline { 
