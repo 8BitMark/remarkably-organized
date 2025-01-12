@@ -125,6 +125,7 @@
 border-bottom: solid 1px var(--outline-high);
 }
 .label{
+width:150px;
 transform: rotate(270deg);
 }
 
