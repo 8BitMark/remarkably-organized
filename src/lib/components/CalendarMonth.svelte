@@ -30,7 +30,7 @@
 							month: 'short',
 						})}
 					{/if}
-					Week {useWeekSinceYear ? week.weekSinceYear : week.weekSinceMonth}
+					<div class="label">Week {useWeekSinceYear ? week.weekSinceYear : week.weekSinceMonth}</div>
 				</a>
 			{/each}
 		{/if}
@@ -39,7 +39,7 @@
 				timeframe.start.getTime() + (i - numDaysBeforeStart) * 86400000,
 			)}
 			<a
-				class="day"
+				class="day" 
 				href="#{date.getUTCFullYear()}-{date.getUTCMonth() + 1}-{date.getUTCDate()}">
 			</a>
 		{/each}
@@ -121,6 +121,13 @@
                         border-right: solid 1px var(--outline-high);
 			background-color: var(--nav-bg);
 			margin-bottom: 0px;
+&:last-week {
+border-bottom: solid 1px var(--outline-high);
+}
+.label{
+transform: rotate(270deg);
+}
+
 			
 		}
 		.day {
@@ -133,7 +140,7 @@
 			border-right: solid 1px var(--outline-high);
 			line-height: 1;
 
-                        &:last-child {
+                        &:last-week {
 border-bottom: solid 1px var(--outline-high);
 }
 			small {
