@@ -9,30 +9,26 @@
         {#each Array(4) as _, i}
           <div class="lines"></div>
         {/each}
-        <div class="lines">Key Results</div>
-        <div class="results">
-        {#each Array(6) as _, i}
-	 	<div class="left-side">
-          		<div class="lines">{i+1}.</div>
-   			<div class="lines"></div>
-		</div>
-		<div class="right-side">
-			
-		</div>
-        {/each}
-     </div>
+      </div>
+
+ <div class="results">
+      <div class="lines" style="grid-column:1 / span 2;">Key Results</div>
+      {#each Array(6) as _, i}
+	    	<div class="krlines" style="grid-column:1;">{i+1}.</div>
+   			<div class="krlines" style="grid-column:1;"></div>
+      {/each}
+</div>
 
 <div class="priorities">
-   <div class="lines" style="grid-column:1 / span 3;">Action Plan</div>
-        {#each Array(12) as _, i}
+   <div class="lines" style="grid-column:1 / span 2;">Action Plan</div>
+   <div class="lines" style="grid-column:2;">Due Date</div>
+   
+   {#each Array(12) as _, i}
 	    <div class="icon"></div>
 	    <div class="content"></div>
-      <div class="date">/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/</div>
-        {/each}
-	</div>
-
-
-      </div>
+      <div class="date"></div>
+   {/each}
+</div>
 </div>
 
 <style lang="scss">
@@ -62,6 +58,7 @@
     letter-spacing: 1.5px;
     border-bottom: 1.5px solid var(--outline);
   }
+
   .lines {
       border-bottom: 1px solid var(--outline-high);
       color: var(--text-high);
@@ -72,33 +69,19 @@
     }
 
    .results{
-	display: grid;
+	    display: grid;
       	grid-template-columns: 70% 30%; /* Two columns with auto widths */
-     	grid-template-rows: 28px repeat(6, 1fr);
-      	gap: 0px;
-	border-bottom: 1px solid var(--outline-high);
-      	color: var(--text-high);
-      	text-transform: uppercase;
-      	font-size: 0.7em;
-      	height: 24px;
-      	padding-top: 2px;
+      gap: 0px;
     }
-
-    .left-header {
-	grid-column:1;
-	display:flex;
-	align-items: start;
-	justify-content: flex-start;
-    }
-    .right-header {
-	grid-column:2;
-	display:flex;
-	text-align: right;
-	margin-right: 5px;
-	justify-content: flex-end;
-	align-items:center;
-    }
-
+  .results .krlines {
+     grid-column:2;
+     padding: 0px;
+     border-bottom: 1px solid var(--outline-high);
+     font-size: 0.9em;
+     height: 24px;
+     width: auto;
+  }
+  
 .star {
     width: 25px;
     height: 25px;
