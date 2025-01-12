@@ -16,6 +16,17 @@
       {#each Array(6) as _, i}
 	    	<div class="krlines" style="grid-column:1;">{i+1}.</div>
    			<div class="krlines" style="grid-column:1;"></div>
+<div class="progress-bar">
+  <div class="marker"></div>
+  <div class="marker"></div>
+  <div class="marker"></div>
+  <div class="marker"></div>
+  <div class="marker"></div>
+  <div class="marker"></div>
+  <div class="marker"></div>
+  <div class="marker"></div>
+  <div class="marker"></div>
+</div>
       {/each}
 </div>
 
