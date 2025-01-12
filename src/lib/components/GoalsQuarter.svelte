@@ -12,7 +12,7 @@
         {/each}
         <div class="lines">Key Results</div>
         {#each Array(6) as _, i}
-          <div class="midline">{i+1}.
+          {i+1}.
 
 <div class="progress-bar">
   <div class="marker"></div>
@@ -25,6 +25,7 @@
   <div class="marker"></div>
   <div class="marker"></div>
 </div>
+<div class="midline">
           </div>
    <div class="lines"></div>
         {/each}
@@ -82,10 +83,7 @@
   .midline { 
     display: flex;
       height: 25px; 
-      width:50%;
-text-align: right;
-                justify-content: flex-end;
-                align-items:center;
+      width:70%;
   }
 
   .star {
@@ -97,12 +95,15 @@ text-align: right;
     margin: 2px;
   }
   .progress-bar {
-    width: 45%;
+display:flex;
+    width: 30%;
     height: 20px;
     background-color: #e0e0e0;
     border-radius: 8px;
     position: relative;
-    align-items:end;
+text-align: right;
+ justify-content: flex-end;
+                align-items:center;
   }
 
   .progress-bar::before {
