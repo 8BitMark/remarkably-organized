@@ -288,8 +288,7 @@
 	     <a class="icon" href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}">
 							<PlannerIcon
 							width="32px"
-							height="32px"
-style="margin-top:-10px"/>
+							height="32px">
 							</a>
 	     <a class="icon" href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}-pg2">
 							<NotepadIcon
@@ -401,7 +400,7 @@ style="margin-top:-10px"/>
 	.icon {
 		text-decoration: none;
 		color: var(--text);
-    		margin-top: -10px;
+    		margin-top: -8px;
 	}
 
 	ol.breadcrumbs {
