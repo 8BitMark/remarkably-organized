@@ -119,7 +119,7 @@
     			text-transform: uppercase;
 			color: var(--text-low);
 			border-top: solid 1px var(--outline-high);
-			border-left: solid 1px var(--outline-high);
+			
    			border-right: solid 1px var(--outline-high);
 			background-color: var(--nav-bg);
 			margin-bottom: 0px;
@@ -133,8 +133,9 @@
 			font-weight: var(--font-weight-light);
 			border-top: solid 1px var(--outline-high);
 			border-right: solid 1px var(--outline-high);
-			border-bottom: solid 1px var(--outline-high);
+			
 			line-height: 1;
+    
 			small {
 				font-size: 0.65em;
 				opacity: 1;
