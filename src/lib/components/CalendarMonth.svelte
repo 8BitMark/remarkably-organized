@@ -159,7 +159,7 @@ transform: rotate(270deg);
 .week:nth-child(1) {
 border-top: solid 1px var(--outline-high);
 }
-.day:nth-child(-n + 10) {
+.day:nth-child(-n + 11) {
 border-top: solid 1px var(--outline-high);
 }
 		.events {
