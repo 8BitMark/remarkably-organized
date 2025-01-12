@@ -122,7 +122,7 @@
    			border-right: solid 1px var(--outline-high);
 			background-color: var(--nav-bg);
 			margin-bottom: 0px;
-			border-bottom: solid 1px var(--outline-high);
+			
 		}
 		.day {
 			display: flex;
@@ -132,8 +132,8 @@
 			font-weight: var(--font-weight-light);
 			border-top: solid 1px var(--outline-high);
 			border-right: solid 1px var(--outline-high);
-			
 			line-height: 1;
+
                         &:nth-last-child(-n + 1) {
 border-bottom: solid 1px var(--outline-high);
 }
