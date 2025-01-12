@@ -199,8 +199,8 @@
 		{#if showQuarterBreadcrumb && tabs !== 'quarters'}
 				<a class="icon" href="#{year}-q{quarter}" >
 					<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-						<path fill="currentColor" d="M21.75 3A3.25 3.25 0 0 1 25 6.25v8.25a7.5 7.5 0 0 0-1.5-.876V9.503h-19V21.75c0 .966.784 1.75 1.75 1.75h7.374c.234.535.529 1.038.875 1.5H6.25A3.25 3.25 0 0 1 3 21.75V6.25A3.25 3.25 0 0 1 6.25 3zm0 1.5H6.25A1.75 1.75 0 0 0 4.5 6.25v1.753h19V6.25a1.75 1.75 0 0 0-1.75-1.75m5.25 16a6.5 6.5 0 1 1-13 0a6.5 6.5 0 0 1 13 0m-8.146-2.646a.5.5 0 0 0-.708-.708l-2 2a.5.5 0 0 0 0 .708l2 2a.5.5 0 0 0 .708-.708L17.707 20h2.543A2.75 2.75 0 0 1 23 22.75V23a.5.5 0 0 0 1 0v-.25A3.75 3.75 0 0 0 20.25 19h-2.543z" />
-						<text x="10" y="21" text-anchor="middle" fill="black" font-size="12">{quarter}</text>
+						<path fill="currentColor" d="M2 6.5A4.5 4.5 0 0 1 6.5 2h15A4.5 4.5 0 0 1 26 6.5v15a4.5 4.5 0 0 1-4.5 4.5h-15A4.5 4.5 0 0 1 2 21.5zM6.5 4A2.5 2.5 0 0 0 4 6.5V7h20v-.5A2.5 2.5 0 0 0 21.5 4zM4 21.5A2.5 2.5 0 0 0 6.5 24h15a2.5 2.5 0 0 0 2.5-2.5V9H4zm24-12V5.757c1.206.808 2 2.183 2 3.743V22a8 8 0 0 1-8 8H9.5a4.5 4.5 0 0 1-3.742-2H22a6 6 0 0 0 6-6z"/>
+                                                <text x="10" y="21" text-anchor="middle" fill="black" font-size="12">{quarter}</text>
 					</svg>
 				</a>
 		{/if}
@@ -454,7 +454,7 @@
 		}
 		ol.links {
 			list-style: none;
-			margin-right: 10px;
+			margin-right: 0px;
 			align-items: right;
 			display: flex;
     			padding: 0px;
