@@ -401,7 +401,7 @@ style="margin-top:-10px"/>
 	.icon {
 		text-decoration: none;
 		color: var(--text);
-    		margin-top: 3px;
+    		margin-top: -10px;
 	}
 
 	ol.breadcrumbs {
