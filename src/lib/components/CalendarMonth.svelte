@@ -24,7 +24,7 @@
 			{#each new Array(numWeeks) as _, i (i)}
 				{@const date = new Date(timeframe.weekStart.getTime() + i * 604800000)}
 				{@const week = getWeek(date, startWeekOnSunday)}
-				<a href="#{week.id}" class="week" class:last-week={i === numWeeks - 1}>
+				<a href="#{week.id}" class="week">
 					{#if !useWeekSinceYear && week.year && week.month && week.month !== timeframe.month}
 						{new Date(Date.UTC(week.year, week.month)).toLocaleString('default', {
 							month: 'short',
