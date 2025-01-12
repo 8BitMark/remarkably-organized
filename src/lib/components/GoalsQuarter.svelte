@@ -125,12 +125,11 @@
     margin: 2px;
   }
   .progress-bar {
-display:flex;
+   display:flex;
     width: 30%;
     height: 20px;
     background-color: #e0e0e0;
     border-radius: 8px;
-    position: relative;
 text-align: right;
  justify-content: flex-end;
                 align-items:center;
