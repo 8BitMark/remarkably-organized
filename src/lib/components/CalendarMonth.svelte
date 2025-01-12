@@ -100,6 +100,7 @@
 		grid-gap: 0px;
 		padding-left: 10px;
 		padding-right: 10px;
+		border-top: solid 1px var(--outline-high);
 		&.with-notes {
 			height: 70%;
 			padding-left: 10px;
@@ -155,7 +156,7 @@ transform: rotate(270deg);
 			}
 		}
 
-.week:nth-child(-n + 7) {
+.week:nth-child(1) {
 border-top: solid 1px var(--outline-high);
 }
 .day:nth-child(-n + 7) {
