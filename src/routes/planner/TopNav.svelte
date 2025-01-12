@@ -289,7 +289,7 @@
 							<PlannerIcon
 							width="32px"
 							height="32px"
-style="margin-top:-5px"/>
+style="margin-top:-10px"/>
 							</a>
 	     <a class="icon" href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}-pg2">
 							<NotepadIcon
