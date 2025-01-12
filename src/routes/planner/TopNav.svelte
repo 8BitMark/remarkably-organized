@@ -400,7 +400,7 @@
 	.icon {
 		text-decoration: none;
 		color: var(--text);
-    		margin-top: 4px;
+    		margin-top: 3px;
 	}
 
 	ol.breadcrumbs {
@@ -455,7 +455,7 @@
 		ol.links {
 			list-style: none;
 			margin-right: 0px;
-margin-top:0px;
+margin-top:3px;
 			align-items: right;
 			display: flex;
     			padding: 0px;
