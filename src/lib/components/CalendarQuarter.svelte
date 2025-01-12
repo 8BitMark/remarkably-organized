@@ -127,7 +127,7 @@
 		display: grid;
 		grid-template-columns: repeat(7, 1fr);
 		grid-template-rows: repeat(6, 1fr);
-		justify-items: center;
+		justify-items: right;
 		align-items: center;
 		gap: 0.15rem 0.55rem;
 		.label {
