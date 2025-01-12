@@ -26,7 +26,7 @@
 		  <div class="marker"></div>
 		  <div class="marker"></div>
 		</div>
-   		<div class="krlines" style="grid-column:1;"></div>
+   		<div class="krlines" style="grid-column:1 / span 2;"></div>
 
       {/each}
 </div>
