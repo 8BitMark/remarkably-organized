@@ -892,10 +892,7 @@
 	main {
 		font-family: var(--font);
 		@supports (color: oklch(from var(--text) calc(l - 0.15) c h)) {
-			--text-low: oklch(from var(--text) calc(l + 0.2) c h);
-			--text-high: oklch(from var(--text) calc(l - 0.15) c h);
-			--outline-low: oklch(from var(--outline) calc(l + 0.03) c h);
-			--outline-high: oklch(from var(--outline) max(0, calc(l - 0.1)) c h);
+			
 		}
 	}
 	@media screen {
