@@ -21,7 +21,7 @@
 
 <div class="priorities">
    <div class="lines" style="grid-column:1 / span 2;">Action Plan</div>
-   <div class="lines" style="grid-column:2;">Due Date</div>
+   <div class="lines" style="grid-column:3;">Due Date</div>
    
    {#each Array(12) as _, i}
 	    <div class="icon"></div>
@@ -70,11 +70,11 @@
 
    .results{
 	    display: grid;
-      	grid-template-columns: 70% 30%; /* Two columns with auto widths */
+      	grid-template-columns: 65% 35%; /* Two columns with auto widths */
       gap: 0px;
     }
   .results .krlines {
-     grid-column:2;
+     grid-column:1;
      padding: 0px;
      border-bottom: 1px solid var(--outline-high);
      font-size: 0.9em;
