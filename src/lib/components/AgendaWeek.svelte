@@ -115,8 +115,8 @@
     grid-column:1;
     width: 25px;
     height: auto;
-    border-right: 1px solid var(--outline-high);
-    border-top: 1px solid var(--outline-high);
+    border-left: 1px solid var(--outline-high);
+    border-bottom: 1px solid var(--outline-high);
     background-color: var(--nav-bg);
     font-size: 0.8em;
     margin: 0px;    
@@ -127,14 +127,12 @@
     justify-content: center; /* Center text horizontally */
     letter-spacing: 1.5px;
     text-transform: uppercase;
-.label{
+.day{
 width:auto;
 white-space: nowrap;
 transform: rotate(270deg);
 }
-.day:nth-last-child(-n + 2) {
-border-bottom: solid 1px var(--outline-high);
-}
+
 }
 
   .weekly-plan .content {
