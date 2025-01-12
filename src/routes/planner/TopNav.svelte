@@ -207,7 +207,7 @@
 		{#if showMonthBreadcrumb && (tabs === 'days-this-week' || tabs === 'days-this-month' || tabs === 'days-this-year' || tabs === 'weeks-this-month' || tabs === 'weeks-this-year')}	
 				<a class="icon" href="#{year}-{month}">
 					<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-  <path fill="currentColor" d="m4,9 a5,5,0,0,1,5,-5 h14 a5,5,0,0,1,5,5 v14 a5,5,0,0,1,-5,5 h-14 a5,5,0,0,1,-5,-5 v-4 a1,1,0,1,1,2,0 v4 a3,3,0,0,0,3,3 h14 a3,3,0,0,0,3,-3 v-11 h-15.71 a2.5,2.5,0,0,0,0,-2 h15.71 v-1 a3,3,0,0,0,-3,-3 h-14 a3,3,0,0,0,-3,3 v2.586 l1.293,-1.293 a1,1,0,1,1,1.414,1.414 l-3,3 a1,1,0,0,1,-1.414,0 l-3,-3 a1,1,0,1,1,1.414,-1.414 l1.29,1.29
+  <path fill="currentColor" d="m4,9 a5,5,0,0,1,5,-5 h14 a5,5,0,0,1,5,5 v14 a5,5,0,0,1,-5,5 h-14 a5,5,0,0,1,-5,-5 v-4 a1,1,0,1,1,2,0 v4 a3,3,0,0,0,3,3 h14 a3,3,0,0,0,3,-3 v-11 h-15.71 a2.5,2.5,0,0,0,0,-2 h15.71 v-1 a3,3,0,0,0,-3,-3 h-14 a3,3,0,0,0,-3,3 v2.586 l1.293,-1.293 a1,1,0,1,1,1.414,1.414 l-3,3 a1,1,0,0,1,-1.414,0 l-3,-3 a1,1,0,1,1,1.414,-1.414 l1.29,1.29"/>
   					<text x="16" y="24" text-anchor="middle" fill="black" font-size="14">
 							{timeframe.start.toLocaleString('default', { month: 'short' })}</text>
 					</svg>
