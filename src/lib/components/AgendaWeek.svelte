@@ -127,6 +127,14 @@
     justify-content: center; /* Center text horizontally */
     letter-spacing: 1.5px;
     text-transform: uppercase;
+.label{
+width:auto;
+white-space: nowrap;
+transform: rotate(270deg);
+}
+.day:nth-last-child(-n + 2) {
+border-bottom: solid 1px var(--outline-high);
+}
 }
 
   .weekly-plan .content {
