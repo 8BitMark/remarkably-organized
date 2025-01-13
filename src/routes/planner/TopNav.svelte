@@ -164,7 +164,7 @@
 	<nav style:font-family="'{font}'">
 				
 	<div class="left-header">
-		<a href="#{year}">
+		<a class="icon" href="#{year}">
 			<HomeIcon
 				width="32px"
 				height="32px"/>
@@ -357,7 +357,7 @@
 		padding: 0 0 0 var(--sidenav-width);
 		margin-top: 15px;
  	margin-left: 5px;
-		margin-right:8px;
+		margin-right:5px;
 		font-size: 1.2em;
 	}
 	.left-header {
@@ -371,7 +371,7 @@
                 display:flex;
 		text-align: right;
     		margin-right: 5px;
-		font-size: 1.4em;
+		font-size: 1.3em;
                 justify-content: flex-end;
                 align-items:center;
 	}
