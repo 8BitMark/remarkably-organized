@@ -189,7 +189,7 @@ export class PlannerSettings {
 	readonly quarterPage = new (class QuarterPageSettings {
 		disable = $state(false);
 		notePagesTemplate = $state('quarterly-goals' as PageTemplate);
-		notePagesAmount = $state(1);
+		notePagesAmount = $state(6);
 	})();
 
 	/** Settings for changing how the monthly pages should work */
