@@ -162,40 +162,13 @@
 
 {#if !settings.topNav.disable}
 	<nav style:font-family="'{font}'">
+				
 	<div class="left-header">
 		<a href="#{year}">
 			<HomeIcon
 				width="32px"
 				height="32px"/>
 		</a>
-		{#if showYearBreadcrumb && tabs === 'years'}
-			<a class="title" href="#{year}">{year}</a>
-		{:else if showQuarterBreadcrumb && tabs === 'quarters'}
-			<a class="title" href="#{year}-q{quarter}">Quarter {quarter}</a>
-		{:else if showMonthBreadcrumb && tabs === 'months'}
-			<a class="title" href="#{year}-{month}">{new Date(year, month - 1).toLocaleString('default', { month: 'long' })}</a>
-		{:else if showWeekBreadcrumb && (tabs === 'weeks-this-month' || tabs === 'weeks-this-year')}
-			<a class="title" href="#{timeframe.year}-wk{timeframe.weekSinceYear}">{new Date(year, month - 1).toLocaleString('default', { month: 'long' })} - Week {settings.weekPage.useWeekSinceYear
-				? timeframe.weekSinceYear
-				: timeframe.weekSinceMonth}</a>
-		{:else if showDayBreadcrumb && (tabs === 'days-this-week' || tabs === 'days-this-month' || tabs === 'days-this-year')}
-			<a class="title" href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}">
-					{timeframe.start.toLocaleString('default', {
-						weekday: 'long',
-						timeZone: 'UTC',
-					})},
-					{@html formatToString(timeframe.daySinceMonth, {
-						type: 'd',
-						html: true,
-					})}
-					{timeframe.start.toLocaleString('default', {
-						month: 'long',
-						timeZone: 'UTC',
-					})}</a>
-		{/if}
-	</div>		
-					
-	<div class="right-header">
 		{#if showQuarterBreadcrumb && tabs !== 'quarters'}
 				<a class="icon" href="#{year}-q{quarter}" >
 					<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
@@ -333,6 +306,36 @@
 							</a>
 	{/if}
 	</div>
+
+<div class="right-header">
+		
+		{#if showYearBreadcrumb && tabs === 'years'}
+			<a class="title" href="#{year}">{year}</a>
+		{:else if showQuarterBreadcrumb && tabs === 'quarters'}
+			<a class="title" href="#{year}-q{quarter}">Quarter {quarter}</a>
+		{:else if showMonthBreadcrumb && tabs === 'months'}
+			<a class="title" href="#{year}-{month}">{new Date(year, month - 1).toLocaleString('default', { month: 'long' })}</a>
+		{:else if showWeekBreadcrumb && (tabs === 'weeks-this-month' || tabs === 'weeks-this-year')}
+			<a class="title" href="#{timeframe.year}-wk{timeframe.weekSinceYear}">{new Date(year, month - 1).toLocaleString('default', { month: 'long' })} - Week {settings.weekPage.useWeekSinceYear
+				? timeframe.weekSinceYear
+				: timeframe.weekSinceMonth}</a>
+		{:else if showDayBreadcrumb && (tabs === 'days-this-week' || tabs === 'days-this-month' || tabs === 'days-this-year')}
+			<a class="title" href="#{timeframe.year}-{timeframe.month}-{timeframe.daySinceMonth}">
+					{timeframe.start.toLocaleString('default', {
+						weekday: 'long',
+						timeZone: 'UTC',
+					})},
+					{@html formatToString(timeframe.daySinceMonth, {
+						type: 'd',
+						html: true,
+					})}
+					{timeframe.start.toLocaleString('default', {
+						month: 'long',
+						timeZone: 'UTC',
+					})}</a>
+		{/if}
+	</div>		
+		
 </nav>
 {/if}
 
@@ -360,7 +363,6 @@
 	.left-header {
 		grid-column:1;
                 display:flex;
-		font-size: 1.25em;
 		align-items: start;
 		justify-content: flex-start;
 	}
@@ -369,6 +371,7 @@
                 display:flex;
 		text-align: right;
     		margin-right: 5px;
+		font-size: 1.4em;
                 justify-content: flex-end;
                 align-items:center;
 	}
