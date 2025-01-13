@@ -363,7 +363,7 @@
 	.left-header {
 		grid-column:1;
                 display:flex;
-		align-items: start;
+		align-items:center;
 		justify-content: flex-start;
 	}
 	.right-header {
