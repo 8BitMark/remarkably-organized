@@ -353,7 +353,8 @@
 		height: var(--topnav-height);
 		padding: 0 0 0 var(--sidenav-width);
 		margin-top: 15px;
- 	margin-left: 28px;
+ 	margin-left: 5px;
+		margin-right:28px;
 		font-size: 1.2em;
 	}
 	.left-header {
