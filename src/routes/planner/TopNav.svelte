@@ -352,14 +352,14 @@
 		right: 0;
 		height: var(--topnav-height);
 		padding: 0 0 0 var(--sidenav-width);
-		margin-top: 5px;
-    		margin-left: 8px;
+		margin-top: 15px;
+ 	margin-left: 28px;
 		font-size: 1.2em;
 	}
 	.left-header {
 		grid-column:1;
                 display:flex;
-		font-size: 1.4em;
+		font-size: 1.25em;
 		align-items: start;
 		justify-content: flex-start;
 	}
@@ -382,7 +382,7 @@
 		background-color: var(--nav-bg);
 		border: 1.8px solid black;
 		border-radius: 4px; /* Half the height for perfect rounded corners */
-		color: var(--text-high);
+		color: black;
 		text-decoration: none;
 		height: 26px;
 		width: 26px;
@@ -467,7 +467,7 @@ margin-top:3px;
 				background-color: var(--nav-bg);
     				border: 1.8px solid black;
     				border-radius: 4px; /* Half the height for perfect rounded corners */
-    				color: var(--text-high);
+    				color: black;
     				text-decoration: none;
     				height: 26px;
 		width: 26px;
